@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integrys Consulting | إنتيجريس للاستشارات</title>
+<meta name="description" content="Egypt's specialist ESG, Carbon Footprint, GRC and AML consulting firm. إنتيجريس للاستشارات — الرائدة في استشارات الحوكمة والاستدامة وبصمة الكربون في مصر.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<style>
+/* ═══════════════════════════════════════ RESET & VARIABLES ═══ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --nav:#0D2B4E;--teal:#006B75;--bteal:#2E86AB;--amber:#C06E00;
+  --red:#C00000;--green:#006B3C;
+  --lgrey:#EDF2F7;--lgrey2:#F0F5FF;--lgrey3:#F5F0FF;
+  --mgrey:#9EAFC0;--dgrey:#3C3C3C;--white:#FFFFFF;
+  --bg-body:#F8FAFB;--bg-card:#FFFFFF;
+  --bg-alt:linear-gradient(160deg,#EDF2F7 0%,#E8F0FE 100%);
+  --bg-alt2:linear-gradient(160deg,#F0F5FF 0%,#E8F5F0 100%);
+  --font-en:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;--font-ar:'Tajawal','Segoe UI',Tahoma,sans-serif;
+  --font:var(--font-en);--transition:0.3s ease;
+  --radius:10px;--shadow:0 4px 24px rgba(13,43,78,0.10);
+  --shadow-lg:0 8px 40px rgba(13,43,78,0.18);
+  --shadow-card:0 2px 12px rgba(13,43,78,0.08), 0 1px 3px rgba(0,107,117,0.05);
+}
+[lang="ar"],[dir="rtl"]{--font:var(--font-ar)}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--dgrey);background:var(--bg-body);overflow-x:hidden;line-height:1.7}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;height:auto}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ═══════════════════════════════════════ TYPOGRAPHY ══════════ */
+h1,h2,h3,h4{color:var(--nav);line-height:1.2}
+.section-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:block}
+.section-title{font-size:clamp(26px,3.5vw,40px);font-weight:800;color:var(--nav);margin-bottom:16px}
+.section-title span{color:var(--teal)}
+.section-sub{font-size:16px;color:var(--mgrey);max-width:640px;line-height:1.8}
+[dir="rtl"] .section-sub{margin-right:0;margin-left:auto}
+
+/* ═══════════════════════════════════════ NAVIGATION ═════════ */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,43,78,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,107,117,0.2);transition:var(--transition)}
+.navbar.scrolled{box-shadow:var(--shadow-lg)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--teal),var(--bteal));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0}
+.nav-logo-text{display:flex;flex-direction:column;gap:1px}
+.nav-logo-en{font-size:14px;font-weight:700;color:#fff;line-height:1.1;font-family:var(--font-en)}
+.nav-logo-ar{font-size:11px;color:var(--mgrey);line-height:1.1;font-family:var(--font-ar)}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{font-size:12px;font-weight:500;color:rgba(255,255,255,0.75);padding:6px 9px;border-radius:6px;transition:var(--transition);white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(0,107,117,0.25)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.lang-btn{display:flex;align-items:center;gap:6px;background:rgba(0,107,117,0.2);border:1px solid var(--teal);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:20px;cursor:pointer;transition:var(--transition);font-family:var(--font-ar);letter-spacing:0}
+.lang-btn:hover{background:var(--teal)}
+.lang-btn .lang-icon{font-size:15px}
+.nav-cta{background:var(--teal);color:#fff;font-size:13px;font-weight:600;padding:8px 18px;border-radius:7px;cursor:pointer;transition:var(--transition);border:none;font-family:var(--font)}
+.nav-cta:hover{background:#005a63;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;transition:var(--transition)}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--nav);padding:20px 24px;flex-direction:column;gap:4px;border-top:1px solid rgba(0,107,117,0.3);z-index:999}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:rgba(255,255,255,0.8);padding:10px 12px;border-radius:6px;font-size:14px;font-weight:500;transition:var(--transition)}
+.mobile-menu a:hover{background:rgba(0,107,117,0.2);color:#fff}
+.mobile-menu .mobile-lang{margin-top:8px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1)}
+
+/* ═══════════════════════════════════════ HERO ═══════════════ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--nav);overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg-gradient{position:absolute;inset:0;background:linear-gradient(135deg,#0B2645 0%,#081D36 40%,#050F1E 80%,#04122A 100%)}
+.hero-circle1{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,107,117,0.22) 0%,rgba(46,134,171,0.08) 50%,transparent 70%);right:-150px;top:-150px}
+.hero-circle2{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(46,134,171,0.15) 0%,rgba(0,107,117,0.05) 50%,transparent 70%);left:5%;bottom:-80px}
+.hero-circle3{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(0,107,117,0.1) 0%,transparent 70%);left:55%;top:20%}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,107,117,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,107,117,0.07) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,#000 40%,transparent 100%)}
+.hero-shimmer{position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(0,107,117,0.04) 50%,transparent 60%);animation:shimmerSlide 6s ease-in-out infinite}
+@keyframes shimmerSlide{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.hero-content{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,107,117,0.2);border:1px solid rgba(0,107,117,0.4);color:var(--teal);font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:24px;letter-spacing:1px}
+.hero-badge-dot{width:6px;height:6px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero-title{font-size:clamp(32px,4.5vw,58px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:10px}
+.hero-title-ar{font-size:clamp(22px,3vw,36px);font-weight:700;color:var(--teal);margin-bottom:20px;font-family:var(--font-ar)}
+.hero-subtitle{font-size:clamp(15px,1.6vw,18px);color:rgba(255,255,255,0.65);max-width:520px;line-height:1.8;margin-bottom:36px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--teal);color:#fff;padding:13px 28px;border-radius:8px;font-size:15px;font-weight:600;border:none;cursor:pointer;transition:var(--transition);font-family:var(--font)}
+.btn-primary:hover{background:#005a63;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,107,117,0.4)}
+.btn-outline{background:transparent;color:#fff;padding:13px 28px;border-radius:8px;font-size:15px;font-weight:600;border:2px solid rgba(255,255,255,0.3);cursor:pointer;transition:var(--transition);font-family:var(--font)}
+.btn-outline:hover{border-color:rgba(255,255,255,0.7);transform:translateY(-2px)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.hero-stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px 16px;text-align:center}
+.hero-stat-val{font-size:28px;font-weight:800;color:var(--teal);line-height:1}
+.hero-stat-lbl{font-size:12px;color:rgba(255,255,255,0.5);margin-top:4px;line-height:1.4}
+.hero-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hero-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:20px;transition:var(--transition)}
+.hero-card:hover{background:rgba(0,107,117,0.12);border-color:var(--teal);transform:translateY(-3px)}
+.hero-card-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px}
+.hero-card-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px}
+.hero-card-sub{font-size:11px;color:rgba(255,255,255,0.5);line-height:1.5}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,0.3);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+.scroll-arrow{width:20px;height:20px;border-right:2px solid rgba(255,255,255,0.3);border-bottom:2px solid rgba(255,255,255,0.3);transform:rotate(45deg);animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(5px)}}
+
+/* ═══════════════════════════════════════ CREDENTIAL STRIP ═══ */
+.cred-strip{background:linear-gradient(90deg,#0D2B4E 0%,#0a2040 50%,#0D2B4E 100%);border-top:1px solid rgba(0,107,117,0.3);border-bottom:1px solid rgba(0,107,117,0.3);padding:18px 0}
+.cred-inner{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.cred-item{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(0,107,117,0.35);border-radius:20px;padding:7px 16px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.85);backdrop-filter:blur(4px);transition:0.3s ease}
+.cred-item:hover{background:rgba(0,107,117,0.25);border-color:var(--teal);color:#fff}
+.cred-dot{width:6px;height:6px;background:var(--teal);border-radius:50%;flex-shrink:0;box-shadow:0 0 6px rgba(0,107,117,0.6)}
+.cred-sep{color:rgba(255,255,255,0.2);font-size:18px;font-weight:300}
+
+/* ═══════════════════════════════════════ SECTIONS COMMON ════ */
+.section{padding:88px 0;background:var(--bg-body)}
+.section-alt{background:var(--bg-alt)}
+.section-alt2{background:var(--bg-alt2)}
+.section-center{text-align:center}
+.section-center .section-sub{margin:0 auto 48px}
+.section-header{margin-bottom:52px}
+
+/* ═══════════════════════════════════════ ABOUT ══════════════ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-img-block{position:relative}
+.about-main-card{background:linear-gradient(160deg,#0D2B4E 0%,#0a2040 60%,#071a38 100%);border-radius:16px;padding:40px 36px 88px;color:#fff;position:relative;z-index:1;border:1px solid rgba(0,107,117,0.2);box-shadow:0 12px 48px rgba(13,43,78,0.25)}
+.about-main-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--bteal));border-radius:16px 16px 0 0}
+.about-main-title{font-size:22px;font-weight:800;color:var(--teal);margin-bottom:6px}
+.about-main-ar{font-size:14px;color:var(--mgrey);font-family:var(--font-ar);margin-bottom:20px}
+.about-main-line{width:48px;height:3px;background:linear-gradient(90deg,var(--teal),var(--bteal));border-radius:2px;margin-bottom:20px}
+.about-main-body{font-size:14px;color:rgba(255,255,255,0.78);line-height:1.8}
+.about-float{position:absolute;bottom:-20px;right:-20px;background:linear-gradient(135deg,#fff 80%,rgba(0,107,117,0.05) 100%);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow-lg);min-width:180px;z-index:2;border:1px solid rgba(0,107,117,0.12)}
+[dir="rtl"] .about-float{right:auto;left:-20px}
+.about-float-val{font-size:28px;font-weight:800;color:var(--teal)}
+.about-float-lbl{font-size:12px;color:var(--mgrey);margin-top:2px}
+.about-right{}
+.about-vision-card{background:linear-gradient(135deg,#005f68 0%,var(--teal) 40%,var(--bteal) 100%);border-radius:12px;padding:24px;color:#fff;margin-bottom:16px;box-shadow:0 8px 32px rgba(0,107,117,0.3)}
+.about-vision-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;opacity:.75;margin-bottom:6px}
+.about-vision-text{font-size:15px;font-weight:600;line-height:1.6}
+.about-values{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.value-item{background:linear-gradient(135deg,#fff 0%,rgba(0,107,117,0.03) 100%);border:1px solid #dde6f0;border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;border-left:3px solid var(--teal);transition:0.3s ease;box-shadow:var(--shadow-card)}
+.value-item:hover{background:linear-gradient(135deg,rgba(0,107,117,0.05) 0%,rgba(46,134,171,0.05) 100%);transform:translateY(-2px);box-shadow:var(--shadow)}
+[dir="rtl"] .value-item{border-left:none;border-right:3px solid var(--teal)}
+.value-icon{font-size:18px;flex-shrink:0}
+.value-text{font-size:13px;font-weight:600;color:var(--nav)}
+
+/* ═══════════════════════════════════════ SERVICES ═══════════ */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:linear-gradient(160deg,#fff 0%,rgba(237,242,247,0.5) 100%);border:1px solid #dde6f0;border-radius:var(--radius);padding:30px;transition:var(--transition);cursor:default;position:relative;overflow:hidden;box-shadow:var(--shadow-card)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--c,var(--teal)),var(--c2,var(--bteal)));transition:var(--transition)}
+.service-card::after{content:'';position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--c,var(--teal)),var(--c2,var(--bteal)));transition:width 1.1s cubic-bezier(.22,1,.36,1) .1s}
+.service-card.visible::after{width:100%}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.service-num{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.service-num-badge{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--c,var(--teal)),var(--c2,var(--bteal)));color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 6px 16px -5px var(--c,var(--teal))}
+.service-num-label{font-size:10.5px;font-weight:700;color:var(--c,var(--teal));letter-spacing:2px;text-transform:uppercase}
+@keyframes iconFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.service-icon-wrap{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px;animation:iconFloat 3.4s ease-in-out infinite}
+.service-title{font-size:17px;font-weight:700;color:var(--nav);margin-bottom:10px;line-height:1.3}
+.service-body{font-size:13.5px;color:var(--mgrey);line-height:1.7;margin-bottom:18px}
+.service-list{display:flex;flex-direction:column;gap:6px}
+.service-list li{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:var(--dgrey)}
+.service-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--c,var(--teal));flex-shrink:0;margin-top:7px}
+
+/* ═══════════════════════════════════════ METHODOLOGY ════════ */
+.method-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.iesg-model{position:relative}
+.iesg-center{background:var(--nav);border-radius:50%;width:140px;height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 30px;border:4px solid var(--teal);box-shadow:0 0 40px rgba(0,107,117,0.3)}
+.iesg-center-label{font-size:22px;font-weight:800;color:var(--teal)}
+.iesg-center-sub{font-size:10px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase}
+.iesg-pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.iesg-pillar{border-radius:10px;padding:18px;border-left:4px solid var(--pc,var(--teal))}
+[dir="rtl"] .iesg-pillar{border-left:none;border-right:4px solid var(--pc,var(--teal))}
+.pillar-code{font-size:22px;font-weight:800;color:var(--pc,var(--teal));line-height:1}
+.pillar-name{font-size:12px;font-weight:700;color:var(--nav);margin-bottom:4px}
+.pillar-weight{font-size:11px;color:var(--mgrey)}
+.method-right{}
+.method-steps{display:flex;flex-direction:column;gap:16px;position:relative;padding-left:4px}
+[dir="rtl"] .method-steps{padding-left:0;padding-right:4px}
+.method-steps::before{content:'';position:absolute;top:6px;bottom:6px;left:22px;width:2px;background:linear-gradient(180deg,var(--teal),var(--bteal),var(--nav));opacity:.3;z-index:0}
+[dir="rtl"] .method-steps::before{left:auto;right:22px}
+.method-step{display:flex;gap:16px;align-items:flex-start;position:relative;z-index:1}
+.step-num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--bteal));color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 6px 16px -4px rgba(0,107,117,.5);transition:transform .3s ease}
+.method-step:hover .step-num{transform:scale(1.14)}
+.step-content{}
+.step-title{font-size:14px;font-weight:700;color:var(--nav);margin-bottom:3px}
+.step-body{font-size:13px;color:var(--mgrey);line-height:1.6}
+
+/* ═══════════════════════════════════════ CARBON ════════════ */
+.carbon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+.carbon-scope{border-radius:12px;overflow:hidden;box-shadow:0 6px 28px rgba(13,43,78,0.14);position:relative;border:1px solid rgba(0,107,117,0.1)}
+.carbon-scope:not(:last-child)::after{content:'\2192';position:absolute;top:32px;right:-25px;font-size:22px;color:var(--mgrey);z-index:2;animation:arrowPulse 1.8s ease-in-out infinite}
+[dir="rtl"] .carbon-scope:not(:last-child)::after{content:'\2190';right:auto;left:-25px;animation-name:arrowPulseRtl}
+@keyframes arrowPulse{0%,100%{opacity:.35;transform:translateX(0)}50%{opacity:1;transform:translateX(4px)}}
+@keyframes arrowPulseRtl{0%,100%{opacity:.35;transform:translateX(0)}50%{opacity:1;transform:translateX(-4px)}}
+@media(max-width:768px){.carbon-scope::after{display:none}}
+.scope-header{padding:20px 22px;display:flex;align-items:center;gap:14px;position:relative;overflow:hidden}
+.scope-num{font-size:34px;font-weight:800;line-height:1;background:linear-gradient(135deg,#fff,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.scope-info{}
+.scope-type{font-size:13px;font-weight:700;color:#fff;line-height:1.1}
+.scope-sub{font-size:11px;color:rgba(255,255,255,0.65)}
+.scope-body{background:#fff;padding:18px 22px}
+.scope-items{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.scope-item{display:flex;align-items:flex-start;gap:7px;font-size:12.5px;color:var(--dgrey)}
+.scope-item::before{content:'';width:4px;height:4px;border-radius:50%;background:currentColor;flex-shrink:0;margin-top:8px}
+.scope-ef{background:var(--lgrey);border-radius:6px;padding:8px 12px;font-size:11px;color:var(--mgrey)}
+.scope-ef strong{color:var(--nav)}
+.carbon-total{background:var(--nav);border-radius:12px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.carbon-total-label{font-size:14px;font-weight:700;color:#fff}
+.carbon-total-formula{font-size:13px;color:var(--teal);font-style:italic}
+
+/* ═══════════════════════════════════════ REGULATORY ════════ */
+.reg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.reg-card{background:linear-gradient(160deg,#fff 0%,rgba(240,245,255,0.6) 100%);border:1px solid #dde6f0;border-radius:var(--radius);overflow:hidden;transition:var(--transition);position:relative;box-shadow:var(--shadow-card)}
+.reg-card::before{content:'';position:absolute;top:0;left:-60%;width:35%;height:100%;background:linear-gradient(115deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .9s ease;pointer-events:none;z-index:3}
+.reg-card:hover::before{left:140%}
+.reg-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.reg-header{padding:18px 22px;display:flex;align-items:center;gap:14px;position:relative;overflow:hidden}
+.reg-badge{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;letter-spacing:0.5px;transition:transform .35s ease}
+.reg-card:hover .reg-badge{transform:scale(1.1) rotate(-4deg)}
+.reg-name-en{font-size:14px;font-weight:700;color:#fff;line-height:1.2}
+.reg-name-ar{font-size:11px;color:rgba(255,255,255,0.65);font-family:var(--font-ar);margin-top:2px}
+.reg-body{padding:0 22px 18px}
+.reg-list{display:flex;flex-direction:column;gap:7px}
+.reg-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--dgrey);line-height:1.5}
+.reg-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--rc,var(--teal));flex-shrink:0;margin-top:8px}
+
+/* ═══════════════════════════════════════ PRICING ═══════════ */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:30px}
+.pricing-card{background:linear-gradient(160deg,#fff 0%,rgba(240,245,255,0.4) 100%);border:1px solid #dde6f0;border-radius:var(--radius);padding:28px;transition:var(--transition);position:relative;box-shadow:var(--shadow-card)}
+.pricing-card.featured{background:linear-gradient(160deg,#0D2B4E 0%,#0a2040 60%,#071a38 100%);border-color:var(--teal);transform:scale(1.03);box-shadow:0 12px 48px rgba(13,43,78,0.28);border-width:1.5px}
+.pricing-card:hover:not(.featured){transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.pricing-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:12px;white-space:nowrap;letter-spacing:1px}
+.pricing-title{font-size:16px;font-weight:700;margin-bottom:6px}
+.pricing-sub{font-size:12px;color:var(--mgrey);margin-bottom:20px;line-height:1.5}
+.pricing-price{font-size:28px;font-weight:800;color:var(--teal);line-height:1}
+.pricing-price-dur{font-size:12px;color:var(--mgrey);margin-top:4px;margin-bottom:20px}
+.pricing-card.featured .pricing-title{color:#fff}
+.pricing-card.featured .pricing-sub{color:rgba(255,255,255,0.55)}
+.pricing-card.featured .pricing-price{color:var(--teal)}
+.pricing-card.featured .pricing-price-dur{color:rgba(255,255,255,0.45)}
+.pricing-list{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.pricing-list li{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--dgrey)}
+.pricing-card.featured .pricing-list li{color:rgba(255,255,255,0.75)}
+.pricing-check{width:16px;height:16px;background:rgba(0,107,117,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--teal);flex-shrink:0;margin-top:2px}
+.pricing-card.featured .pricing-check{background:rgba(0,107,117,0.3);color:var(--teal)}
+.pricing-btn{width:100%;padding:11px;border-radius:7px;font-size:13px;font-weight:600;cursor:pointer;transition:var(--transition);font-family:var(--font);border:2px solid var(--teal);color:var(--teal);background:transparent}
+.pricing-btn:hover{background:var(--teal);color:#fff}
+.pricing-card.featured .pricing-btn{background:var(--teal);color:#fff;border-color:var(--teal)}
+.pricing-card.featured .pricing-btn:hover{background:#005a63}
+.day-rates{background:linear-gradient(135deg,#EDF2F7 0%,#E8F0FE 100%);border-radius:var(--radius);padding:28px;border:1px solid #dde6f0;box-shadow:var(--shadow-card)}
+.day-rates-title{font-size:15px;font-weight:700;color:var(--nav);margin-bottom:16px}
+.rates-table{width:100%;border-collapse:collapse}
+.rates-table th{text-align:left;font-size:11px;font-weight:700;color:var(--mgrey);text-transform:uppercase;letter-spacing:1.5px;padding:8px 12px;border-bottom:2px solid #e2e8f0}
+[dir="rtl"] .rates-table th{text-align:right}
+.rates-table td{padding:10px 12px;font-size:13px;border-bottom:1px solid #f0f0f0}
+.rates-table tr:last-child td{border-bottom:none}
+.rates-table .rate-grade{font-weight:700;color:var(--nav);width:40px}
+.rates-table .rate-role{color:var(--dgrey)}
+.rates-table .rate-egp{font-weight:700;color:var(--teal)}
+.rates-table .rate-usd{color:var(--mgrey);font-size:12px}
+
+/* ═══════════════════════════════════════ TEAM ══════════════ */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
+.team-card{background:linear-gradient(180deg,#fff 0%,rgba(237,242,247,0.4) 100%);border:1px solid #dde6f0;border-top:4px solid var(--tc,var(--teal));border-radius:var(--radius);overflow:hidden;transition:var(--transition);text-align:center;box-shadow:var(--shadow-card)}
+.team-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.team-avatar{height:100px;display:flex;align-items:center;justify-content:center;font-size:34px;transition:transform .4s ease}
+.team-card:hover .team-avatar{transform:scale(1.08)}
+.team-info{padding:16px 18px 22px}
+.team-role{font-size:14px;font-weight:700;color:var(--nav);margin-bottom:6px;line-height:1.3}
+.team-focus{font-size:11.5px;color:var(--mgrey);line-height:1.5;margin-bottom:12px}
+.team-quals{display:flex;flex-direction:column;gap:4px}
+.team-qual{font-size:11px;background:linear-gradient(90deg,rgba(0,107,117,0.06),rgba(237,242,247,0.8));color:var(--dgrey);padding:4px 10px 4px 16px;border-radius:4px;text-align:left;position:relative;border:1px solid rgba(0,107,117,0.08)}
+.team-qual::before{content:'';position:absolute;left:6px;top:50%;transform:translateY(-50%);width:5px;height:5px;border-radius:50%;background:var(--tc,var(--teal))}
+[dir="rtl"] .team-qual{text-align:right;padding-left:10px;padding-right:16px}
+[dir="rtl"] .team-qual::before{left:auto;right:6px}
+
+/* ═══════════════════════════════════════ CONTACT ═══════════ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.contact-info{}
+.contact-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(0,107,117,0.1)}
+.contact-item:last-child{border-bottom:none}
+.contact-icon{width:44px;height:44px;background:linear-gradient(135deg,rgba(0,107,117,0.12),rgba(46,134,171,0.08));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;border:1px solid rgba(0,107,117,0.15)}
+.contact-label{font-size:12px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.contact-value{font-size:14px;color:var(--nav);font-weight:500;line-height:1.6}
+.contact-form{background:linear-gradient(160deg,#EDF2F7 0%,#E8F0FE 100%);border-radius:16px;padding:32px;border:1px solid #dde6f0;box-shadow:var(--shadow-card)}
+.form-title{font-size:18px;font-weight:700;color:var(--nav);margin-bottom:22px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.form-label{font-size:12px;font-weight:600;color:var(--nav);text-transform:uppercase;letter-spacing:1px}
+.form-input,.form-select,.form-textarea{background:#fff;border:1px solid #e2e8f0;border-radius:7px;padding:11px 14px;font-size:14px;font-family:var(--font);color:var(--nav);transition:var(--transition);outline:none;width:100%}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,107,117,0.1)}
+.form-textarea{resize:vertical;min-height:100px}
+.form-submit{background:var(--teal);color:#fff;border:none;padding:13px 28px;border-radius:7px;font-size:14px;font-weight:700;cursor:pointer;transition:var(--transition);font-family:var(--font);width:100%}
+.form-submit:hover{background:#005a63;transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,107,117,0.3)}
+.form-success{display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;padding:14px;font-size:14px;color:#2e7d32;text-align:center;margin-top:14px}
+
+/* ═══════════════════════════════════════ FOOTER ════════════ */
+footer{background:var(--nav);color:rgba(255,255,255,0.65);padding-top:60px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-brand{}
+.footer-logo-line1{font-size:18px;font-weight:800;color:#fff;margin-bottom:2px}
+.footer-logo-line2{font-size:12px;color:var(--teal);font-family:var(--font-ar);margin-bottom:14px}
+.footer-desc{font-size:13px;line-height:1.8;max-width:280px;margin-bottom:20px}
+.footer-badges{display:flex;gap:7px;flex-wrap:wrap}
+.footer-badge{font-size:10px;font-weight:600;border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:3px 10px;color:rgba(255,255,255,0.5)}
+.footer-col-title{font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.5);transition:var(--transition)}
+.footer-links a:hover{color:var(--teal)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding:18px 0;font-size:12px;color:rgba(255,255,255,0.35);flex-wrap:wrap;gap:10px}
+.footer-bottom-links{display:flex;gap:18px}
+.footer-bottom-links a{color:rgba(255,255,255,0.35);transition:var(--transition)}
+.footer-bottom-links a:hover{color:rgba(255,255,255,0.65)}
+
+/* ═══════════════════════════════════════ RESPONSIVE ════════ */
+@media(max-width:1024px){
+  .hero-content,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-card-grid{display:none}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .hero-stats{grid-template-columns:repeat(3,1fr)}
+  .services-grid,.carbon-grid,.reg-grid,.pricing-grid{grid-template-columns:1fr}
+  .method-grid{grid-template-columns:1fr}
+  .pricing-card.featured{transform:none}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .about-float{display:none}
+}
+@media(max-width:480px){
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .iesg-pillars{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .about-values{grid-template-columns:1fr}
+}
+
+/* ═══════════════════════════════════════ RTL OVERRIDES ═════ */
+[dir="rtl"]{font-family:var(--font-ar)}
+[dir="rtl"] .nav-inner{flex-direction:row-reverse}
+[dir="rtl"] .hero-btns{flex-direction:row-reverse}
+[dir="rtl"] .footer-grid{direction:rtl}
+[dir="rtl"] .footer-desc{direction:rtl}
+[dir="rtl"] .rates-table{direction:rtl}
+[dir="rtl"] .contact-grid{direction:rtl}
+[dir="rtl"] .form-row{direction:rtl}
+
+/* ═══════════════════════════════════════ ANIMATIONS ════════ */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ═══════════════════════════════════════ STAGGERED REVEAL ══ */
+.services-grid .fade-in:nth-child(1),.reg-grid .fade-in:nth-child(1),.team-grid .fade-in:nth-child(1),.pricing-grid .fade-in:nth-child(1),.carbon-grid .fade-in:nth-child(1),.cases-grid .fade-in:nth-child(1),.method-steps .fade-in:nth-child(1){transition-delay:.05s}
+.services-grid .fade-in:nth-child(2),.reg-grid .fade-in:nth-child(2),.team-grid .fade-in:nth-child(2),.pricing-grid .fade-in:nth-child(2),.carbon-grid .fade-in:nth-child(2),.cases-grid .fade-in:nth-child(2),.method-steps .fade-in:nth-child(2){transition-delay:.12s}
+.services-grid .fade-in:nth-child(3),.reg-grid .fade-in:nth-child(3),.team-grid .fade-in:nth-child(3),.pricing-grid .fade-in:nth-child(3),.carbon-grid .fade-in:nth-child(3),.cases-grid .fade-in:nth-child(3),.method-steps .fade-in:nth-child(3){transition-delay:.19s}
+.services-grid .fade-in:nth-child(4),.reg-grid .fade-in:nth-child(4),.team-grid .fade-in:nth-child(4),.pricing-grid .fade-in:nth-child(4),.cases-grid .fade-in:nth-child(4),.method-steps .fade-in:nth-child(4){transition-delay:.26s}
+.services-grid .fade-in:nth-child(5),.team-grid .fade-in:nth-child(5),.cases-grid .fade-in:nth-child(5),.method-steps .fade-in:nth-child(5){transition-delay:.33s}
+.services-grid .fade-in:nth-child(6),.cases-grid .fade-in:nth-child(6),.method-steps .fade-in:nth-child(6){transition-delay:.4s}
+
+/* ═══════════════════════════════════════ EXPANDABLE CARDS ══ */
+.expand-toggle{margin-top:14px;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--c,var(--teal));cursor:pointer;user-select:none;background:none;border:none;font-family:var(--font);padding:0;transition:gap .25s ease}
+.expand-toggle:hover{gap:10px}
+.expand-toggle .chev{display:inline-block;transition:transform .35s ease;font-size:10px}
+.expandable.open .expand-toggle .chev{transform:rotate(180deg)}
+.expandable.open .deepdive-chev{transform:rotate(180deg)}
+.expand-content{max-height:0;overflow:hidden;opacity:0;transition:max-height .5s ease,opacity .4s ease,margin-top .4s ease}
+.expandable.open .expand-content{max-height:900px;opacity:1;margin-top:14px}
+.expand-detail-row{font-size:12.5px;color:var(--dgrey);line-height:1.7;margin-bottom:6px}
+.expand-detail-row strong{color:var(--nav)}
+.expand-case-ref{background:var(--lgrey);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--dgrey);line-height:1.6;margin-top:8px;border-left:3px solid var(--c,var(--teal))}
+[dir="rtl"] .expand-case-ref{border-left:none;border-right:3px solid var(--c,var(--teal))}
+
+/* card / icon hover animation */
+.service-icon-wrap,.hero-card-icon{transition:transform .4s ease}
+.service-card:hover .service-icon-wrap{transform:scale(1.15) rotate(-6deg);animation-play-state:paused}
+.hero-card:hover .hero-card-icon{transform:scale(1.15) rotate(6deg)}
+.carbon-scope{transition:var(--transition)}
+.carbon-scope:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.carbon-scope:hover .scope-num{transform:scale(1.06)}
+.scope-num{transition:transform .3s ease;display:inline-block}
+
+/* ═══════════════════════════════════════ CASE STUDIES ══════ */
+.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.case-card{background:linear-gradient(160deg,#fff 0%,rgba(240,245,255,0.5) 100%);border:1px solid #dde6f0;border-radius:var(--radius);padding:26px;transition:var(--transition);box-shadow:var(--shadow-card)}
+.case-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
+.case-badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:14px;color:#fff;background:var(--c,var(--teal))}
+.case-title{font-size:16.5px;font-weight:700;color:var(--nav);margin-bottom:8px;line-height:1.35}
+.case-challenge{font-size:13px;color:var(--mgrey);line-height:1.7;margin-bottom:4px}
+.case-challenge strong{color:var(--dgrey)}
+.case-meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid #f0f4f8}
+.case-meta-lbl{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--c,var(--teal))}
+.case-meta-val{font-size:13px;font-weight:700;color:var(--nav);margin-top:2px}
+.case-steps{display:flex;flex-direction:column;gap:8px;margin-bottom:4px}
+.case-step{display:flex;gap:8px;font-size:12.5px;color:var(--dgrey);line-height:1.6}
+.case-step b{color:var(--c,var(--teal));flex-shrink:0}
+.case-disclaimer{font-size:11px;color:var(--mgrey);font-style:italic;margin-top:24px;text-align:center}
+
+/* ═══════════════════════════════════════ DEEP-DIVE ACCORDION ═ */
+.deepdive-list{display:flex;flex-direction:column;gap:12px;margin-top:40px}
+.deepdive-item{background:linear-gradient(160deg,#fff 0%,rgba(237,242,247,0.5) 100%);border:1px solid #dde6f0;border-radius:10px;overflow:hidden;transition:var(--transition);box-shadow:var(--shadow-card)}
+.deepdive-item.open{border-color:var(--teal)}
+.deepdive-head{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;cursor:pointer}
+.deepdive-q{font-size:14.5px;font-weight:700;color:var(--nav);line-height:1.4}
+.deepdive-tag{font-size:10.5px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px}
+.deepdive-chev{font-size:12px;color:var(--teal);transition:transform .35s ease;flex-shrink:0}
+.deepdive-body-inner{padding:0 22px 20px;font-size:13.5px;color:var(--dgrey);line-height:1.8;border-top:1px solid #f0f4f8;padding-top:16px;margin:0 22px}
+.deepdive-body-inner strong{color:var(--nav)}
+.freshness-flag{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;background:rgba(0,107,60,0.1);color:var(--green);padding:3px 10px;border-radius:10px;margin-top:10px}
+
+@media(max-width:768px){.cases-grid{grid-template-columns:1fr}}
+
+/* ═══════════════════════════════════════ COOKIE / TOAST ════ */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--nav);color:#fff;padding:14px 20px;border-radius:10px;font-size:13px;box-shadow:var(--shadow-lg);z-index:9999;display:none;align-items:center;gap:10px;max-width:320px;border-left:4px solid var(--teal)}
+[dir="rtl"] .toast{right:auto;left:24px;border-left:none;border-right:4px solid var(--teal)}
+.toast.show{display:flex;animation:slideUp .4s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAVBAR ═══════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">I</div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-en">Integrys Consulting</span>
+          <span class="nav-logo-ar">إنتيجريس للاستشارات</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-en="About" data-ar="من نحن">About</a>
+        <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+        <a href="#methodology" data-en="Methodology" data-ar="المنهجية">Methodology</a>
+        <a href="#regulatory" data-en="Regulatory" data-ar="الإطار التنظيمي">Regulatory</a>
+        <a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a>
+        <a href="#team" data-en="Team" data-ar="الفريق">Team</a>
+        <a href="#cases" data-en="Case Studies" data-ar="دراسات الحالة">Case Studies</a>
+        <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-btn" id="langToggle" onclick="toggleLang()">
+          <span class="lang-icon">🌐</span>
+          <span id="langLabel">العربية</span>
+        </button>
+        <button class="nav-cta" id="navCta" onclick="scrollTo('#contact')" data-en="Get Started" data-ar="ابدأ الآن">Get Started</button>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" data-en="About" data-ar="من نحن" onclick="toggleMenu()">About</a>
+    <a href="#services" data-en="Services" data-ar="خدماتنا" onclick="toggleMenu()">Services</a>
+    <a href="#methodology" data-en="Methodology" data-ar="المنهجية" onclick="toggleMenu()">Methodology</a>
+    <a href="#regulatory" data-en="Regulatory" data-ar="الإطار التنظيمي" onclick="toggleMenu()">Regulatory</a>
+    <a href="#pricing" data-en="Pricing" data-ar="الأسعار" onclick="toggleMenu()">Pricing</a>
+    <a href="#team" data-en="Team" data-ar="الفريق" onclick="toggleMenu()">Team</a>
+    <a href="#cases" data-en="Case Studies" data-ar="دراسات الحالة" onclick="toggleMenu()">Case Studies</a>
+    <a href="#contact" data-en="Contact" data-ar="اتصل بنا" onclick="toggleMenu()">Contact</a>
+    <div class="mobile-lang">
+      <button class="lang-btn" onclick="toggleLang();toggleMenu()">
+        <span class="lang-icon">🌐</span>
+        <span id="mobileLangLabel">العربية</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-circle1"></div>
+    <div class="hero-circle2"></div>
+    <div class="hero-circle3"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-shimmer"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span data-en="Egypt's Leading ESG & GRC Consultancy" data-ar="الشركة الرائدة في استشارات ESG والحوكمة بمصر">Egypt's Leading ESG &amp; GRC Consultancy</span>
+        </div>
+        <h1 class="hero-title" data-en="ESG · Carbon · GRC · AML" data-ar="استدامة · كربون · حوكمة · امتثال">ESG · Carbon<br>GRC · AML</h1>
+        <p class="hero-title-ar" id="heroSubtitleAr">إنتيجريس للاستشارات</p>
+        <p class="hero-subtitle" data-en="Egypt's specialist consulting firm delivering integrated ESG strategy, carbon footprint calculation, governance, risk &amp; compliance, and AML advisory services — bilingual Arabic-English delivery." data-ar="شركة استشارات متخصصة تقدم خدمات متكاملة في استراتيجية ESG، وحساب بصمة الكربون، والحوكمة، وإدارة المخاطر والامتثال، والاستشارات في مكافحة غسل الأموال — بالعربية والإنجليزية.">Egypt's specialist consulting firm delivering integrated ESG strategy, carbon footprint calculation, governance, risk &amp; compliance, and AML advisory services — bilingual Arabic-English delivery.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})" data-en="Start Your ESG Journey" data-ar="ابدأ رحلتك مع ESG">Start Your ESG Journey</button>
+          <button class="btn-outline" onclick="document.querySelector('#services').scrollIntoView({behavior:'smooth'})" data-en="Explore Services" data-ar="استعرض خدماتنا">Explore Services</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-val">6</div>
+            <div class="hero-stat-lbl" data-en="Practice Areas" data-ar="مجالات الممارسة">Practice Areas</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val">GRI</div>
+            <div class="hero-stat-lbl" data-en="Standards Aligned" data-ar="متوافق مع معايير GRI">Standards Aligned</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val">FRA</div>
+            <div class="hero-stat-lbl" data-en="Regulatory Expertise" data-ar="خبرة تنظيمية">Regulatory Expertise</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card-grid">
+          <div class="hero-card">
+            <div class="hero-card-icon" style="background:rgba(0,107,117,0.15)">🌿</div>
+            <div class="hero-card-title" data-en="ESG Advisory" data-ar="استشارات ESG">ESG Advisory</div>
+            <div class="hero-card-sub" data-en="GRI · IFRS S1/S2 · EGX Template" data-ar="GRI · IFRS S1/S2 · نموذج البورصة">GRI · IFRS S1/S2 · EGX Template</div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon" style="background:rgba(192,0,0,0.1)">♻️</div>
+            <div class="hero-card-title" data-en="Carbon Footprint" data-ar="بصمة الكربون">Carbon Footprint</div>
+            <div class="hero-card-sub" data-en="Scope 1, 2 &amp; 3 · ISO 14064" data-ar="النطاق 1 و2 و3 · ISO 14064">Scope 1, 2 &amp; 3 · ISO 14064</div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon" style="background:rgba(46,134,171,0.12)">🏛️</div>
+            <div class="hero-card-title" data-en="GRC Framework" data-ar="إطار الحوكمة والمخاطر">GRC Framework</div>
+            <div class="hero-card-sub" data-en="ERM · ISO 37001 · Policies" data-ar="إدارة المخاطر · ISO 37001 · السياسات">ERM · ISO 37001 · Policies</div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon" style="background:rgba(192,110,0,0.1)">🔍</div>
+            <div class="hero-card-title" data-en="AML Advisory" data-ar="استشارات مكافحة غسل الأموال">AML Advisory</div>
+            <div class="hero-card-sub" data-en="FATF · FRA · EMLCU · CBE" data-ar="FATF · هيئة الرقابة المالية · وحدة مكافحة غسل الأموال">FATF · FRA · EMLCU · CBE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-en="SCROLL" data-ar="للأسفل">SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CREDENTIAL STRIP ════════════════════ -->
+<div class="cred-strip">
+  <div class="container">
+    <div class="cred-inner">
+      <div class="cred-item"><span class="cred-dot"></span><span data-en="GRI Standards Aligned" data-ar="متوافق مع معايير GRI">GRI Standards Aligned</span></div>
+      <span class="cred-sep">·</span>
+      <div class="cred-item"><span class="cred-dot"></span><span data-en="TCFD Ready" data-ar="جاهز لـ TCFD">TCFD Ready</span></div>
+      <span class="cred-sep">·</span>
+      <div class="cred-item"><span class="cred-dot"></span><span data-en="ISO 37001 Certified" data-ar="معتمد ISO 37001">ISO 37001 Certified</span></div>
+      <span class="cred-sep">·</span>
+      <div class="cred-item"><span class="cred-dot"></span><span data-en="FATF / EMLCU Compliant" data-ar="متوافق مع FATF ووحدة مكافحة غسيل الأموال">FATF / EMLCU Compliant</span></div>
+      <span class="cred-sep">·</span>
+      <div class="cred-item"><span class="cred-dot"></span><span data-en="FRA / EGX Expertise" data-ar="خبرة هيئة الرقابة المالية والبورصة">FRA / EGX Expertise</span></div>
+      <span class="cred-sep">·</span>
+      <div class="cred-item"><span class="cred-dot"></span><span data-en="IFRS S1 / S2" data-ar="IFRS S1 / S2">IFRS S1 / S2</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ ABOUT ════════════════════════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-block fade-in">
+        <div class="about-main-card">
+          <div class="about-main-title">Integrys Consulting</div>
+          <div class="about-main-ar">إنتيجريس للاستشارات</div>
+          <div class="about-main-line"></div>
+          <p class="about-main-body" data-en="Founded in Cairo, Integrys is Egypt's specialist advisory firm for ESG, sustainability, carbon footprint calculation, governance, risk & compliance, and AML advisory. We serve listed companies, financial institutions, and industrial groups across Egypt and the GCC — delivering bilingual, data-driven, regulatory-aligned solutions." data-ar="تأسست في القاهرة، وإنتيجريس هي شركة الاستشارات المتخصصة في مصر في مجالات ESG والاستدامة وحساب بصمة الكربون والحوكمة وإدارة المخاطر والامتثال ومكافحة غسل الأموال. نخدم الشركات المدرجة في البورصة والمؤسسات المالية والمجموعات الصناعية في مصر ودول الخليج.">Founded in Cairo, Integrys is Egypt's specialist advisory firm for ESG, sustainability, carbon footprint calculation, governance, risk &amp; compliance, and AML advisory. We serve listed companies, financial institutions, and industrial groups across Egypt and the GCC — delivering bilingual, data-driven, regulatory-aligned solutions.</p>
+        </div>
+        <div class="about-float">
+          <div class="about-float-val">I-ESG</div>
+          <div class="about-float-lbl" data-en="Proprietary scoring model" data-ar="نموذج التقييم الخاص بنا">Proprietary scoring model</div>
+        </div>
+      </div>
+      <div class="about-right fade-in">
+        <span class="section-label" data-en="WHO WE ARE" data-ar="من نحن">WHO WE ARE</span>
+        <h2 class="section-title" data-en="Egypt's <span>Integrated</span> ESG & Compliance Partner" data-ar="شريككم المتكامل في <span>ESG</span> والامتثال بمصر">Egypt's <span>Integrated</span> ESG &amp; Compliance Partner</h2>
+        <p class="section-sub" style="margin-bottom:28px" data-en="We combine deep regulatory expertise with practical, technology-enabled delivery across ESG, carbon, GRC, and AML — all under one roof, in Arabic and English." data-ar="نجمع بين الخبرة التنظيمية العميقة والتقديم العملي الممكّن بالتكنولوجيا في مجالات ESG والكربون والحوكمة ومكافحة غسل الأموال — تحت سقف واحد، بالعربية والإنجليزية.">We combine deep regulatory expertise with practical, technology-enabled delivery across ESG, carbon, GRC, and AML — all under one roof, in Arabic and English.</p>
+        <div class="about-vision-card">
+          <div class="about-vision-label" data-en="OUR VISION" data-ar="رؤيتنا">OUR VISION</div>
+          <div class="about-vision-text" data-en="To be the leading ESG and compliance advisory firm in Egypt and the GCC — enabling organisations to build sustainable, well-governed, and compliant businesses." data-ar="أن نكون الشركة الاستشارية الرائدة في ESG والامتثال في مصر ودول الخليج — تمكين المنظمات من بناء أعمال مستدامة ومحكومة وملتزمة.">To be the leading ESG and compliance advisory firm in Egypt and the GCC — enabling organisations to build sustainable, well-governed, and compliant businesses.</div>
+        </div>
+        <div class="about-values">
+          <div class="value-item"><span class="value-icon">🎯</span><span class="value-text" data-en="Integrity" data-ar="النزاهة">Integrity</span></div>
+          <div class="value-item"><span class="value-icon">📊</span><span class="value-text" data-en="Data-Driven" data-ar="مبني على البيانات">Data-Driven</span></div>
+          <div class="value-item"><span class="value-icon">🌍</span><span class="value-text" data-en="Impact-Focused" data-ar="موجّه نحو الأثر">Impact-Focused</span></div>
+          <div class="value-item"><span class="value-icon">🤝</span><span class="value-text" data-en="Client-First" data-ar="العميل أولاً">Client-First</span></div>
+          <div class="value-item"><span class="value-icon">⚖️</span><span class="value-text" data-en="Regulatory Depth" data-ar="العمق التنظيمي">Regulatory Depth</span></div>
+          <div class="value-item"><span class="value-icon">💡</span><span class="value-text" data-en="Innovation" data-ar="الابتكار">Innovation</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SERVICES ═════════════════════════════  -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-header section-center fade-in">
+      <span class="section-label" data-en="WHAT WE DO" data-ar="ماذا نقدم">WHAT WE DO</span>
+      <h2 class="section-title" data-en="Six <span>Integrated</span> Practice Areas" data-ar="ستة <span>مجالات ممارسة</span> متكاملة">Six <span>Integrated</span> Practice Areas</h2>
+      <p class="section-sub" data-en="End-to-end ESG, carbon, governance and compliance services — from strategy to report to digital dashboard." data-ar="خدمات ESG والكربون والحوكمة والامتثال الشاملة — من الاستراتيجية إلى التقرير إلى لوحة البيانات الرقمية.">End-to-end ESG, carbon, governance and compliance services — from strategy to report to digital dashboard.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card fade-in expandable" style="--c:#006B75;--c2:#2E86AB">
+        <div class="service-num"><span class="service-num-badge">01</span><span class="service-num-label">ESG &amp; SUSTAINABILITY</span></div>
+        <div class="service-icon-wrap" style="background:linear-gradient(135deg,rgba(0,107,117,0.18),rgba(46,134,171,0.06))">🌿</div>
+        <h3 class="service-title" data-en="ESG & Sustainability Advisory" data-ar="استشارات ESG والاستدامة">ESG &amp; Sustainability Advisory</h3>
+        <p class="service-body" data-en="Comprehensive ESG strategy development, stakeholder engagement, and GRI/IFRS S1-S2 framework alignment for listed and private sector organisations." data-ar="تطوير شامل لاستراتيجية ESG ومشاركة أصحاب المصلحة والمواءمة مع أطر GRI وIFRS S1-S2 للشركات المدرجة والقطاع الخاص.">Comprehensive ESG strategy development, stakeholder engagement, and GRI/IFRS S1-S2 framework alignment for listed and private sector organisations.</p>
+        <ul class="service-list">
+          <li data-en="Materiality assessment &amp; ESG roadmap" data-ar="تقييم الأهمية النسبية وخارطة طريق ESG">Materiality assessment &amp; ESG roadmap</li>
+          <li data-en="Stakeholder engagement &amp; mapping" data-ar="مشاركة أصحاب المصلحة ورسم الخرائط">Stakeholder engagement &amp; mapping</li>
+          <li data-en="GRI / IFRS S1-S2 strategy framework" data-ar="إطار استراتيجي GRI / IFRS S1-S2">GRI / IFRS S1-S2 strategy framework</li>
+          <li data-en="ESG policy development" data-ar="تطوير سياسات ESG">ESG policy development</li>
+          <li data-en="Board ESG governance training" data-ar="تدريب مجلس الإدارة على حوكمة ESG">Board ESG governance training</li>
+        </ul>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="More Details" data-ar="تفاصيل أكثر">More Details</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="expand-detail-row"><strong data-en="Typical Duration:" data-ar="المدة المعتادة:">Typical Duration:</strong> <span data-en="8–14 weeks" data-ar="8–14 أسبوعاً">8–14 weeks</span></div>
+          <div class="expand-detail-row"><strong data-en="Key Deliverable:" data-ar="المخرج الرئيسي:">Key Deliverable:</strong> <span data-en="Board-approved ESG policy suite, materiality matrix and 3-year roadmap" data-ar="حزمة سياسات ESG معتمدة من مجلس الإدارة، مصفوفة الأهمية النسبية، وخارطة طريق 3 سنوات">Board-approved ESG policy suite, materiality matrix and 3-year roadmap</span></div>
+          <div class="expand-case-ref" data-en="Real case: an EGX-listed food & beverage manufacturer had never run a materiality assessment. We completed the 6-step process with 40+ stakeholder interviews, identified 12 material topics, and delivered a board-approved 3-year ESG roadmap in 10 weeks — unlocking eligibility for the EGX ESG Index." data-ar="حالة واقعية: شركة مصنّعة للأغذية والمشروبات مدرجة في البورصة المصرية لم تُجرِ تقييماً للأهمية النسبية من قبل. أنجزنا العملية السداسية الخطوات بأكثر من 40 مقابلة مع أصحاب المصلحة، وحددنا 12 موضوعاً جوهرياً، وسلّمنا خارطة طريق ESG معتمدة من مجلس الإدارة لمدة 3 سنوات خلال 10 أسابيع — ما أهّل الشركة للانضمام إلى مؤشر ESG بالبورصة المصرية.">Real case: an EGX-listed food &amp; beverage manufacturer had never run a materiality assessment. We completed the 6-step process with 40+ stakeholder interviews, identified 12 material topics, and delivered a board-approved 3-year ESG roadmap in 10 weeks — unlocking eligibility for the EGX ESG Index.</div>
+        </div>
+      </div>
+
+      <div class="service-card fade-in expandable" style="--c:#C00000;--c2:#ff6f59">
+        <div class="service-num"><span class="service-num-badge">02</span><span class="service-num-label">CARBON &amp; CLIMATE</span></div>
+        <div class="service-icon-wrap" style="background:linear-gradient(135deg,rgba(192,0,0,0.16),rgba(255,111,89,0.06))">♻️</div>
+        <h3 class="service-title" data-en="Carbon Footprint & Climate Advisory" data-ar="بصمة الكربون واستشارات المناخ">Carbon Footprint &amp; Climate Advisory</h3>
+        <p class="service-body" data-en="Full Scope 1, 2 &amp; 3 GHG inventories using DEFRA 2023 factors and the Egyptian national grid emission factor. TCFD and SBTi alignment." data-ar="جرد كامل لانبعاثات غازات الاحتباس الحراري للنطاقين 1 و2 و3 باستخدام عوامل DEFRA 2023 ومعامل انبعاث الشبكة الوطنية المصرية. مواءمة TCFD وSBTi.">Full Scope 1, 2 &amp; 3 GHG inventories using DEFRA 2023 factors and the Egyptian national grid emission factor. TCFD and SBTi alignment.</p>
+        <ul class="service-list">
+          <li data-en="Scope 1, 2 &amp; 3 GHG inventory" data-ar="جرد غازات الاحتباس الحراري النطاقين 1 و2 و3">Scope 1, 2 &amp; 3 GHG inventory</li>
+          <li data-en="TCFD climate risk assessment" data-ar="تقييم مخاطر المناخ وفق TCFD">TCFD climate risk assessment</li>
+          <li data-en="Science-based targets (SBTi) alignment" data-ar="الأهداف القائمة على العلم (SBTi)">Science-based targets (SBTi) alignment</li>
+          <li data-en="Net-zero pathway design" data-ar="تصميم مسار صافي الصفر">Net-zero pathway design</li>
+          <li data-en="Carbon credits advisory" data-ar="استشارات أرصدة الكربون">Carbon credits advisory</li>
+        </ul>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="More Details" data-ar="تفاصيل أكثر">More Details</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="expand-detail-row"><strong data-en="Typical Duration:" data-ar="المدة المعتادة:">Typical Duration:</strong> <span data-en="6–10 weeks per reporting cycle" data-ar="6–10 أسابيع لكل دورة إبلاغ">6–10 weeks per reporting cycle</span></div>
+          <div class="expand-detail-row"><strong data-en="Key Deliverable:" data-ar="المخرج الرئيسي:">Key Deliverable:</strong> <span data-en="Verified Scope 1–3 GHG inventory (tCO₂e) and a net-zero pathway" data-ar="جرد غازات دفيئة موثّق للنطاقات 1–3 (tCO₂e) ومسار لصافي الصفر">Verified Scope 1–3 GHG inventory (tCO₂e) and a net-zero pathway</span></div>
+          <div class="expand-case-ref" data-en="Real case: a Cairo-based real estate developer had no carbon baseline across its portfolio. Using DEFRA 2023 factors and Egypt's national grid EF (~0.495 kgCO₂e/kWh), we calculated a 4,200 tCO₂e baseline across three sites and designed a net-zero pathway targeting a 42% reduction by 2030." data-ar="حالة واقعية: مطوّر عقاري بالقاهرة لم يكن لديه خط أساس لانبعاثات الكربون على مستوى محفظته. باستخدام معاملات DEFRA 2023 ومعامل انبعاث الشبكة المصرية (~0.495 كجم CO₂e/كيلوواط ساعة)، احتسبنا خط أساس قدره 4,200 طن CO₂e عبر ثلاثة مواقع، وصممنا مساراً لصافي الصفر يستهدف خفضاً بنسبة 42% بحلول 2030.">Real case: a Cairo-based real estate developer had no carbon baseline across its portfolio. Using DEFRA 2023 factors and Egypt's national grid EF (~0.495 kgCO₂e/kWh), we calculated a 4,200 tCO₂e baseline across three sites and designed a net-zero pathway targeting a 42% reduction by 2030.</div>
+        </div>
+      </div>
+
+      <div class="service-card fade-in expandable" style="--c:#2E86AB;--c2:#006B75">
+        <div class="service-num"><span class="service-num-badge">03</span><span class="service-num-label">ESG REPORTING</span></div>
+        <div class="service-icon-wrap" style="background:linear-gradient(135deg,rgba(46,134,171,0.18),rgba(0,107,117,0.06))">📋</div>
+        <h3 class="service-title" data-en="ESG Reporting & Disclosure" data-ar="تقارير الإفصاح عن ESG">ESG Reporting &amp; Disclosure</h3>
+        <p class="service-body" data-en="Full GRI Standards reports, IFRS S1/S2 disclosures, and EGX ESG template completion — in Arabic and English, verification-ready." data-ar="تقارير GRI الكاملة وإفصاحات IFRS S1/S2 وإكمال نموذج بورصة مصر — بالعربية والإنجليزية، جاهزة للتحقق.">Full GRI Standards reports, IFRS S1/S2 disclosures, and EGX ESG template completion — in Arabic and English, verification-ready.</p>
+        <ul class="service-list">
+          <li data-en="GRI Standards full sustainability report" data-ar="تقرير الاستدامة الكامل وفق معايير GRI">GRI Standards full sustainability report</li>
+          <li data-en="IFRS S1/S2 climate disclosure" data-ar="إفصاح المناخ وفق IFRS S1/S2">IFRS S1/S2 climate disclosure</li>
+          <li data-en="EGX ESG template submission" data-ar="تقديم نموذج ESG للبورصة المصرية">EGX ESG template submission</li>
+          <li data-en="Integrated annual report support" data-ar="دعم التقرير السنوي المتكامل">Integrated annual report support</li>
+          <li data-en="Assurance readiness review" data-ar="مراجعة جاهزية التوكيد">Assurance readiness review</li>
+        </ul>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="More Details" data-ar="تفاصيل أكثر">More Details</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="expand-detail-row"><strong data-en="Typical Duration:" data-ar="المدة المعتادة:">Typical Duration:</strong> <span data-en="10–16 weeks" data-ar="10–16 أسبوعاً">10–16 weeks</span></div>
+          <div class="expand-detail-row"><strong data-en="Key Deliverable:" data-ar="المخرج الرئيسي:">Key Deliverable:</strong> <span data-en="Bilingual GRI-aligned report, EGX ESG template, and IFRS S1/S2 disclosure pack" data-ar="تقرير ثنائي اللغة متوافق مع GRI، نموذج ESG للبورصة المصرية، وحزمة إفصاح IFRS S1/S2">Bilingual GRI-aligned report, EGX ESG template, and IFRS S1/S2 disclosure pack</span></div>
+          <div class="expand-case-ref" data-en="Real case: an FRA-regulated NBFI facing its first mandatory disclosure under FRA Resolutions 107/108 of 2021 needed a compliant report within 8 weeks before its annual filing deadline. We delivered a bilingual GRI + TCFD report on time, fully aligned with the FRA template." data-ar="حالة واقعية: مؤسسة مالية غير مصرفية خاضعة لرقابة الهيئة العامة للرقابة المالية واجهت أول التزام إفصاح إلزامي بموجب قراري الهيئة رقم 107 و108 لسنة 2021، واحتاجت تقريراً متوافقاً خلال 8 أسابيع قبل موعد التقديم السنوي. سلّمنا تقريراً ثنائي اللغة وفق GRI وTCFD في الموعد المحدد ومتوافقاً بالكامل مع نموذج الهيئة.">Real case: an FRA-regulated NBFI facing its first mandatory disclosure under FRA Resolutions 107/108 of 2021 needed a compliant report within 8 weeks before its annual filing deadline. We delivered a bilingual GRI + TCFD report on time, fully aligned with the FRA template.</div>
+        </div>
+      </div>
+
+      <div class="service-card fade-in expandable" style="--c:#0D2B4E;--c2:#2E86AB">
+        <div class="service-num"><span class="service-num-badge">04</span><span class="service-num-label">GRC</span></div>
+        <div class="service-icon-wrap" style="background:linear-gradient(135deg,rgba(13,43,78,0.16),rgba(46,134,171,0.06))">🏛️</div>
+        <h3 class="service-title" data-en="Governance, Risk & Compliance" data-ar="الحوكمة والمخاطر والامتثال">Governance, Risk &amp; Compliance</h3>
+        <p class="service-body" data-en="Enterprise risk management, board effectiveness reviews, policy suite development, and ISO 37001 anti-bribery programme implementation." data-ar="إدارة المخاطر المؤسسية ومراجعات فاعلية مجلس الإدارة وتطوير حزمة السياسات وتطبيق برنامج مكافحة الرشوة ISO 37001.">Enterprise risk management, board effectiveness reviews, policy suite development, and ISO 37001 anti-bribery programme implementation.</p>
+        <ul class="service-list">
+          <li data-en="ERM framework design &amp; implementation" data-ar="تصميم وتنفيذ إطار إدارة المخاطر المؤسسية">ERM framework design &amp; implementation</li>
+          <li data-en="Board effectiveness review" data-ar="مراجعة فاعلية مجلس الإدارة">Board effectiveness review</li>
+          <li data-en="Policy suite (30+ policies)" data-ar="حزمة السياسات (أكثر من 30 سياسة)">Policy suite (30+ policies)</li>
+          <li data-en="ISO 37001 ABC programme" data-ar="برنامج مكافحة الرشوة ISO 37001">ISO 37001 ABC programme</li>
+          <li data-en="Internal audit support" data-ar="دعم التدقيق الداخلي">Internal audit support</li>
+        </ul>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="More Details" data-ar="تفاصيل أكثر">More Details</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="expand-detail-row"><strong data-en="Typical Duration:" data-ar="المدة المعتادة:">Typical Duration:</strong> <span data-en="8–12 weeks framework build; retainer available" data-ar="8–12 أسبوعاً لبناء الإطار؛ مع إمكانية عقد استشاري مستمر">8–12 weeks framework build; retainer available</span></div>
+          <div class="expand-detail-row"><strong data-en="Key Deliverable:" data-ar="المخرج الرئيسي:">Key Deliverable:</strong> <span data-en="ERM framework, 10–30 policy suite, and ISO 37001 readiness assessment" data-ar="إطار إدارة مخاطر مؤسسية، حزمة سياسات (10–30 سياسة)، وتقييم جاهزية ISO 37001">ERM framework, 10–30 policy suite, and ISO 37001 readiness assessment</span></div>
+          <div class="expand-case-ref" data-en="Real case: a family-owned industrial group preparing for a GCC private-equity investment had no formal risk register or policy suite. We built a 22-policy governance framework and an ERM heat map in 9 weeks, satisfying the investor's due-diligence checklist." data-ar="حالة واقعية: مجموعة صناعية عائلية كانت تستعد لاستثمار من صندوق أسهم خاصة خليجي، ولم يكن لديها سجل مخاطر رسمي أو حزمة سياسات. بنينا إطار حوكمة من 22 سياسة وخريطة حرارية لإدارة المخاطر خلال 9 أسابيع، بما لبّى قائمة العناية الواجبة للمستثمر.">Real case: a family-owned industrial group preparing for a GCC private-equity investment had no formal risk register or policy suite. We built a 22-policy governance framework and an ERM heat map in 9 weeks, satisfying the investor's due-diligence checklist.</div>
+        </div>
+      </div>
+
+      <div class="service-card fade-in expandable" style="--c:#C06E00;--c2:#ffab40">
+        <div class="service-num"><span class="service-num-badge">05</span><span class="service-num-label">AML &amp; REGULATORY</span></div>
+        <div class="service-icon-wrap" style="background:linear-gradient(135deg,rgba(192,110,0,0.18),rgba(255,171,64,0.06))">🔍</div>
+        <h3 class="service-title" data-en="AML & Regulatory Advisory" data-ar="استشارات مكافحة غسل الأموال والتنظيم">AML &amp; Regulatory Advisory</h3>
+        <p class="service-body" data-en="FATF-aligned AML/CFT programme design, FRA and CBE regulatory compliance, KYC/EDD procedures, and EMLCU DNFBP registration support." data-ar="تصميم برامج مكافحة غسل الأموال وفق FATF، والامتثال لهيئة الرقابة المالية والبنك المركزي، وإجراءات KYC/EDD، ودعم تسجيل EMLCU.">FATF-aligned AML/CFT programme design, FRA and CBE regulatory compliance, KYC/EDD procedures, and EMLCU DNFBP registration support.</p>
+        <ul class="service-list">
+          <li data-en="AML/CFT programme design" data-ar="تصميم برنامج مكافحة غسل الأموال">AML/CFT programme design</li>
+          <li data-en="FRA &amp; CBE regulatory compliance" data-ar="الامتثال لهيئة الرقابة المالية والبنك المركزي">FRA &amp; CBE regulatory compliance</li>
+          <li data-en="KYC / EDD procedures" data-ar="إجراءات اعرف عميلك / العناية المعززة">KYC / EDD procedures</li>
+          <li data-en="Sanctions screening framework" data-ar="إطار فحص العقوبات">Sanctions screening framework</li>
+          <li data-en="EMLCU DNFBP registration" data-ar="تسجيل المهن غير المالية بوحدة مكافحة غسل الأموال">EMLCU DNFBP registration</li>
+        </ul>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="More Details" data-ar="تفاصيل أكثر">More Details</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="expand-detail-row"><strong data-en="Typical Duration:" data-ar="المدة المعتادة:">Typical Duration:</strong> <span data-en="6–10 weeks programme design; 2–4 weeks DNFBP registration" data-ar="6–10 أسابيع لتصميم البرنامج؛ 2–4 أسابيع لتسجيل EMLCU">6–10 weeks programme design; 2–4 weeks DNFBP registration</span></div>
+          <div class="expand-detail-row"><strong data-en="Key Deliverable:" data-ar="المخرج الرئيسي:">Key Deliverable:</strong> <span data-en="AML/CFT programme, KYC/EDD SOPs, and completed EMLCU DNFBP registration" data-ar="برنامج مكافحة غسل أموال، إجراءات KYC/EDD، وتسجيل مكتمل لدى وحدة مكافحة غسل الأموال">AML/CFT programme, KYC/EDD SOPs, and completed EMLCU DNFBP registration</span></div>
+          <div class="expand-case-ref" data-en="Real case: a CBE-licensed payment service provider had an incomplete EMLCU DNFBP registration and no documented risk-based AML/CFT programme. We registered the entity, built KYC/EDD procedures and a sanctions-screening SOP, and trained 25 staff within 7 weeks — closing a CBE inspection finding." data-ar="حالة واقعية: مقدم خدمات دفع مرخّص من البنك المركزي المصري لديه تسجيل غير مكتمل لدى وحدة مكافحة غسل الأموال وبلا برنامج موثق قائم على المخاطر. أتممنا التسجيل، وبنينا إجراءات KYC/EDD ومسار فحص عقوبات، ودرّبنا 25 موظفاً خلال 7 أسابيع — ما أغلق ملاحظة تفتيش البنك المركزي.">Real case: a CBE-licensed payment service provider had an incomplete EMLCU DNFBP registration and no documented risk-based AML/CFT programme. We registered the entity, built KYC/EDD procedures and a sanctions-screening SOP, and trained 25 staff within 7 weeks — closing a CBE inspection finding.</div>
+        </div>
+      </div>
+
+      <div class="service-card fade-in expandable" style="--c:#006B3C;--c2:#2E86AB">
+        <div class="service-num"><span class="service-num-badge">06</span><span class="service-num-label">ESG DATA &amp; DIGITAL</span></div>
+        <div class="service-icon-wrap" style="background:linear-gradient(135deg,rgba(0,107,60,0.18),rgba(46,134,171,0.06))">📊</div>
+        <h3 class="service-title" data-en="ESG Data & Digital Advisory" data-ar="استشارات بيانات ESG الرقمية">ESG Data &amp; Digital Advisory</h3>
+        <p class="service-body" data-en="Power BI ESG dashboards, Python-automated carbon calculation engines, I-ESG scoring tools, and AI-assisted materiality assessment platform." data-ar="لوحات بيانات ESG بـ Power BI، ومحركات حساب الكربون المؤتمتة بـ Python، وأدوات تسجيل I-ESG، ومنصة تقييم الأهمية بالذكاء الاصطناعي.">Power BI ESG dashboards, Python-automated carbon calculation engines, I-ESG scoring tools, and AI-assisted materiality assessment platform.</p>
+        <ul class="service-list">
+          <li data-en="ESG data architecture &amp; templates" data-ar="بنية بيانات ESG والقوالب">ESG data architecture &amp; templates</li>
+          <li data-en="Power BI real-time KPI dashboards" data-ar="لوحات مؤشرات الأداء في الوقت الفعلي">Power BI real-time KPI dashboards</li>
+          <li data-en="Python GHG automation engine" data-ar="محرك أتمتة الغازات الدفيئة بـ Python">Python GHG automation engine</li>
+          <li data-en="I-ESG scoring model (0–100)" data-ar="نموذج تسجيل I-ESG (0–100)">I-ESG scoring model (0–100)</li>
+          <li data-en="AI-assisted materiality tool" data-ar="أداة الأهمية النسبية بالذكاء الاصطناعي">AI-assisted materiality tool</li>
+        </ul>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="More Details" data-ar="تفاصيل أكثر">More Details</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="expand-detail-row"><strong data-en="Typical Duration:" data-ar="المدة المعتادة:">Typical Duration:</strong> <span data-en="4–8 weeks" data-ar="4–8 أسابيع">4–8 weeks</span></div>
+          <div class="expand-detail-row"><strong data-en="Key Deliverable:" data-ar="المخرج الرئيسي:">Key Deliverable:</strong> <span data-en="Power BI ESG dashboard, Python GHG automation engine, and live I-ESG score" data-ar="لوحة بيانات ESG بـ Power BI، محرك أتمتة غازات دفيئة بـ Python، ونتيجة I-ESG حية">Power BI ESG dashboard, Python GHG automation engine, and live I-ESG score</span></div>
+          <div class="expand-case-ref" data-en="Real case: a conglomerate with 6 subsidiaries was consolidating ESG data manually in spreadsheets every quarter. We built a Python-automated GHG engine feeding a live Power BI dashboard, cutting reporting time from 3 weeks to 3 days and producing a real-time I-ESG score of 71/100." data-ar="حالة واقعية: مجموعة قابضة تضم 6 شركات تابعة كانت تجمّع بيانات ESG يدوياً عبر جداول بيانات كل ربع سنة. بنينا محرك أتمتة لغازات الدفيئة بلغة Python يغذّي لوحة بيانات Power BI حية، ما قلّص وقت إعداد التقرير من 3 أسابيع إلى 3 أيام، وأنتج نتيجة I-ESG لحظية بلغت 71 من 100.">Real case: a conglomerate with 6 subsidiaries was consolidating ESG data manually in spreadsheets every quarter. We built a Python-automated GHG engine feeding a live Power BI dashboard, cutting reporting time from 3 weeks to 3 days and producing a real-time I-ESG score of 71/100.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ METHODOLOGY ══════════════════════════ -->
+<section class="section" id="methodology">
+  <div class="container">
+    <div class="section-header section-center fade-in">
+      <span class="section-label" data-en="OUR APPROACH" data-ar="نهجنا">OUR APPROACH</span>
+      <h2 class="section-title" data-en="The Proprietary <span>I-ESG</span> Model" data-ar="نموذج <span>I-ESG</span> الخاص بنا">The Proprietary <span>I-ESG</span> Model</h2>
+      <p class="section-sub" data-en="A 4-pillar weighted scoring framework (0–100) designed specifically for the Egyptian regulatory environment — covering Environment, Social, Governance, and Regulatory compliance." data-ar="إطار تسجيل مرجح بأربعة محاور (0–100) مصمم خصيصاً للبيئة التنظيمية المصرية — يغطي البيئة والجانب الاجتماعي والحوكمة والامتثال التنظيمي.">A 4-pillar weighted scoring framework (0–100) designed specifically for the Egyptian regulatory environment — covering Environment, Social, Governance, and Regulatory compliance.</p>
+    </div>
+    <div class="method-grid fade-in">
+      <div class="iesg-model">
+        <div class="iesg-center">
+          <div class="iesg-center-label">I-ESG</div>
+          <div class="iesg-center-sub">MODEL</div>
+        </div>
+        <div class="iesg-pillars">
+          <div class="iesg-pillar" style="--pc:#006B75;background:#f0fafa">
+            <div class="pillar-code">E</div>
+            <div class="pillar-name" data-en="Environmental" data-ar="البيئة">Environmental</div>
+            <div class="pillar-weight" data-en="Weight: 30% · Scope 1/2/3, Energy, Water, Waste" data-ar="الوزن: 30% · النطاقات 1/2/3، الطاقة، الماء، النفايات">Weight: 30% · Scope 1/2/3, Energy, Water, Waste</div>
+          </div>
+          <div class="iesg-pillar" style="--pc:#2E86AB;background:#f0f7fb">
+            <div class="pillar-code">S</div>
+            <div class="pillar-name" data-en="Social" data-ar="الجانب الاجتماعي">Social</div>
+            <div class="pillar-weight" data-en="Weight: 25% · Safety, Labour, Diversity, Community" data-ar="الوزن: 25% · السلامة، العمل، التنوع، المجتمع">Weight: 25% · Safety, Labour, Diversity, Community</div>
+          </div>
+          <div class="iesg-pillar" style="--pc:#0D2B4E;background:#f4f7fa">
+            <div class="pillar-code">G</div>
+            <div class="pillar-name" data-en="Governance" data-ar="الحوكمة">Governance</div>
+            <div class="pillar-weight" data-en="Weight: 30% · Board, Controls, Anti-Corruption, Disclosure" data-ar="الوزن: 30% · مجلس الإدارة، الضوابط، مكافحة الفساد، الإفصاح">Weight: 30% · Board, Controls, Anti-Corruption, Disclosure</div>
+          </div>
+          <div class="iesg-pillar" style="--pc:#C06E00;background:#fdf8f0">
+            <div class="pillar-code">R</div>
+            <div class="pillar-name" data-en="Regulatory" data-ar="الامتثال التنظيمي">Regulatory</div>
+            <div class="pillar-weight" data-en="Weight: 15% · FRA, CBE, AML/CFT, PDPL, EGX" data-ar="الوزن: 15% · هيئة الرقابة المالية، البنك المركزي، مكافحة غسل الأموال، حماية البيانات">Weight: 15% · FRA, CBE, AML/CFT, PDPL, EGX</div>
+          </div>
+        </div>
+      </div>
+      <div class="method-right">
+        <h3 style="font-size:20px;color:var(--nav);margin-bottom:24px" data-en="Six-Step Materiality Process" data-ar="عملية الأهمية النسبية في ستة خطوات">Six-Step Materiality Process</h3>
+        <div class="method-steps">
+          <div class="method-step fade-in">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <div class="step-title" data-en="Sector Scan" data-ar="مسح القطاع">Sector Scan</div>
+              <div class="step-body" data-en="Identify sector-relevant ESG topics using GRI, SASB, and Egyptian regulatory frameworks. Benchmark against peer companies." data-ar="تحديد موضوعات ESG ذات الصلة بالقطاع باستخدام معايير GRI وSASB والأطر التنظيمية المصرية. المقارنة المعيارية مع الشركات النظيرة.">Identify sector-relevant ESG topics using GRI, SASB, and Egyptian regulatory frameworks. Benchmark against peer companies.</div>
+            </div>
+          </div>
+          <div class="method-step fade-in">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <div class="step-title" data-en="Stakeholder Survey" data-ar="استطلاع أصحاب المصلحة">Stakeholder Survey</div>
+              <div class="step-body" data-en="Structured surveys and interviews with investors, customers, employees, regulators, and community. Score importance (1–5)." data-ar="استطلاعات ومقابلات منظمة مع المستثمرين والعملاء والموظفين والجهات التنظيمية والمجتمع. تقييم الأهمية (1–5).">Structured surveys and interviews with investors, customers, employees, regulators, and community. Score importance (1–5).</div>
+            </div>
+          </div>
+          <div class="method-step fade-in">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <div class="step-title" data-en="Business Impact Analysis" data-ar="تحليل الأثر على الأعمال">Business Impact Analysis</div>
+              <div class="step-body" data-en="Score each topic for financial impact, regulatory exposure, and reputational risk using a double materiality lens." data-ar="تسجيل كل موضوع بناءً على الأثر المالي والتعرض التنظيمي والمخاطر التشهيرية باستخدام عدسة الأهمية المزدوجة.">Score each topic for financial impact, regulatory exposure, and reputational risk using a double materiality lens.</div>
+            </div>
+          </div>
+          <div class="method-step fade-in">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <div class="step-title" data-en="Materiality Matrix" data-ar="مصفوفة الأهمية النسبية">Materiality Matrix</div>
+              <div class="step-body" data-en="Plot topics on a 2×2 matrix (stakeholder importance × business impact). Identify top 10–15 material topics." data-ar="رسم الموضوعات على مصفوفة 2×2 (أهمية أصحاب المصلحة × الأثر على الأعمال). تحديد أهم 10–15 موضوعاً جوهرياً.">Plot topics on a 2×2 matrix (stakeholder importance × business impact). Identify top 10–15 material topics.</div>
+            </div>
+          </div>
+          <div class="method-step fade-in">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <div class="step-title" data-en="Board Validation" data-ar="اعتماد مجلس الإدارة">Board Validation</div>
+              <div class="step-body" data-en="Board and management workshop to validate material topics, align with strategy and risk register, and secure sign-off." data-ar="ورشة عمل لمجلس الإدارة والإدارة لاعتماد الموضوعات الجوهرية ومواءمتها مع الاستراتيجية وسجل المخاطر.">Board and management workshop to validate material topics, align with strategy and risk register, and secure sign-off.</div>
+            </div>
+          </div>
+          <div class="method-step fade-in">
+            <div class="step-num">6</div>
+            <div class="step-content">
+              <div class="step-title" data-en="Disclosure & Target-Setting" data-ar="الإفصاح وتحديد الأهداف">Disclosure &amp; Target-Setting</div>
+              <div class="step-body" data-en="Embed material topics in ESG report. Set KPIs and targets. Annual review cycle. Link to executive remuneration where applicable." data-ar="إدراج الموضوعات الجوهرية في تقرير ESG. تحديد مؤشرات الأداء والأهداف. دورة مراجعة سنوية. الربط بالمكافآت التنفيذية عند الاقتضاء.">Embed material topics in ESG report. Set KPIs and targets. Annual review cycle. Link to executive remuneration where applicable.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carbon Section inside Methodology -->
+    <div style="margin-top:72px">
+      <div class="section-header section-center fade-in">
+        <span class="section-label" data-en="CARBON CALCULATION" data-ar="حساب الكربون">CARBON CALCULATION</span>
+        <h2 class="section-title" data-en="Scope 1, 2 &amp; 3 <span>GHG Inventory</span>" data-ar="جرد غازات الاحتباس الحراري <span>النطاق 1 و2 و3</span>">Scope 1, 2 &amp; 3 <span>GHG Inventory</span></h2>
+        <p class="section-sub" data-en="We calculate your complete carbon footprint using DEFRA 2023 emission factors and Egypt's national grid factor — producing a verification-ready GHG report in tCO₂e." data-ar="نحسب بصمتك الكربونية الكاملة باستخدام عوامل الانبعاثات DEFRA 2023 ومعامل الشبكة الوطنية المصرية — لإنتاج تقرير غازات الاحتباس الحراري الجاهز للتحقق بوحدة tCO₂e.">We calculate your complete carbon footprint using DEFRA 2023 emission factors and Egypt's national grid factor — producing a verification-ready GHG report in tCO₂e.</p>
+      </div>
+      <div class="carbon-grid">
+        <div class="carbon-scope fade-in">
+          <div class="scope-header" style="background:linear-gradient(135deg,var(--red),#8a0000)">
+            <div class="scope-num">1</div>
+            <div class="scope-info">
+              <div class="scope-type" data-en="DIRECT EMISSIONS" data-ar="الانبعاثات المباشرة">DIRECT EMISSIONS</div>
+              <div class="scope-sub" data-en="Company-owned sources" data-ar="مصادر مملوكة للشركة">Company-owned sources</div>
+            </div>
+          </div>
+          <div class="scope-body">
+            <ul class="scope-items">
+              <li data-en="Company vehicles (diesel/petrol)" data-ar="مركبات الشركة (ديزل/بنزين)">Company vehicles (diesel/petrol)</li>
+              <li data-en="On-site fuel combustion" data-ar="حرق الوقود في الموقع">On-site fuel combustion</li>
+              <li data-en="Refrigerant leakage" data-ar="تسرب مادة التبريد">Refrigerant leakage</li>
+              <li data-en="Process emissions" data-ar="انبعاثات العمليات">Process emissions</li>
+            </ul>
+            <div class="scope-ef"><strong data-en="EF Source:" data-ar="مصدر معامل الانبعاثات:">EF Source:</strong> <span data-en="DEFRA 2023 / IPCC AR6" data-ar="DEFRA 2023 / IPCC AR6">DEFRA 2023 / IPCC AR6</span></div>
+          </div>
+        </div>
+        <div class="carbon-scope fade-in">
+          <div class="scope-header" style="background:linear-gradient(135deg,var(--amber),#8f4e00)">
+            <div class="scope-num">2</div>
+            <div class="scope-info">
+              <div class="scope-type" data-en="INDIRECT ELECTRICITY" data-ar="الكهرباء غير المباشرة">INDIRECT ELECTRICITY</div>
+              <div class="scope-sub" data-en="Purchased energy" data-ar="الطاقة المشتراة">Purchased energy</div>
+            </div>
+          </div>
+          <div class="scope-body">
+            <ul class="scope-items">
+              <li data-en="Office electricity (kWh)" data-ar="كهرباء المكتب (كيلوواط ساعة)">Office electricity (kWh)</li>
+              <li data-en="Data centre power" data-ar="طاقة مراكز البيانات">Data centre power</li>
+              <li data-en="Leased facility electricity" data-ar="كهرباء المنشآت المستأجرة">Leased facility electricity</li>
+              <li data-en="Purchased heat / steam" data-ar="الحرارة / البخار المشترى">Purchased heat / steam</li>
+            </ul>
+            <div class="scope-ef"><strong data-en="Egypt Grid EF:" data-ar="معامل الشبكة المصرية:">Egypt Grid EF:</strong> <span>~0.495 kg CO₂e/kWh (IEA 2023)</span></div>
+          </div>
+        </div>
+        <div class="carbon-scope fade-in">
+          <div class="scope-header" style="background:linear-gradient(135deg,var(--bteal),var(--teal))">
+            <div class="scope-num">3</div>
+            <div class="scope-info">
+              <div class="scope-type" data-en="VALUE CHAIN" data-ar="سلسلة القيمة">VALUE CHAIN</div>
+              <div class="scope-sub" data-en="15 GHG Protocol categories" data-ar="15 فئة بموجب بروتوكول غازات الاحتباس الحراري">15 GHG Protocol categories</div>
+            </div>
+          </div>
+          <div class="scope-body">
+            <ul class="scope-items">
+              <li data-en="Cat 6: Business travel (flights)" data-ar="الفئة 6: سفر الأعمال (رحلات جوية)">Cat 6: Business travel (flights)</li>
+              <li data-en="Cat 7: Employee commuting" data-ar="الفئة 7: تنقل الموظفين">Cat 7: Employee commuting</li>
+              <li data-en="Cat 1: Purchased goods &amp; services" data-ar="الفئة 1: البضائع والخدمات المشتراة">Cat 1: Purchased goods &amp; services</li>
+              <li data-en="Cat 15: Investments (finance sector)" data-ar="الفئة 15: الاستثمارات (القطاع المالي)">Cat 15: Investments (finance sector)</li>
+            </ul>
+            <div class="scope-ef"><strong data-en="EF Source:" data-ar="مصدر معامل الانبعاثات:">EF Source:</strong> <span data-en="DEFRA 2023 / ICAO / GHG Protocol" data-ar="DEFRA 2023 / ICAO / بروتوكول غازات الاحتباس الحراري">DEFRA 2023 / ICAO / GHG Protocol</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="carbon-total fade-in" style="background:linear-gradient(135deg,var(--nav),#123a63)">
+        <div>
+          <div class="carbon-total-label" data-en="Total GHG Inventory" data-ar="إجمالي جرد غازات الاحتباس الحراري">Total GHG Inventory</div>
+          <div class="carbon-total-formula" data-en="= Scope 1 + Scope 2 + Scope 3 · Reported in tCO₂e · Intensity: tCO₂e/FTE and tCO₂e/EGP revenue" data-ar="= النطاق 1 + النطاق 2 + النطاق 3 · بوحدة tCO₂e · الكثافة: tCO₂e لكل موظف ولكل إيراد"">= Scope 1 + Scope 2 + Scope 3 &nbsp;·&nbsp; Reported in tCO₂e &nbsp;·&nbsp; Intensity: tCO₂e/FTE and tCO₂e/EGP revenue</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:12px;color:var(--teal);font-weight:600;margin-bottom:4px" data-en="Tool Provided to All Clients" data-ar="الأداة متاحة لجميع العملاء">Tool Provided to All Clients</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.4)" data-en="Integrys Carbon Calculator (Excel) — ISO 14064-3 aligned" data-ar="حاسبة الكربون من إنتيجريس (Excel) — متوافقة مع ISO 14064-3">Integrys Carbon Calculator (Excel) — ISO 14064-3 aligned</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ REGULATORY ════════════════════════════ -->
+<section class="section section-alt" id="regulatory">
+  <div class="container">
+    <div class="section-header section-center fade-in">
+      <span class="section-label" data-en="REGULATORY EXPERTISE" data-ar="الخبرة التنظيمية">REGULATORY EXPERTISE</span>
+      <h2 class="section-title" data-en="Deep <span>Egyptian Regulatory</span> Knowledge" data-ar="معرفة عميقة <span>بالبيئة التنظيمية المصرية</span>">Deep <span>Egyptian Regulatory</span> Knowledge</h2>
+      <p class="section-sub" data-en="We understand every regulatory framework that affects your ESG and compliance obligations — from FRA mandatory reporting to EMLCU AML registration." data-ar="نفهم كل إطار تنظيمي يؤثر على التزامات ESG والامتثال لديكم — من التقارير الإلزامية لهيئة الرقابة المالية إلى تسجيل مكافحة غسل الأموال بوحدة EMLCU.">We understand every regulatory framework that affects your ESG and compliance obligations — from FRA mandatory reporting to EMLCU AML registration.</p>
+    </div>
+    <div class="reg-grid">
+
+      <div class="reg-card fade-in" style="--rc:#006B75">
+        <div class="reg-header" style="background:linear-gradient(120deg,var(--teal),var(--bteal))">
+          <div class="reg-badge" style="background:rgba(255,255,255,0.15)">FRA</div>
+          <div>
+            <div class="reg-name-en" data-en="Financial Regulatory Authority" data-ar="هيئة الرقابة المالية">Financial Regulatory Authority</div>
+            <div class="reg-name-ar">هيئة الرقابة المالية</div>
+          </div>
+        </div>
+        <div class="reg-body">
+          <ul class="reg-list">
+            <li data-en="Decision 272/2020: mandatory ESG disclosure for listed companies" data-ar="قرار 272/2020: الإفصاح الإلزامي عن ESG للشركات المدرجة">Decision 272/2020: mandatory ESG disclosure for listed companies</li>
+            <li data-en="Decision 183/2022: sustainable finance guidelines" data-ar="قرار 183/2022: إرشادات التمويل المستدام">Decision 183/2022: sustainable finance guidelines</li>
+            <li data-en="FRA Corporate Governance Code (OECD-aligned)" data-ar="مدونة حوكمة الشركات للهيئة (متوافقة مع OECD)">FRA Corporate Governance Code (OECD-aligned)</li>
+            <li data-en="Mandatory ESG reporting: EGX 30/70 companies (phased 2024–2026)" data-ar="التقارير الإلزامية لـ ESG: شركات EGX 30/70 (مرحلي 2024–2026)">Mandatory ESG reporting: EGX 30/70 companies (phased 2024–2026)</li>
+            <li data-en="FRA licensing requirements for financial advisory services" data-ar="متطلبات ترخيص الهيئة للخدمات الاستشارية المالية">FRA licensing requirements for financial advisory services</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reg-card fade-in" style="--rc:#2E86AB">
+        <div class="reg-header" style="background:linear-gradient(120deg,var(--bteal),#1a5f8a)">
+          <div class="reg-badge" style="background:rgba(255,255,255,0.15)">CBE</div>
+          <div>
+            <div class="reg-name-en" data-en="Central Bank of Egypt" data-ar="البنك المركزي المصري">Central Bank of Egypt</div>
+            <div class="reg-name-ar">البنك المركزي المصري</div>
+          </div>
+        </div>
+        <div class="reg-body">
+          <ul class="reg-list">
+            <li data-en="CBE Sustainable Finance Framework (June 2022)" data-ar="إطار التمويل المستدام للبنك المركزي (يونيو 2022)">CBE Sustainable Finance Framework (June 2022)</li>
+            <li data-en="AML/CFT Guidelines — FATF Recommendations aligned" data-ar="إرشادات مكافحة غسل الأموال — متوافقة مع توصيات FATF">AML/CFT Guidelines — FATF Recommendations aligned</li>
+            <li data-en="Digital Payments regulation &amp; FinTech licensing" data-ar="تنظيم المدفوعات الرقمية وترخيص التكنولوجيا المالية">Digital Payments regulation &amp; FinTech licensing</li>
+            <li data-en="Corporate Governance guidelines for banks" data-ar="إرشادات حوكمة الشركات للبنوك">Corporate Governance guidelines for banks</li>
+            <li data-en="PDPL data obligations for financial sector" data-ar="التزامات PDPL لحماية البيانات في القطاع المالي">PDPL data obligations for financial sector</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reg-card fade-in" style="--rc:#C06E00">
+        <div class="reg-header" style="background:linear-gradient(120deg,var(--amber),#8f4e00)">
+          <div class="reg-badge" style="background:rgba(255,255,255,0.15)">EGX</div>
+          <div>
+            <div class="reg-name-en" data-en="Egyptian Exchange" data-ar="البورصة المصرية">Egyptian Exchange</div>
+            <div class="reg-name-ar">البورصة المصرية</div>
+          </div>
+        </div>
+        <div class="reg-body">
+          <ul class="reg-list">
+            <li data-en="EGX ESG Index — sustainability performance criteria" data-ar="مؤشر ESG للبورصة — معايير الأداء الاستدامي">EGX ESG Index — sustainability performance criteria</li>
+            <li data-en="EGX Listing Rules — integrated reporting guidance" data-ar="قواعد الإدراج بالبورصة — إرشادات التقارير المتكاملة">EGX Listing Rules — integrated reporting guidance</li>
+            <li data-en="Corporate Governance Code for EGX-listed entities" data-ar="مدونة حوكمة الشركات للكيانات المدرجة في البورصة">Corporate Governance Code for EGX-listed entities</li>
+            <li data-en="Annual ESG reporting templates (GRI/TCFD aligned)" data-ar="نماذج تقارير ESG السنوية (متوافقة مع GRI/TCFD)">Annual ESG reporting templates (GRI/TCFD aligned)</li>
+            <li data-en="Climate-related financial disclosure — phased rollout" data-ar="الإفصاح المالي المتعلق بالمناخ — تطبيق تدريجي">Climate-related financial disclosure — phased rollout</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reg-card fade-in" style="--rc:#006B3C">
+        <div class="reg-header" style="background:linear-gradient(120deg,#006B3C,#00502c)">
+          <div class="reg-badge" style="background:rgba(255,255,255,0.15)">EMLCU</div>
+          <div>
+            <div class="reg-name-en" data-en="Money Laundering Combating Unit" data-ar="وحدة مكافحة غسل الأموال">Money Laundering Combating Unit</div>
+            <div class="reg-name-ar">وحدة مكافحة غسل الأموال وتمويل الإرهاب</div>
+          </div>
+        </div>
+        <div class="reg-body">
+          <ul class="reg-list">
+            <li data-en="DNFBP registration for consulting firms — Day 1 obligation" data-ar="تسجيل المهن والأعمال غير المالية لشركات الاستشارات — التزام اليوم الأول">DNFBP registration for consulting firms — Day 1 obligation</li>
+            <li data-en="AML/CFT supervisory framework (FATF MENA region)" data-ar="الإطار الرقابي لمكافحة غسل الأموال (FATF منطقة الشرق الأوسط وشمال أفريقيا)">AML/CFT supervisory framework (FATF MENA region)</li>
+            <li data-en="Enhanced Due Diligence for high-risk clients" data-ar="العناية الواجبة المعززة للعملاء ذوي المخاطر العالية">Enhanced Due Diligence for high-risk clients</li>
+            <li data-en="Suspicious Transaction Reporting (STR) obligations" data-ar="التزامات الإبلاغ عن المعاملات المشبوهة (STR)">Suspicious Transaction Reporting (STR) obligations</li>
+            <li data-en="Annual AML/CFT risk assessment &amp; staff training" data-ar="تقييم المخاطر السنوي لمكافحة غسل الأموال وتدريب الموظفين">Annual AML/CFT risk assessment &amp; staff training</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="deepdive-list">
+      <div class="deepdive-item expandable">
+        <div class="deepdive-head" onclick="toggleExpand(this)">
+          <div><span class="deepdive-tag" data-en="FRA · MANDATORY" data-ar="الهيئة العامة للرقابة المالية · إلزامي">FRA · MANDATORY</span>
+            <div class="deepdive-q" data-en="FRA Resolutions 107 &amp; 108 of 2021 — what mandatory ESG/TCFD disclosure means for you" data-ar="قرارا الهيئة العامة للرقابة المالية رقم 107 و108 لسنة 2021 — ماذا يعني الإفصاح الإلزامي عن ESG وTCFD لشركتك؟">FRA Resolutions 107 &amp; 108 of 2021 — what mandatory ESG/TCFD disclosure means for you</div>
+          </div>
+          <span class="deepdive-chev chev">▾</span>
+        </div>
+        <div class="expand-content"><div class="deepdive-body-inner" data-en="The FRA's board issued Resolutions 107 and 108 in July 2021, requiring: (1) all EGX-listed companies, and (2) FRA-regulated non-bank financial companies with paid-up capital or net equity of EGP 100 million or more, to publish annual ESG disclosures. Companies at or above EGP 500 million must additionally publish TCFD-aligned climate disclosures. First disclosures covered FY2022 and were filed with 2023 annual statements — this is now a recurring annual obligation, not a one-time exercise." data-ar="أصدر مجلس إدارة الهيئة العامة للرقابة المالية القرارين رقم 107 و108 في يوليو 2021، ويلزمان: (1) جميع الشركات المدرجة في البورصة المصرية، و(2) الشركات غير المصرفية الخاضعة لرقابة الهيئة التي يبلغ رأس مالها المدفوع أو صافي حقوق ملكيتها 100 مليون جنيه أو أكثر، بنشر إفصاحات ESG سنوية. أما الشركات التي يبلغ رأس مالها أو حقوق ملكيتها 500 مليون جنيه أو أكثر فعليها إضافة إفصاحات مناخية متوافقة مع TCFD. شملت أول الإفصاحات السنة المالية 2022 وقُدّمت مع القوائم المالية لعام 2023 — وهذا التزام سنوي متكرر وليس إجراءً لمرة واحدة.">The FRA's board issued Resolutions 107 and 108 in July 2021, requiring: (1) all EGX-listed companies, and (2) FRA-regulated non-bank financial companies with paid-up capital or net equity of EGP 100 million or more, to publish annual ESG disclosures. Companies at or above EGP 500 million must additionally publish TCFD-aligned climate disclosures. First disclosures covered FY2022 and were filed with 2023 annual statements — this is now a recurring annual obligation, not a one-time exercise.</div></div>
+      </div>
+
+      <div class="deepdive-item expandable">
+        <div class="deepdive-head" onclick="toggleExpand(this)">
+          <div><span class="deepdive-tag" data-en="CBE · BANKS &amp; NBFIs" data-ar="البنك المركزي · البنوك والمؤسسات المالية">CBE · BANKS &amp; NBFIs</span>
+            <div class="deepdive-q" data-en="CBE Guiding Principles (2021) vs Binding Regulations (Nov 2022) — know the difference" data-ar="مبادئ البنك المركزي الاسترشادية (2021) مقابل اللوائح الملزمة (نوفمبر 2022) — الفرق مهم">CBE Guiding Principles (2021) vs Binding Regulations (Nov 2022) — know the difference</div>
+          </div>
+          <span class="deepdive-chev chev">▾</span>
+        </div>
+        <div class="expand-content"><div class="deepdive-body-inner" data-en="In July 2021 the CBE issued voluntary Guiding Principles for Sustainable Finance (6 principles: capacity-building, sustainable finance uptake, stakeholder engagement, climate risk management, sustainable internal operations, and reporting). In November 2022 the CBE converted this into Binding Regulations — every bank must now establish a dedicated sustainability/sustainable-finance department, embed ESG risk into credit and investment policies, and report to the CBE. If your bank or NBFI only has the 2021 principles on file without the 2022 binding structure in place, you are behind the current requirement." data-ar="في يوليو 2021 أصدر البنك المركزي مبادئ استرشادية طوعية للتمويل المستدام (6 مبادئ: بناء القدرات، تعزيز التمويل المستدام، إشراك أصحاب المصلحة، إدارة مخاطر المناخ، تطبيق الاستدامة على العمليات الداخلية، والإبلاغ). وفي نوفمبر 2022 حوّل البنك المركزي هذه المبادئ إلى لوائح ملزمة — يتوجب على كل بنك الآن إنشاء إدارة مخصصة للاستدامة والتمويل المستدام، ودمج مخاطر ESG في سياسات الائتمان والاستثمار، والإبلاغ للبنك المركزي. إذا كان لدى بنككم أو مؤسستكم المالية غير المصرفية مبادئ 2021 فقط دون البنية الملزمة لعام 2022، فأنتم متأخرون عن المتطلب الحالي.">In July 2021 the CBE issued voluntary Guiding Principles for Sustainable Finance (6 principles: capacity-building, sustainable finance uptake, stakeholder engagement, climate risk management, sustainable internal operations, and reporting). In November 2022 the CBE converted this into Binding Regulations — every bank must now establish a dedicated sustainability/sustainable-finance department, embed ESG risk into credit and investment policies, and report to the CBE. If your bank or NBFI only has the 2021 principles on file without the 2022 binding structure in place, you are behind the current requirement.</div></div>
+      </div>
+
+      <div class="deepdive-item expandable">
+        <div class="deepdive-head" onclick="toggleExpand(this)">
+          <div><span class="deepdive-tag" data-en="PDPL · URGENT — 2026 DEADLINE" data-ar="قانون حماية البيانات · عاجل — موعد 2026">PDPL · URGENT — 2026 DEADLINE</span>
+            <div class="deepdive-q" data-en="Data Protection Law 151/2020: the 2025 Executive Regulations changed your deadline" data-ar="قانون حماية البيانات الشخصية 151/2020: اللائحة التنفيذية لعام 2025 غيّرت الموعد النهائي">Data Protection Law 151/2020: the 2025 Executive Regulations changed your deadline</div>
+          </div>
+          <span class="deepdive-chev chev">▾</span>
+        </div>
+        <div class="expand-content"><div class="deepdive-body-inner" data-en="Egypt's Personal Data Protection Law (151/2020) sat without operative Executive Regulations for years. That changed on 1 November 2025, when Prime Ministerial Decree 816/2025 issued the Executive Regulations — introducing a graduated licensing/permit regime for data processing, mandatory breach notification (72 hours to the Personal Data Protection Center, 3 working days to affected individuals), and full data-subject rights (access, correction, objection, withdrawal of consent). Organisations have a one-year grace period, meaning full enforcement lands around October 2026. If you process customer or employee data — which every PSP, bank and consulting firm does — this is a live, time-boxed compliance project now, not a future one." data-ar="ظل قانون حماية البيانات الشخصية المصري رقم 151 لسنة 2020 بلا لائحة تنفيذية فعّالة لسنوات. تغيّر ذلك في 1 نوفمبر 2025، حين صدرت اللائحة التنفيذية بقرار رئيس مجلس الوزراء رقم 816 لسنة 2025 — وأدخلت نظام ترخيص وتصاريح متدرجاً لمعالجة البيانات، والإخطار الإلزامي بالاختراقات (خلال 72 ساعة للجهاز المختص، و3 أيام عمل لإخطار الأشخاص المتضررين)، وحقوقاً كاملة لأصحاب البيانات (الاطلاع، التصحيح، الاعتراض، سحب الموافقة). مُنحت المؤسسات مهلة سماح لمدة عام، ما يعني أن التطبيق الكامل سيبدأ تقريباً في أكتوبر 2026. إذا كانت شركتكم تعالج بيانات عملاء أو موظفين — وهو حال أي مقدم خدمات دفع أو بنك أو شركة استشارات — فهذا مشروع امتثال جارٍ ومحدد بموعد الآن، وليس مشروعاً مستقبلياً." data-flag="true">Egypt's Personal Data Protection Law (151/2020) sat without operative Executive Regulations for years. That changed on 1 November 2025, when Prime Ministerial Decree 816/2025 issued the Executive Regulations — introducing a graduated licensing/permit regime for data processing, mandatory breach notification (72 hours to the Personal Data Protection Center, 3 working days to affected individuals), and full data-subject rights (access, correction, objection, withdrawal of consent). Organisations have a one-year grace period, meaning full enforcement lands around October 2026. If you process customer or employee data — which every PSP, bank and consulting firm does — this is a live, time-boxed compliance project now, not a future one.<div class="freshness-flag" data-en="✓ 2026-critical: enforcement clock is running" data-ar="✓ حرج لعام 2026: مهلة التطبيق جارية">✓ 2026-critical: enforcement clock is running</div></div></div>
+      </div>
+
+      <div class="deepdive-item expandable">
+        <div class="deepdive-head" onclick="toggleExpand(this)">
+          <div><span class="deepdive-tag" data-en="LABOR LAW · HR/GRC IMPACT" data-ar="قانون العمل · أثر على الموارد البشرية والحوكمة">LABOR LAW · HR/GRC IMPACT</span>
+            <div class="deepdive-q" data-en="Labor Law 14/2025 — what changed for your HR and governance policies" data-ar="قانون العمل 14/2025 — ما الذي تغيّر في سياسات الموارد البشرية والحوكمة لديكم">Labor Law 14/2025 — what changed for your HR and governance policies</div>
+          </div>
+          <span class="deepdive-chev chev">▾</span>
+        </div>
+        <div class="expand-content"><div class="deepdive-body-inner" data-en="Law 14/2025 took effect 1 September 2025, fully replacing Law 12/2003 and Law 125/2010 — Egypt's most significant labour reform in decades (298 articles). For GRC purposes, the key impacts are: written Arabic employment contracts in four copies (employer, employee, social insurance office, labour authority); maternity leave extended from 3 to 4 months, usable up to three times; a new training-fund contribution (0.25% of minimum insured salary per employee); and specialised labour courts operating from October 2025 for faster dispute resolution. Every HR policy, employment contract template and disciplinary procedure in your policy suite should be re-checked against Law 14/2025 — this is a Social-pillar (S) item under our I-ESG model as well as a core GRC policy update." data-ar="دخل القانون رقم 14 لسنة 2025 حيز التنفيذ في 1 سبتمبر 2025، ليحل محل القانون 12 لسنة 2003 والقانون 125 لسنة 2010 بالكامل — وهو أهم إصلاح لقانون العمل في مصر منذ عقود (298 مادة). من منظور الحوكمة والمخاطر والامتثال، أبرز التأثيرات: عقود عمل مكتوبة بالعربية من أربع نسخ (صاحب العمل، العامل، مكتب التأمينات، جهة العمل المختصة)؛ تمديد إجازة الوضع من 3 إلى 4 أشهر، وتُستخدم حتى 3 مرات؛ مساهمة جديدة في صندوق التدريب (0.25% من الحد الأدنى للأجر المؤمن عليه لكل عامل)؛ ومحاكم عمالية متخصصة تعمل اعتباراً من أكتوبر 2025 لتسريع فض المنازعات. ينبغي مراجعة كل سياسة موارد بشرية، ونموذج عقد عمل، وإجراء تأديبي في حزمة سياساتكم في ضوء القانون 14/2025 — وهذا بند ضمن محور الجانب الاجتماعي (S) في نموذج I-ESG وتحديث أساسي لسياسات الحوكمة والمخاطر والامتثال.">Law 14/2025 took effect 1 September 2025, fully replacing Law 12/2003 and Law 125/2010 — Egypt's most significant labour reform in decades (298 articles). For GRC purposes, the key impacts are: written Arabic employment contracts in four copies (employer, employee, social insurance office, labour authority); maternity leave extended from 3 to 4 months, usable up to three times; a new training-fund contribution (0.25% of minimum insured salary per employee); and specialised labour courts operating from October 2025 for faster dispute resolution. Every HR policy, employment contract template and disciplinary procedure in your policy suite should be re-checked against Law 14/2025 — this is a Social-pillar (S) item under our I-ESG model as well as a core GRC policy update.</div></div>
+      </div>
+
+      <div class="deepdive-item expandable">
+        <div class="deepdive-head" onclick="toggleExpand(this)">
+          <div><span class="deepdive-tag" data-en="FATF · AML/CFT" data-ar="FATF · مكافحة غسل الأموال">FATF · AML/CFT</span>
+            <div class="deepdive-q" data-en="Egypt's 2025 FATF Mutual Evaluation — what it means for your AML programme" data-ar="التقييم المتبادل لمصر أمام FATF لعام 2025 — ماذا يعني ذلك لبرنامجكم لمكافحة غسل الأموال">Egypt's 2025 FATF Mutual Evaluation — what it means for your AML programme</div>
+          </div>
+          <span class="deepdive-chev chev">▾</span>
+        </div>
+        <div class="expand-content"><div class="deepdive-body-inner" data-en="Egypt is not on the FATF grey or black list. Its 2025 Mutual Evaluation Report rated Egypt Compliant or Largely Compliant on 37 of the 40 FATF Recommendations, with 4 areas still only Substantially Effective on the effectiveness scale. Practically, this means regulators (CBE, FRA, EMLCU) are under active pressure to tighten supervision, STR quality and beneficial-ownership transparency — so expect more inspections, more documentation requests, and less tolerance for template-only AML policies that are not actually followed. A programme that looks good on paper but lacks evidenced execution (training logs, STR trails, risk-rating records) is now a real regulatory exposure, not just a best-practice gap." data-ar="مصر ليست على القائمة الرمادية أو السوداء لمجموعة العمل المالي (FATF). صنّف تقرير التقييم المتبادل لعام 2025 مصر بأنها ملتزمة أو ملتزمة إلى حد كبير في 37 من أصل 40 توصية من توصيات FATF، مع بقاء 4 مجالات عند مستوى «فعّالة جزئياً» فقط على مقياس الفعالية. عملياً، يعني هذا أن الجهات الرقابية (البنك المركزي، الهيئة العامة للرقابة المالية، وحدة مكافحة غسل الأموال) تحت ضغط فعلي لتشديد الرقابة، وتحسين جودة الإبلاغ عن المعاملات المشبوهة، وشفافية المستفيد الحقيقي — لذا تتوقعوا مزيداً من عمليات التفتيش وطلبات التوثيق، وتساهلاً أقل مع سياسات مكافحة غسل الأموال الشكلية غير المطبَّقة فعلياً. أي برنامج يبدو جيداً على الورق لكن بلا أدلة تنفيذ فعلية (سجلات تدريب، مسارات إبلاغ، سجلات تصنيف مخاطر) بات يشكّل تعرضاً رقابياً حقيقياً، وليس مجرد فجوة في أفضل الممارسات.">Egypt is not on the FATF grey or black list. Its 2025 Mutual Evaluation Report rated Egypt Compliant or Largely Compliant on 37 of the 40 FATF Recommendations, with 4 areas still only Substantially Effective on the effectiveness scale. Practically, this means regulators (CBE, FRA, EMLCU) are under active pressure to tighten supervision, STR quality and beneficial-ownership transparency — so expect more inspections, more documentation requests, and less tolerance for template-only AML policies that are not actually followed. A programme that looks good on paper but lacks evidenced execution (training logs, STR trails, risk-rating records) is now a real regulatory exposure, not just a best-practice gap.</div></div>
+      </div>
+
+      <div class="deepdive-item expandable">
+        <div class="deepdive-head" onclick="toggleExpand(this)">
+          <div><span class="deepdive-tag" data-en="AML CONCEPTS" data-ar="مفاهيم مكافحة غسل الأموال">AML CONCEPTS</span>
+            <div class="deepdive-q" data-en="KYC vs CDD vs EDD — the practical difference at onboarding" data-ar="KYC مقابل CDD مقابل EDD — الفرق العملي عند توثيق العميل">KYC vs CDD vs EDD — the practical difference at onboarding</div>
+          </div>
+          <span class="deepdive-chev chev">▾</span>
+        </div>
+        <div class="expand-content"><div class="deepdive-body-inner" data-en="<strong>KYC</strong> (Know Your Customer) is identity verification: who is this person or entity, really? <strong>CDD</strong> (Customer Due Diligence) goes further — understanding the customer's business, expected transaction behaviour, and source of funds, so unusual activity can be spotted later. <strong>EDD</strong> (Enhanced Due Diligence) applies to higher-risk customers — politically exposed persons (PEPs), cash-intensive businesses, customers from higher-risk jurisdictions — and requires deeper verification, senior sign-off, and more frequent monitoring. Most Egyptian PSPs and DNFBPs get flagged in inspections not because KYC is missing, but because CDD/EDD is not risk-tiered — everyone gets the same shallow check regardless of actual risk." data-ar="<strong>KYC</strong> (اعرف عميلك) هو التحقق من الهوية: من هذا الشخص أو الكيان فعلياً؟ أما <strong>CDD</strong> (العناية الواجبة تجاه العميل) فيذهب أبعد من ذلك — بفهم طبيعة نشاط العميل، والسلوك المعاملاتي المتوقع، ومصدر الأموال، بحيث يمكن رصد أي نشاط غير معتاد لاحقاً. وتُطبَّق <strong>EDD</strong> (العناية الواجبة المعززة) على العملاء الأعلى مخاطرة — كالأشخاص المعرضين سياسياً (PEPs)، والأنشطة كثيفة التعامل النقدي، والعملاء من ولايات قضائية أعلى مخاطرة — وتتطلب تحققاً أعمق، واعتماداً من الإدارة العليا، ومراقبة أكثر تكراراً. معظم مقدمي خدمات الدفع والمهن غير المالية في مصر يتلقون ملاحظات تفتيش ليس لغياب KYC، بل لأن CDD/EDD غير مُدرَّج حسب المخاطر — إذ يخضع الجميع لنفس الفحص السطحي بصرف النظر عن مستوى المخاطرة الفعلي.">KYC (Know Your Customer) is identity verification: who is this person or entity, really? CDD (Customer Due Diligence) goes further — understanding the customer's business, expected transaction behaviour, and source of funds, so unusual activity can be spotted later. EDD (Enhanced Due Diligence) applies to higher-risk customers — politically exposed persons (PEPs), cash-intensive businesses, customers from higher-risk jurisdictions — and requires deeper verification, senior sign-off, and more frequent monitoring. Most Egyptian PSPs and DNFBPs get flagged in inspections not because KYC is missing, but because CDD/EDD is not risk-tiered — everyone gets the same shallow check regardless of actual risk.</div></div>
+      </div>
+
+      <div class="deepdive-item expandable">
+        <div class="deepdive-head" onclick="toggleExpand(this)">
+          <div><span class="deepdive-tag" data-en="ESG STANDARDS" data-ar="معايير ESG">ESG STANDARDS</span>
+            <div class="deepdive-q" data-en="IFRS S1/S2 vs GRI vs the EGX template — which one applies to you?" data-ar="IFRS S1/S2 مقابل GRI مقابل نموذج البورصة المصرية — أيها ينطبق عليكم؟">IFRS S1/S2 vs GRI vs the EGX template — which one applies to you?</div>
+          </div>
+          <span class="deepdive-chev chev">▾</span>
+        </div>
+        <div class="expand-content"><div class="deepdive-body-inner" data-en="<strong>GRI Standards</strong> are impact-focused — they report your effect on the economy, environment and people (double materiality's 'impact' side) and are the base layer expected under the FRA/EGX template. <strong>IFRS S1/S2</strong> are investor-focused — they report sustainability and climate risks that could affect your company's own financial value ('financial materiality'), and are mandatory for larger FRA-regulated entities (≥EGP 500m) alongside TCFD. The <strong>EGX ESG template</strong> is Egypt's own structured disclosure form, built to reference GRI indicators and, increasingly, TCFD/IFRS S2 climate metrics. In practice, most EGX-listed clients need all three working together: GRI for the narrative and impact indicators, IFRS S2 for climate financial risk, and the EGX template as the delivery format regulators expect." data-ar="تركّز <strong>معايير GRI</strong> على الأثر — أي تأثير شركتكم على الاقتصاد والبيئة والمجتمع (وهو الشق المتعلق بـ«الأثر» في مفهوم الأهمية النسبية المزدوجة)، وهي الطبقة الأساسية المتوقعة ضمن نموذج الهيئة العامة للرقابة المالية والبورصة المصرية. أما <strong>IFRS S1/S2</strong> فتركّز على المستثمر — إذ تُفصح عن مخاطر الاستدامة والمناخ التي قد تؤثر على القيمة المالية لشركتكم («الأهمية المالية»)، وهي إلزامية للكيانات الأكبر الخاضعة لرقابة الهيئة (500 مليون جنيه فأكثر) إلى جانب TCFD. أما <strong>نموذج البورصة المصرية لـESG</strong> فهو نموذج إفصاح مصري مُهيكل خصيصاً، ومبني على الرجوع إلى مؤشرات GRI، ومتّجه بشكل متزايد نحو مقاييس مناخية وفق TCFD/IFRS S2. عملياً، يحتاج معظم عملائنا المدرجين في البورصة إلى الثلاثة معاً: GRI للسرد ومؤشرات الأثر، وIFRS S2 لمخاطر المناخ المالية، ونموذج البورصة كصيغة التسليم التي تتوقعها الجهات الرقابية.">GRI Standards are impact-focused — they report your effect on the economy, environment and people (double materiality's 'impact' side) and are the base layer expected under the FRA/EGX template. IFRS S1/S2 are investor-focused — they report sustainability and climate risks that could affect your company's own financial value ('financial materiality'), and are mandatory for larger FRA-regulated entities (≥EGP 500m) alongside TCFD. The EGX ESG template is Egypt's own structured disclosure form, built to reference GRI indicators and, increasingly, TCFD/IFRS S2 climate metrics. In practice, most EGX-listed clients need all three working together: GRI for the narrative and impact indicators, IFRS S2 for climate financial risk, and the EGX template as the delivery format regulators expect.</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ PRICING ══════════════════════════════ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header section-center fade-in">
+      <span class="section-label" data-en="TRANSPARENT PRICING" data-ar="أسعار شفافة">TRANSPARENT PRICING</span>
+      <h2 class="section-title" data-en="Service Packages &amp; <span>Day Rates</span>" data-ar="حزم الخدمات و<span>أسعار اليوم</span>">Service Packages &amp; <span>Day Rates</span></h2>
+      <p class="section-sub" data-en="Fixed-fee packages for defined scopes, or flexible day-rate engagements. All prices in EGP (VAT exclusive). GCC engagements priced in USD." data-ar="حزم بسعر ثابت لنطاقات محددة، أو مشاركات مرنة بسعر اليوم. جميع الأسعار بالجنيه المصري (غير شاملة ضريبة القيمة المضافة). مشاركات دول الخليج بالدولار الأمريكي.">Fixed-fee packages for defined scopes, or flexible day-rate engagements. All prices in EGP (VAT exclusive). GCC engagements priced in USD.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card fade-in">
+        <div class="pricing-title" data-en="ESG Starter Pack" data-ar="حزمة ESG للمبتدئين">ESG Starter Pack</div>
+        <div class="pricing-sub" data-en="Ideal for SMEs and first-time reporters. 6–8 weeks." data-ar="مثالية للمنشآت الصغيرة والمتوسطة والمقدمين الجدد للتقارير. 6–8 أسابيع.">Ideal for SMEs and first-time reporters. 6–8 weeks.</div>
+        <div class="pricing-price">EGP 85,000</div>
+        <div class="pricing-price-dur" data-en="Fixed fee · VAT excl." data-ar="سعر ثابت · غير شامل ضريبة القيمة المضافة">Fixed fee · VAT excl.</div>
+        <ul class="pricing-list">
+          <li><div class="pricing-check">✓</div><span data-en="Materiality assessment" data-ar="تقييم الأهمية النسبية">Materiality assessment</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="Scope 1 &amp; 2 GHG inventory" data-ar="جرد الغازات للنطاقين 1 و2">Scope 1 &amp; 2 GHG inventory</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="ESG policy (3 core policies)" data-ar="سياسة ESG (3 سياسات أساسية)">ESG policy (3 core policies)</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="EGX ESG template draft" data-ar="مسودة نموذج بورصة مصر لـ ESG">EGX ESG template draft</span></li>
+        </ul>
+        <button class="pricing-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})" data-en="Get a Proposal" data-ar="احصل على عرض">Get a Proposal</button>
+      </div>
+
+      <div class="pricing-card featured fade-in">
+        <div class="pricing-badge" data-en="MOST POPULAR" data-ar="الأكثر طلباً">MOST POPULAR</div>
+        <div class="pricing-title" data-en="Full ESG Report" data-ar="تقرير ESG كامل">Full ESG Report</div>
+        <div class="pricing-sub" data-en="For EGX-listed companies. GRI + TCFD + EGX. 12–16 weeks." data-ar="للشركات المدرجة في البورصة. GRI + TCFD + EGX. 12–16 أسبوعاً.">For EGX-listed companies. GRI + TCFD + EGX. 12–16 weeks.</div>
+        <div class="pricing-price">EGP 180,000</div>
+        <div class="pricing-price-dur" data-en="Fixed fee · VAT excl." data-ar="سعر ثابت · غير شامل ضريبة القيمة المضافة">Fixed fee · VAT excl.</div>
+        <ul class="pricing-list">
+          <li><div class="pricing-check">✓</div><span data-en="Full GRI Standards report" data-ar="تقرير كامل وفق معايير GRI">Full GRI Standards report</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="TCFD climate disclosure" data-ar="إفصاح المناخ وفق TCFD">TCFD climate disclosure</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="Scope 1, 2 &amp; 3 inventory" data-ar="جرد الغازات للنطاقات 1 و2 و3">Scope 1, 2 &amp; 3 inventory</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="EGX template submission" data-ar="تقديم نموذج البورصة">EGX template submission</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="Arabic &amp; English versions" data-ar="نسختا العربية والإنجليزية">Arabic &amp; English versions</span></li>
+        </ul>
+        <button class="pricing-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})" data-en="Get a Proposal" data-ar="احصل على عرض">Get a Proposal</button>
+      </div>
+
+      <div class="pricing-card fade-in">
+        <div class="pricing-title" data-en="GRC Compliance Pack" data-ar="حزمة الحوكمة والمخاطر والامتثال">GRC Compliance Pack</div>
+        <div class="pricing-sub" data-en="For financial services &amp; regulated entities. 8–12 weeks." data-ar="للخدمات المالية والكيانات الخاضعة للتنظيم. 8–12 أسبوعاً.">For financial services &amp; regulated entities. 8–12 weeks.</div>
+        <div class="pricing-price">EGP 120,000</div>
+        <div class="pricing-price-dur" data-en="Fixed fee · VAT excl." data-ar="سعر ثابت · غير شامل ضريبة القيمة المضافة">Fixed fee · VAT excl.</div>
+        <ul class="pricing-list">
+          <li><div class="pricing-check">✓</div><span data-en="ERM framework design" data-ar="تصميم إطار إدارة المخاطر المؤسسية">ERM framework design</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="10 core policies" data-ar="10 سياسات أساسية">10 core policies</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="AML/CFT programme" data-ar="برنامج مكافحة غسل الأموال">AML/CFT programme</span></li>
+          <li><div class="pricing-check">✓</div><span data-en="Compliance calendar" data-ar="تقويم الامتثال">Compliance calendar</span></li>
+        </ul>
+        <button class="pricing-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})" data-en="Get a Proposal" data-ar="احصل على عرض">Get a Proposal</button>
+      </div>
+
+    </div>
+
+    <div class="day-rates fade-in">
+      <div class="day-rates-title" data-en="Day Rate Schedule — Time &amp; Materials Engagements" data-ar="جدول أسعار اليوم — مشاركات الوقت والمواد">Day Rate Schedule — Time &amp; Materials Engagements</div>
+      <table class="rates-table">
+        <thead>
+          <tr>
+            <th data-en="Grade" data-ar="الدرجة">Grade</th>
+            <th data-en="Role" data-ar="الدور">Role</th>
+            <th data-en="EGP / Day" data-ar="جنيه / يوم">EGP / Day</th>
+            <th data-en="USD / Day (approx.)" data-ar="دولار / يوم (تقريباً)">USD / Day (approx.)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="rate-grade">G1</td><td class="rate-role" data-en="Managing Partner" data-ar="الشريك المدير">Managing Partner</td><td class="rate-egp">EGP 12,000</td><td class="rate-usd">USD 240</td></tr>
+          <tr><td class="rate-grade">G2</td><td class="rate-role" data-en="Senior Partner" data-ar="شريك أول">Senior Partner</td><td class="rate-egp">EGP 9,000</td><td class="rate-usd">USD 180</td></tr>
+          <tr><td class="rate-grade">G3</td><td class="rate-role" data-en="Senior Consultant" data-ar="مستشار أول">Senior Consultant</td><td class="rate-egp">EGP 6,500</td><td class="rate-usd">USD 130</td></tr>
+          <tr><td class="rate-grade">G4</td><td class="rate-role" data-en="Consultant" data-ar="مستشار">Consultant</td><td class="rate-egp">EGP 4,500</td><td class="rate-usd">USD 90</td></tr>
+          <tr><td class="rate-grade">G5</td><td class="rate-role" data-en="Analyst" data-ar="محلل">Analyst</td><td class="rate-egp">EGP 2,500</td><td class="rate-usd">USD 50</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TEAM ═════════════════════════════════ -->
+<section class="section section-alt" id="team">
+  <div class="container">
+    <div class="section-header section-center fade-in">
+      <span class="section-label" data-en="OUR PEOPLE" data-ar="فريقنا">OUR PEOPLE</span>
+      <h2 class="section-title" data-en="Expert Team &amp; <span>Qualifications</span>" data-ar="فريق الخبراء و<span>المؤهلات</span>">Expert Team &amp; <span>Qualifications</span></h2>
+      <p class="section-sub" data-en="Our core team holds leading professional qualifications in ESG, carbon accounting, AML, governance and cybersecurity. Supplemented by 12+ specialist associates." data-ar="يحمل فريقنا الأساسي أرفع المؤهلات المهنية في ESG وحساب الكربون ومكافحة غسل الأموال والحوكمة والأمن السيبراني. مدعوم بأكثر من 12 متخصصاً مشاركاً.">Our core team holds leading professional qualifications in ESG, carbon accounting, AML, governance and cybersecurity. Supplemented by 12+ specialist associates.</p>
+    </div>
+    <div class="team-grid">
+
+      <div class="team-card fade-in" style="--tc:#0D2B4E">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#0D2B4E,#1a3f6f)">👤</div>
+        <div class="team-info">
+          <div class="team-role" data-en="Managing Partner" data-ar="الشريك المدير">Managing Partner</div>
+          <div class="team-focus" data-en="ESG Strategy · GRC · AML Advisory · Business Development" data-ar="استراتيجية ESG · الحوكمة · مكافحة غسل الأموال">ESG Strategy · GRC · AML Advisory</div>
+          <div class="team-quals">
+            <div class="team-qual">MBA (Finance &amp; Strategy)</div>
+            <div class="team-qual">CFA Charterholder</div>
+            <div class="team-qual">GRI Certified</div>
+            <div class="team-qual">ISO 37001 Lead Auditor</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card fade-in" style="--tc:#006B75">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#006B75,#2E86AB)">👤</div>
+        <div class="team-info">
+          <div class="team-role" data-en="ESG & Carbon Director" data-ar="مدير ESG والكربون">ESG &amp; Carbon Director</div>
+          <div class="team-focus" data-en="Carbon Footprint · Climate Risk · ESG Reporting · TCFD" data-ar="بصمة الكربون · مخاطر المناخ · تقارير ESG">Carbon Footprint · Climate Risk · TCFD</div>
+          <div class="team-quals">
+            <div class="team-qual">MSc Environmental Mgmt.</div>
+            <div class="team-qual">GHG Accounting (GHG Protocol)</div>
+            <div class="team-qual">TCFD Specialist</div>
+            <div class="team-qual">SBTi Trained</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card fade-in" style="--tc:#2E86AB">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#2E86AB,#1a5f8a)">👤</div>
+        <div class="team-info">
+          <div class="team-role" data-en="Compliance & AML Manager" data-ar="مدير الامتثال ومكافحة غسل الأموال">Compliance &amp; AML Manager</div>
+          <div class="team-focus" data-en="AML/CFT · FRA/CBE Compliance · GRC · Policy" data-ar="مكافحة غسل الأموال · الامتثال · الحوكمة · السياسات">AML/CFT · FRA/CBE Compliance · GRC</div>
+          <div class="team-quals">
+            <div class="team-qual">LLM (Financial Law)</div>
+            <div class="team-qual">CAMS Certified</div>
+            <div class="team-qual">CFE Certified</div>
+            <div class="team-qual">FRA Regulatory Expert</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card fade-in" style="--tc:#C06E00">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#C06E00,#e88c1a)">👤</div>
+        <div class="team-info">
+          <div class="team-role" data-en="ESG Data & Technology Lead" data-ar="رئيس بيانات وتكنولوجيا ESG">ESG Data &amp; Technology Lead</div>
+          <div class="team-focus" data-en="ESG Dashboards · Carbon Automation · I-ESG Model · Analytics" data-ar="لوحات ESG · أتمتة الكربون · نموذج I-ESG">ESG Dashboards · Carbon Automation · Analytics</div>
+          <div class="team-quals">
+            <div class="team-qual">BSc Computer Science</div>
+            <div class="team-qual">Power BI Certified</div>
+            <div class="team-qual">Python Data Science</div>
+            <div class="team-qual">GRI Data Specialist</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card fade-in" style="--tc:#3B3F8C">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#3B3F8C,#6C63B5)">🛡️</div>
+        <div class="team-info">
+          <div class="team-role" data-en="Cybersecurity &amp; IT Governance Lead" data-ar="رئيس الأمن السيبراني وحوكمة تكنولوجيا المعلومات">Cybersecurity &amp; IT Governance Lead</div>
+          <div class="team-focus" data-en="Cyber Risk · Secure Development (SDLC) · IT Governance · PDPL Data Protection" data-ar="مخاطر الأمن السيبراني · التطوير الآمن (SDLC) · حوكمة تكنولوجيا المعلومات · حماية البيانات">Cyber Risk · Secure SDLC · IT Governance · PDPL</div>
+          <div class="team-quals">
+            <div class="team-qual">MSc Cybersecurity</div>
+            <div class="team-qual">CISSP Certified</div>
+            <div class="team-qual">ISO/IEC 27001 Lead Implementer</div>
+            <div class="team-qual">Secure SDLC / DevSecOps</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <p style="font-size:14px;color:var(--mgrey);max-width:600px;margin:0 auto" data-en="All team members maintain annual CPD. Bilingual Arabic-English delivery. Associate network: 12+ subject matter experts for specialist engagements." data-ar="يحافظ جميع أعضاء الفريق على التطوير المهني المستمر. التقديم باللغتين العربية والإنجليزية. شبكة المتخصصين المشاركين: أكثر من 12 خبيراً في المجالات المتخصصة.">All team members maintain annual CPD. Bilingual Arabic-English delivery. Associate network: 12+ subject matter experts for specialist engagements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CASE STUDIES ═══════════════════════════ -->
+<section class="section section-alt" id="cases">
+  <div class="container">
+    <div class="section-header section-center fade-in">
+      <span class="section-label" data-en="PROVEN RESULTS" data-ar="نتائج مثبتة">PROVEN RESULTS</span>
+      <h2 class="section-title" data-en="Real <span>Case Scenarios</span> from the Egyptian Market" data-ar="<span>سيناريوهات حالات واقعية</span> من السوق المصري">Real <span>Case Scenarios</span> from the Egyptian Market</h2>
+      <p class="section-sub" data-en="Illustrative, anonymised engagement examples showing how we apply ESG, carbon, GRC and AML expertise to real Egyptian and MENA operating conditions." data-ar="أمثلة توضيحية ومجهّلة الهوية لمشاركات فعلية توضح كيف نطبّق خبراتنا في ESG والكربون والحوكمة ومكافحة غسل الأموال على واقع التشغيل في مصر ومنطقة الشرق الأوسط وشمال أفريقيا.">Illustrative, anonymised engagement examples showing how we apply ESG, carbon, GRC and AML expertise to real Egyptian and MENA operating conditions.</p>
+    </div>
+    <div class="cases-grid">
+
+      <div class="case-card fade-in expandable" style="--c:#C06E00">
+        <span class="case-badge" data-en="AML · PAYMENT SERVICES" data-ar="مكافحة غسل الأموال · خدمات الدفع">AML · PAYMENT SERVICES</span>
+        <h3 class="case-title" data-en="Licensed Payment Service Provider — CBE Inspection Finding Remediation" data-ar="مقدم خدمات دفع مرخّص — معالجة ملاحظة تفتيش من البنك المركزي">Licensed Payment Service Provider — CBE Inspection Finding Remediation</h3>
+        <p class="case-challenge" data-en="An incomplete EMLCU DNFBP registration and an undocumented, non-risk-based AML/CFT programme were flagged ahead of a scheduled CBE inspection." data-ar="تسجيل غير مكتمل لدى وحدة مكافحة غسل الأموال وبرنامج مكافحة غسل أموال غير موثّق وغير قائم على المخاطر، رُصدا قبيل تفتيش مقرر من البنك المركزي.">An incomplete EMLCU DNFBP registration and an undocumented, non-risk-based AML/CFT programme were flagged ahead of a scheduled CBE inspection.</p>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="View Full Case" data-ar="عرض الحالة كاملة">View Full Case</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="case-steps">
+            <div class="case-step"><b>1.</b><span data-en="Completed EMLCU DNFBP registration and gap-assessed existing controls against FATF Recommendations." data-ar="أكملنا تسجيل الشركة لدى وحدة مكافحة غسل الأموال وقيّمنا فجوات الضوابط القائمة مقابل توصيات FATF.">Completed EMLCU DNFBP registration and gap-assessed existing controls against FATF Recommendations.</span></div>
+            <div class="case-step"><b>2.</b><span data-en="Built a risk-tiered AML/CFT programme: customer risk rating, KYC/EDD SOPs, sanctions-screening workflow." data-ar="بنينا برنامج مكافحة غسل أموال مُدرَّج حسب المخاطر: تصنيف مخاطر العملاء، إجراءات KYC/EDD، ومسار فحص العقوبات.">Built a risk-tiered AML/CFT programme: customer risk rating, KYC/EDD SOPs, sanctions-screening workflow.</span></div>
+            <div class="case-step"><b>3.</b><span data-en="Delivered STR reporting procedures and trained 25 front-line and compliance staff." data-ar="وضعنا إجراءات الإبلاغ عن المعاملات المشبوهة ودرّبنا 25 موظفاً في الخطوط الأمامية والامتثال.">Delivered STR reporting procedures and trained 25 front-line and compliance staff.</span></div>
+          </div>
+          <div class="expand-case-ref" data-en="Result: the CBE finding was closed within 7 weeks, ahead of the re-inspection deadline. The sanctions-screening workflow now runs on every onboarding and flags ~0.8% of applicants for enhanced review." data-ar="النتيجة: أُغلقت ملاحظة البنك المركزي خلال 7 أسابيع، قبل الموعد النهائي لإعادة التفتيش. ويعمل مسار فحص العقوبات الآن على كل توثيق عميل جديد ويرصد نحو 0.8% من المتقدمين لمراجعة معززة.">Result: the CBE finding was closed within 7 weeks, ahead of the re-inspection deadline. The sanctions-screening workflow now runs on every onboarding and flags ~0.8% of applicants for enhanced review.</div>
+        </div>
+        <div class="case-meta">
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Duration" data-ar="المدة">Duration</div><div class="case-meta-val" data-en="7 weeks" data-ar="7 أسابيع">7 weeks</div></div>
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Regulator" data-ar="الجهة الرقابية">Regulator</div><div class="case-meta-val">CBE · EMLCU</div></div>
+        </div>
+      </div>
+
+      <div class="case-card fade-in expandable" style="--c:#2E86AB">
+        <span class="case-badge" data-en="ESG REPORTING · EGX-LISTED" data-ar="تقارير ESG · شركة مدرجة">ESG REPORTING · EGX-LISTED</span>
+        <h3 class="case-title" data-en="EGX-Listed Manufacturer — First Mandatory ESG &amp; TCFD Report" data-ar="شركة تصنيع مدرجة بالبورصة — أول تقرير إلزامي لـ ESG وTCFD">EGX-Listed Manufacturer — First Mandatory ESG &amp; TCFD Report</h3>
+        <p class="case-challenge" data-en="An EGX-listed food &amp; beverage manufacturer faced its first mandatory disclosure under FRA Resolutions 107/108 with only 10 weeks before its annual filing deadline, and no prior materiality process." data-ar="واجهت شركة تصنيع أغذية ومشروبات مدرجة بالبورصة أول التزام إفصاح إلزامي بموجب قراري الهيئة 107/108، بمهلة 10 أسابيع فقط قبل موعد التقديم السنوي، ودون أي عملية أهمية نسبية سابقة.">An EGX-listed food &amp; beverage manufacturer faced its first mandatory disclosure under FRA Resolutions 107/108 with only 10 weeks before its annual filing deadline, and no prior materiality process.</p>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="View Full Case" data-ar="عرض الحالة كاملة">View Full Case</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="case-steps">
+            <div class="case-step"><b>1.</b><span data-en="Ran the 6-step materiality process: sector scan, 40+ stakeholder interviews, materiality matrix, board validation." data-ar="نفّذنا العملية السداسية الخطوات: مسح القطاع، أكثر من 40 مقابلة مع أصحاب المصلحة، مصفوفة الأهمية النسبية، واعتماد مجلس الإدارة.">Ran the 6-step materiality process: sector scan, 40+ stakeholder interviews, materiality matrix, board validation.</span></div>
+            <div class="case-step"><b>2.</b><span data-en="Compiled Scope 1 &amp; 2 GHG inventory and drafted TCFD-aligned climate risk narrative." data-ar="أعددنا جرد غازات دفيئة للنطاقين 1 و2 وصياغة سردية مخاطر مناخية متوافقة مع TCFD.">Compiled Scope 1 &amp; 2 GHG inventory and drafted TCFD-aligned climate risk narrative.</span></div>
+            <div class="case-step"><b>3.</b><span data-en="Delivered a bilingual GRI + TCFD report mapped directly onto the EGX ESG template." data-ar="سلّمنا تقريراً ثنائي اللغة وفق GRI وTCFD مطابقاً مباشرة لنموذج ESG الخاص بالبورصة المصرية.">Delivered a bilingual GRI + TCFD report mapped directly onto the EGX ESG template.</span></div>
+          </div>
+          <div class="expand-case-ref" data-en="Result: filed on time with zero FRA queries on re-submission, and the company's 12 material topics now feed its 3-year ESG roadmap and KPI set." data-ar="النتيجة: قُدّم التقرير في الموعد المحدد دون أي استفسارات من الهيئة عند إعادة التقديم، وأصبحت الموضوعات الجوهرية الـ12 أساساً لخارطة طريق ESG لثلاث سنوات ومجموعة مؤشرات الأداء.">Result: filed on time with zero FRA queries on re-submission, and the company's 12 material topics now feed its 3-year ESG roadmap and KPI set.</div>
+        </div>
+        <div class="case-meta">
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Duration" data-ar="المدة">Duration</div><div class="case-meta-val" data-en="10 weeks" data-ar="10 أسابيع">10 weeks</div></div>
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Regulator" data-ar="الجهة الرقابية">Regulator</div><div class="case-meta-val">FRA · EGX</div></div>
+        </div>
+      </div>
+
+      <div class="case-card fade-in expandable" style="--c:#006B75">
+        <span class="case-badge" data-en="CARBON · REAL ESTATE" data-ar="الكربون · التطوير العقاري">CARBON · REAL ESTATE</span>
+        <h3 class="case-title" data-en="Real Estate Developer — Scope 1–3 Baseline &amp; Net-Zero Pathway" data-ar="مطوّر عقاري — خط أساس النطاقات 1–3 ومسار صافي الصفر">Real Estate Developer — Scope 1–3 Baseline &amp; Net-Zero Pathway</h3>
+        <p class="case-challenge" data-en="A Cairo-based developer with three active sites had never calculated a carbon footprint and needed a credible baseline for a green-bond feasibility study." data-ar="مطوّر عقاري بالقاهرة يدير ثلاثة مواقع نشطة لم يحتسب بصمته الكربونية من قبل، واحتاج خط أساس موثوقاً لدراسة جدوى سندات خضراء.">A Cairo-based developer with three active sites had never calculated a carbon footprint and needed a credible baseline for a green-bond feasibility study.</p>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="View Full Case" data-ar="عرض الحالة كاملة">View Full Case</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="case-steps">
+            <div class="case-step"><b>1.</b><span data-en="Mapped Scope 1 (site fuel &amp; generators), Scope 2 (grid electricity using Egypt's ~0.495 kgCO₂e/kWh factor), and material Scope 3 categories." data-ar="حصرنا النطاق 1 (وقود المواقع والمولدات)، والنطاق 2 (كهرباء الشبكة بمعامل مصر ~0.495 كجم CO₂e/كيلوواط ساعة)، وفئات النطاق 3 الجوهرية.">Mapped Scope 1 (site fuel &amp; generators), Scope 2 (grid electricity using Egypt's ~0.495 kgCO₂e/kWh factor), and material Scope 3 categories.</span></div>
+            <div class="case-step"><b>2.</b><span data-en="Applied DEFRA 2023 emission factors to compute a verified 4,200 tCO₂e annual baseline." data-ar="طبّقنا معاملات DEFRA 2023 لاحتساب خط أساس سنوي موثّق قدره 4,200 طن CO₂e.">Applied DEFRA 2023 emission factors to compute a verified 4,200 tCO₂e annual baseline.</span></div>
+            <div class="case-step"><b>3.</b><span data-en="Designed a phased net-zero pathway (solar retrofit, LED conversion, EV fleet transition) targeting 42% reduction by 2030." data-ar="صممنا مساراً مرحلياً لصافي الصفر (تركيب طاقة شمسية، تحويل للإضاءة LED، والتحول لأسطول مركبات كهربائية) يستهدف خفضاً بنسبة 42% بحلول 2030.">Designed a phased net-zero pathway (solar retrofit, LED conversion, EV fleet transition) targeting 42% reduction by 2030.</span></div>
+          </div>
+          <div class="expand-case-ref" data-en="Result: the baseline and pathway were accepted as supporting evidence in the developer's green-bond feasibility submission." data-ar="النتيجة: قُبل خط الأساس والمسار كأدلة داعمة ضمن طلب دراسة جدوى السندات الخضراء للمطوّر.">Result: the baseline and pathway were accepted as supporting evidence in the developer's green-bond feasibility submission.</div>
+        </div>
+        <div class="case-meta">
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Duration" data-ar="المدة">Duration</div><div class="case-meta-val" data-en="8 weeks" data-ar="8 أسابيع">8 weeks</div></div>
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Standard" data-ar="المعيار">Standard</div><div class="case-meta-val">GHG Protocol · ISO 14064</div></div>
+        </div>
+      </div>
+
+      <div class="case-card fade-in expandable" style="--c:#0D2B4E">
+        <span class="case-badge" data-en="GRC · PE READINESS" data-ar="الحوكمة · جاهزية استثمار">GRC · PE READINESS</span>
+        <h3 class="case-title" data-en="Family-Owned Industrial Group — Governance Readiness for GCC Investment" data-ar="مجموعة صناعية عائلية — جاهزية حوكمة لاستثمار خليجي">Family-Owned Industrial Group — Governance Readiness for GCC Investment</h3>
+        <p class="case-challenge" data-en="A family-owned group in advanced talks with a GCC private-equity fund had no formal risk register, board charter or documented policy suite — all flagged in early due diligence." data-ar="مجموعة عائلية في مفاوضات متقدمة مع صندوق أسهم خاصة خليجي لم يكن لديها سجل مخاطر رسمي أو ميثاق مجلس إدارة أو حزمة سياسات موثّقة — وجميعها رُصدت في مراحل العناية الواجبة المبكرة.">A family-owned group in advanced talks with a GCC private-equity fund had no formal risk register, board charter or documented policy suite — all flagged in early due diligence.</p>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="View Full Case" data-ar="عرض الحالة كاملة">View Full Case</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="case-steps">
+            <div class="case-step"><b>1.</b><span data-en="Built a 22-policy governance suite (conflicts of interest, related-party transactions, delegation of authority, whistleblowing)." data-ar="بنينا حزمة حوكمة من 22 سياسة (تضارب المصالح، معاملات الأطراف ذات الصلة، تفويض الصلاحيات، الإبلاغ عن المخالفات).">Built a 22-policy governance suite (conflicts of interest, related-party transactions, delegation of authority, whistleblowing).</span></div>
+            <div class="case-step"><b>2.</b><span data-en="Produced an ERM heat map covering operational, financial, regulatory and reputational risk categories." data-ar="أعددنا خريطة حرارية لإدارة المخاطر المؤسسية تغطي فئات المخاطر التشغيلية والمالية والتنظيمية والسمعية.">Produced an ERM heat map covering operational, financial, regulatory and reputational risk categories.</span></div>
+            <div class="case-step"><b>3.</b><span data-en="Ran a board-effectiveness workshop separating family, executive and independent-director roles." data-ar="نفّذنا ورشة عمل لفاعلية مجلس الإدارة تفصل بين أدوار أفراد العائلة والتنفيذيين والأعضاء المستقلين.">Ran a board-effectiveness workshop separating family, executive and independent-director roles.</span></div>
+          </div>
+          <div class="expand-case-ref" data-en="Result: governance framework satisfied the fund's due-diligence checklist within the investment timeline, with no deal-delaying findings." data-ar="النتيجة: لبّى إطار الحوكمة قائمة العناية الواجبة للصندوق ضمن الجدول الزمني للاستثمار، دون أي ملاحظات تُعطّل الصفقة.">Result: governance framework satisfied the fund's due-diligence checklist within the investment timeline, with no deal-delaying findings.</div>
+        </div>
+        <div class="case-meta">
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Duration" data-ar="المدة">Duration</div><div class="case-meta-val" data-en="9 weeks" data-ar="9 أسابيع">9 weeks</div></div>
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Standard" data-ar="المعيار">Standard</div><div class="case-meta-val">OECD · ISO 37001</div></div>
+        </div>
+      </div>
+
+      <div class="case-card fade-in expandable" style="--c:#006B3C">
+        <span class="case-badge" data-en="PDPL · DATA COMPLIANCE" data-ar="حماية البيانات · الامتثال">PDPL · DATA COMPLIANCE</span>
+        <h3 class="case-title" data-en="Regional Bank — 2025 PDPL Executive Regulations Gap Assessment" data-ar="بنك إقليمي — تقييم فجوات اللائحة التنفيذية لحماية البيانات 2025">Regional Bank — 2025 PDPL Executive Regulations Gap Assessment</h3>
+        <p class="case-challenge" data-en="Following the November 2025 PDPL Executive Regulations, a mid-sized bank held large volumes of customer data with no licensing assessment, breach-notification procedure or data-subject-rights process." data-ar="عقب صدور اللائحة التنفيذية لحماية البيانات في نوفمبر 2025، كان لدى بنك متوسط الحجم كميات كبيرة من بيانات العملاء دون تقييم ترخيص أو إجراء للإخطار بالاختراقات أو مسار لحقوق أصحاب البيانات.">Following the November 2025 PDPL Executive Regulations, a mid-sized bank held large volumes of customer data with no licensing assessment, breach-notification procedure or data-subject-rights process.</p>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="View Full Case" data-ar="عرض الحالة كاملة">View Full Case</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="case-steps">
+            <div class="case-step"><b>1.</b><span data-en="Mapped data-processing activities against the new graduated licensing/permit regime to identify required filings." data-ar="حصرنا أنشطة معالجة البيانات مقابل نظام الترخيص والتصاريح المتدرج الجديد لتحديد الإيداعات المطلوبة.">Mapped data-processing activities against the new graduated licensing/permit regime to identify required filings.</span></div>
+            <div class="case-step"><b>2.</b><span data-en="Built a 72-hour breach-notification procedure and a data-subject-rights response workflow." data-ar="بنينا إجراء إخطار بالاختراقات خلال 72 ساعة ومسار عمل للاستجابة لحقوق أصحاب البيانات.">Built a 72-hour breach-notification procedure and a data-subject-rights response workflow.</span></div>
+            <div class="case-step"><b>3.</b><span data-en="Set a compliance roadmap timed to the one-year grace period ending around October 2026." data-ar="وضعنا خارطة طريق امتثال مؤقّتة مع مهلة السماح لعام واحد المنتهية تقريباً في أكتوبر 2026.">Set a compliance roadmap timed to the one-year grace period ending around October 2026.</span></div>
+          </div>
+          <div class="expand-case-ref" data-en="Result: the bank now has a documented, board-approved roadmap to full PDPL compliance well ahead of the enforcement date." data-ar="النتيجة: بات لدى البنك الآن خارطة طريق موثّقة ومعتمدة من مجلس الإدارة للامتثال الكامل لقانون حماية البيانات قبل موعد التطبيق بوقت كافٍ.">Result: the bank now has a documented, board-approved roadmap to full PDPL compliance well ahead of the enforcement date.</div>
+        </div>
+        <div class="case-meta">
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Duration" data-ar="المدة">Duration</div><div class="case-meta-val" data-en="6 weeks" data-ar="6 أسابيع">6 weeks</div></div>
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Regulator" data-ar="الجهة الرقابية">Regulator</div><div class="case-meta-val">PDPC · CBE</div></div>
+        </div>
+      </div>
+
+      <div class="case-card fade-in expandable" style="--c:#C00000">
+        <span class="case-badge" data-en="ESG DATA · AUTOMATION" data-ar="بيانات ESG · الأتمتة">ESG DATA · AUTOMATION</span>
+        <h3 class="case-title" data-en="Industrial Conglomerate — From Spreadsheets to a Live ESG Dashboard" data-ar="مجموعة صناعية قابضة — من جداول البيانات إلى لوحة ESG حية">Industrial Conglomerate — From Spreadsheets to a Live ESG Dashboard</h3>
+        <p class="case-challenge" data-en="A holding company with 6 subsidiaries was consolidating ESG and GHG data manually across spreadsheets every quarter, with frequent errors and a 3-week reporting cycle." data-ar="شركة قابضة تضم 6 شركات تابعة كانت تجمّع بيانات ESG وغازات الدفيئة يدوياً عبر جداول بيانات كل ربع سنة، مع أخطاء متكررة ودورة إبلاغ تستغرق 3 أسابيع.">A holding company with 6 subsidiaries was consolidating ESG and GHG data manually across spreadsheets every quarter, with frequent errors and a 3-week reporting cycle.</p>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="View Full Case" data-ar="عرض الحالة كاملة">View Full Case</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="case-steps">
+            <div class="case-step"><b>1.</b><span data-en="Standardised a single ESG data architecture and intake template across all 6 subsidiaries." data-ar="وحّدنا بنية بيانات ESG واحدة ونموذج إدخال موحّد عبر جميع الشركات التابعة الست.">Standardised a single ESG data architecture and intake template across all 6 subsidiaries.</span></div>
+            <div class="case-step"><b>2.</b><span data-en="Built a Python automation engine to calculate GHG emissions directly from utility and fuel data." data-ar="بنينا محرك أتمتة بلغة Python لاحتساب انبعاثات الغازات الدفيئة مباشرة من بيانات المرافق والوقود.">Built a Python automation engine to calculate GHG emissions directly from utility and fuel data.</span></div>
+            <div class="case-step"><b>3.</b><span data-en="Deployed a live Power BI dashboard with an automated I-ESG score visible to the board in real time." data-ar="أطلقنا لوحة بيانات حية عبر Power BI مع نتيجة I-ESG آلية تظهر لمجلس الإدارة في الوقت الفعلي.">Deployed a live Power BI dashboard with an automated I-ESG score visible to the board in real time.</span></div>
+          </div>
+          <div class="expand-case-ref" data-en="Result: reporting cycle cut from 3 weeks to 3 days, with a live I-ESG score of 71/100 tracked continuously by the board." data-ar="النتيجة: تقلّصت دورة الإبلاغ من 3 أسابيع إلى 3 أيام، مع نتيجة I-ESG حية بلغت 71 من 100 يتابعها مجلس الإدارة باستمرار.">Result: reporting cycle cut from 3 weeks to 3 days, with a live I-ESG score of 71/100 tracked continuously by the board.</div>
+        </div>
+        <div class="case-meta">
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Duration" data-ar="المدة">Duration</div><div class="case-meta-val" data-en="6 weeks" data-ar="6 أسابيع">6 weeks</div></div>
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Tools" data-ar="الأدوات">Tools</div><div class="case-meta-val">Power BI · Python</div></div>
+        </div>
+      </div>
+
+    </div>
+    <p class="case-disclaimer" data-en="All case scenarios are anonymised composites illustrating typical engagement approach and outcomes; figures are representative, not client-specific disclosures." data-ar="جميع سيناريوهات الحالات هي نماذج مركّبة ومجهّلة الهوية توضّح أسلوب العمل والنتائج المعتادة؛ والأرقام تمثيلية وليست إفصاحاً خاصاً بعميل بعينه.">All case scenarios are anonymised composites illustrating typical engagement approach and outcomes; figures are representative, not client-specific disclosures.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ══════════════════════════════ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header section-center fade-in">
+      <span class="section-label" data-en="GET IN TOUCH" data-ar="تواصل معنا">GET IN TOUCH</span>
+      <h2 class="section-title" data-en="Start Your <span>ESG Journey</span> Today" data-ar="ابدأ <span>رحلتك في ESG</span> اليوم">Start Your <span>ESG Journey</span> Today</h2>
+      <p class="section-sub" data-en="Schedule a free 30-minute discovery call with our Managing Partner. We respond within one business day." data-ar="جدول مكالمة استكشافية مجانية لمدة 30 دقيقة مع شريكنا المدير. نرد خلال يوم عمل واحد.">Schedule a free 30-minute discovery call with our Managing Partner. We respond within one business day.</p>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label" data-en="EMAIL" data-ar="البريد الإلكتروني">EMAIL</div>
+            <div class="contact-value">info@integrys.com.eg<br>proposals@integrys.com.eg</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label" data-en="TELEPHONE" data-ar="الهاتف">TELEPHONE</div>
+            <div class="contact-value"><a href="tel:+201097988812">+20 10 9798 8812</a><br><a href="tel:+201040094836">+20 10 4009 4836</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <div class="contact-label" data-en="WHATSAPP" data-ar="واتساب">WHATSAPP</div>
+            <div class="contact-value"><a href="https://wa.me/201097988812" target="_blank" rel="noopener">+20 10 9798 8812</a><br><span data-en="Fastest response · Sun–Thu, 09:00–18:00 EET" data-ar="أسرع وسيلة للرد · الأحد–الخميس، 09:00–18:00 بتوقيت مصر">Fastest response · Sun–Thu, 09:00–18:00 EET</span></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label" data-en="LOCATION" data-ar="الموقع">LOCATION</div>
+            <div class="contact-value" data-en="Cairo, Arab Republic of Egypt<br>GCC engagements served remotely" data-ar="القاهرة، جمهورية مصر العربية<br>مشاركات دول الخليج عن بُعد">Cairo, Arab Republic of Egypt<br>GCC engagements served remotely</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-label" data-en="WEBSITE" data-ar="الموقع الإلكتروني">WEBSITE</div>
+            <div class="contact-value">www.integrys.com.eg</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label" data-en="OFFICE HOURS" data-ar="ساعات العمل">OFFICE HOURS</div>
+            <div class="contact-value" data-en="Sunday – Thursday: 09:00 – 18:00 EET<br>Response SLA: 1 business day" data-ar="الأحد – الخميس: 09:00 – 18:00 بتوقيت مصر<br>الرد خلال: يوم عمل واحد">Sunday – Thursday: 09:00 – 18:00 EET<br>Response SLA: 1 business day</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form">
+          <div class="form-title" data-en="Send us a Message" data-ar="أرسل لنا رسالة">Send us a Message</div>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" data-en="FIRST NAME" data-ar="الاسم الأول">FIRST NAME</label>
+                <input class="form-input" type="text" required placeholder="" id="fname">
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-en="LAST NAME" data-ar="اسم العائلة">LAST NAME</label>
+                <input class="form-input" type="text" required placeholder="" id="lname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-en="EMAIL ADDRESS" data-ar="عنوان البريد الإلكتروني">EMAIL ADDRESS</label>
+              <input class="form-input" type="email" required id="email">
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-en="COMPANY" data-ar="اسم الشركة">COMPANY</label>
+              <input class="form-input" type="text" id="company">
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-en="SERVICE OF INTEREST" data-ar="الخدمة المطلوبة">SERVICE OF INTEREST</label>
+              <select class="form-select" id="service">
+                <option value="" data-en="Select a service..." data-ar="اختر خدمة...">Select a service...</option>
+                <option value="esg" data-en="ESG & Sustainability Advisory" data-ar="استشارات ESG والاستدامة">ESG &amp; Sustainability Advisory</option>
+                <option value="carbon" data-en="Carbon Footprint & Climate" data-ar="بصمة الكربون والمناخ">Carbon Footprint &amp; Climate</option>
+                <option value="reporting" data-en="ESG Reporting & Disclosure" data-ar="تقارير وإفصاحات ESG">ESG Reporting &amp; Disclosure</option>
+                <option value="grc" data-en="Governance, Risk & Compliance" data-ar="الحوكمة والمخاطر والامتثال">Governance, Risk &amp; Compliance</option>
+                <option value="aml" data-en="AML & Regulatory Advisory" data-ar="استشارات مكافحة غسل الأموال والتنظيم">AML &amp; Regulatory Advisory</option>
+                <option value="digital" data-en="ESG Data & Digital Advisory" data-ar="استشارات بيانات ESG الرقمية">ESG Data &amp; Digital Advisory</option>
+                <option value="other" data-en="Other / Not sure" data-ar="أخرى / غير متأكد">Other / Not sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-en="MESSAGE" data-ar="الرسالة">MESSAGE</label>
+              <textarea class="form-textarea" id="message" data-en-placeholder="Tell us about your organisation and what you're looking to achieve..." data-ar-placeholder="أخبرنا عن مؤسستك وما الذي تسعى لتحقيقه..." placeholder="Tell us about your organisation and what you're looking to achieve..."></textarea>
+            </div>
+            <button type="submit" class="form-submit" data-en="Send Message — We'll Respond Within 1 Business Day" data-ar="إرسال الرسالة — سنرد خلال يوم عمل واحد">Send Message — We'll Respond Within 1 Business Day</button>
+            <div class="form-success" id="formSuccess" data-en="Thank you for your message. We will be in touch within one business day." data-ar="شكراً لرسالتك. سنتواصل معكم خلال يوم عمل واحد.">Thank you for your message. We will be in touch within one business day.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-line1">Integrys Consulting</div>
+        <div class="footer-logo-line2">إنتيجريس للاستشارات</div>
+        <p class="footer-desc" data-en="Egypt's specialist ESG, carbon, governance, risk, compliance and AML consulting firm. Serving listed companies, financial institutions, and industrial groups across Egypt and the GCC." data-ar="شركة الاستشارات المتخصصة في ESG والكربون والحوكمة والمخاطر والامتثال ومكافحة غسل الأموال في مصر. نخدم الشركات المدرجة والمؤسسات المالية والمجموعات الصناعية في مصر ودول الخليج.">Egypt's specialist ESG, carbon, governance, risk, compliance and AML consulting firm. Serving listed companies, financial institutions, and industrial groups across Egypt and the GCC.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">GRI</span>
+          <span class="footer-badge">TCFD</span>
+          <span class="footer-badge">ISO 37001</span>
+          <span class="footer-badge">FATF</span>
+          <span class="footer-badge">IFRS S1/S2</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-en="Services" data-ar="الخدمات">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services" data-en="ESG Advisory" data-ar="استشارات ESG">ESG Advisory</a></li>
+          <li><a href="#services" data-en="Carbon Footprint" data-ar="بصمة الكربون">Carbon Footprint</a></li>
+          <li><a href="#services" data-en="ESG Reporting" data-ar="تقارير ESG">ESG Reporting</a></li>
+          <li><a href="#services" data-en="GRC Framework" data-ar="إطار الحوكمة والمخاطر">GRC Framework</a></li>
+          <li><a href="#services" data-en="AML Advisory" data-ar="استشارات مكافحة غسل الأموال">AML Advisory</a></li>
+          <li><a href="#services" data-en="ESG Digital" data-ar="ESG الرقمي">ESG Digital</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" data-en="Regulatory" data-ar="التنظيم">Regulatory</div>
+        <ul class="footer-links">
+          <li><a href="#regulatory">FRA Decision 272/2020</a></li>
+          <li><a href="#regulatory">CBE Sustainable Finance</a></li>
+          <li><a href="#regulatory">EGX ESG Index</a></li>
+          <li><a href="#regulatory">EMLCU DNFBP</a></li>
+          <li><a href="#methodology">GRI Standards</a></li>
+          <li><a href="#methodology">IFRS S1 / S2</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" data-en="Contact" data-ar="التواصل">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:info@integrys.com.eg">info@integrys.com.eg</a></li>
+          <li><a href="tel:+201097988812">+20 10 9798 8812</a></li>
+          <li><a href="https://wa.me/201097988812" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="راسلنا عبر واتساب">WhatsApp Us</a></li>
+          <li><a href="#contact" data-en="Request a Proposal" data-ar="اطلب عرضاً">Request a Proposal</a></li>
+          <li><a href="#contact" data-en="Schedule a Call" data-ar="جدول مكالمة">Schedule a Call</a></li>
+          <li><a href="#team" data-en="Our Team" data-ar="فريقنا">Our Team</a></li>
+          <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Integrys Consulting — إنتيجريس للاستشارات. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span> Cairo, Egypt.</div>
+      <div class="footer-bottom-links">
+        <a href="#" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+        <a href="#" data-en="Terms of Use" data-ar="شروط الاستخدام">Terms of Use</a>
+        <a href="#" data-en="PDPL Compliance" data-ar="الامتثال لحماية البيانات">PDPL Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast notification -->
+<div class="toast" id="toast">
+  <span>✓</span>
+  <span id="toastMsg">Message sent successfully</span>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════════
+//  LANGUAGE SYSTEM
+// ══════════════════════════════════════════════════════════════
+let currentLang = 'en';
+
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'ar' : 'en';
+  applyLang(currentLang);
+}
+
+function applyLang(lang) {
+  const isAr = lang === 'ar';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+  document.documentElement.style.setProperty('--font', isAr ? 'var(--font-ar)' : 'var(--font-en)');
+
+  // Update language toggle labels
+  const label = isAr ? 'English' : 'العربية';
+  document.getElementById('langLabel').textContent = label;
+  const mobileLabel = document.getElementById('mobileLangLabel');
+  if (mobileLabel) mobileLabel.textContent = label;
+
+  // Translate all [data-en] and [data-ar] elements
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (!text) return;
+    // Handle innerHTML (for <span> tags inside)
+    if (text.includes('<')) {
+      el.innerHTML = text;
+    } else {
+      el.textContent = text;
+    }
+  });
+
+  // Translate select options
+  document.querySelectorAll('select option[data-en]').forEach(opt => {
+    const text = opt.getAttribute('data-' + lang);
+    if (text) opt.textContent = text;
+  });
+
+  // Translate textarea placeholders
+  document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+    const key = isAr ? 'data-ar-placeholder' : 'data-en-placeholder';
+    const ph = el.getAttribute(key);
+    if (ph) el.placeholder = ph;
+  });
+
+  // Update page title
+  document.title = isAr
+    ? 'إنتيجريس للاستشارات | استشارات ESG والكربون والحوكمة في مصر'
+    : 'Integrys Consulting | ESG · Carbon · GRC · AML — Egypt';
+}
+
+// ══════════════════════════════════════════════════════════════
+//  NAVBAR SCROLL
+// ══════════════════════════════════════════════════════════════
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+
+  // Active nav link
+  const sections = ['home','about','services','methodology','regulatory','pricing','team','cases','contact'];
+  let current = 'home';
+  sections.forEach(id => {
+    const sec = document.getElementById(id);
+    if (sec && window.scrollY >= sec.offsetTop - 100) current = id;
+  });
+  document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+
+// ══════════════════════════════════════════════════════════════
+//  EXPANDABLE CARDS / ACCORDIONS
+// ══════════════════════════════════════════════════════════════
+function toggleExpand(el) {
+  const card = el.closest('.expandable');
+  if (card) card.classList.toggle('open');
+}
+
+// ══════════════════════════════════════════════════════════════
+//  MOBILE MENU
+// ══════════════════════════════════════════════════════════════
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+}
+
+// ══════════════════════════════════════════════════════════════
+//  SCROLL TO
+// ══════════════════════════════════════════════════════════════
+function scrollTo(selector) {
+  const el = document.querySelector(selector);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ══════════════════════════════════════════════════════════════
+//  INTERSECTION OBSERVER — fade-in
+// ══════════════════════════════════════════════════════════════
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ══════════════════════════════════════════════════════════════
+//  CONTACT FORM
+// ══════════════════════════════════════════════════════════════
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  const orig = btn.textContent;
+  btn.textContent = currentLang === 'ar' ? 'جاري الإرسال...' : 'Sending...';
+  btn.disabled = true;
+
+  setTimeout(() => {
+    btn.textContent = orig;
+    btn.disabled = false;
+    e.target.reset();
+
+    // Show inline success
+    const success = document.getElementById('formSuccess');
+    success.style.display = 'block';
+    const msg = success.getAttribute('data-' + currentLang) || success.getAttribute('data-en');
+    success.textContent = msg;
+    setTimeout(() => { success.style.display = 'none'; }, 6000);
+
+    // Toast
+    showToast(currentLang === 'ar'
+      ? 'تم إرسال رسالتكم بنجاح. سنتواصل معكم قريباً.'
+      : 'Message received. We will respond within 1 business day.');
+  }, 1200);
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 5000);
+}
+
+// ══════════════════════════════════════════════════════════════
+//  SMOOTH ANCHOR SCROLL
+// ══════════════════════════════════════════════════════════════
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>

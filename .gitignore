@@ -1,0 +1,6 @@
+*.xlsx
+*.xls
+site/
+site-v2/
+.DS_Store
+Thumbs.db
