@@ -185,6 +185,53 @@ h1,h2,h3,h4{color:var(--nav);line-height:1.2}
   animation: pulse 1.5s infinite;
 }
 .about-float-lbl{font-size:12.5px;color:var(--dgrey);margin-top:4px;font-weight:600}
+.about-video-wrapper {
+  position: absolute;
+  top: -35px;
+  right: -45px;
+  width: 150px;
+  height: 250px;
+  border-radius: 75px;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 20px 45px rgba(11,25,41,0.25);
+  z-index: 3;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+  pointer-events: auto;
+}
+.about-video-wrapper:hover {
+  transform: scale(1.06) translateY(-5px) rotate(2deg);
+  box-shadow: 0 25px 55px rgba(11,25,41,0.35);
+}
+[dir="rtl"] .about-video-wrapper {
+  right: auto;
+  left: -45px;
+}
+.about-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(2, 128, 144, 0.35), rgba(0, 168, 150, 0.15));
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+@media(max-width: 768px) {
+  .about-video-wrapper {
+    position: relative;
+    top: 0; right: 0; left: 0;
+    width: 100%;
+    height: 160px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  [dir="rtl"] .about-video-wrapper {
+    left: 0;
+  }
+}
 .about-right{}
 
 /* Vision Card Hologram Upgrade */
@@ -955,6 +1002,12 @@ footer::before {
   <div class="container">
     <div class="about-grid">
       <div class="about-img-block reveal">
+        <div class="about-video-wrapper">
+          <video autoplay loop muted playsinline class="about-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-wind-blowing-through-green-leaves-43094-large.mp4" type="video/mp4">
+          </video>
+          <div class="about-video-overlay"></div>
+        </div>
         <div class="about-main-card">
           <div class="about-main-title">Integrys Consulting</div>
           <div class="about-main-ar">إنتيجريس للاستشارات</div>
