@@ -124,28 +124,126 @@ h1,h2,h3,h4{color:var(--nav);line-height:1.2}
 .section-header{margin-bottom:52px}
 
 /* ═══════════════════════════════════════ ABOUT ══════════════ */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-img-block{position:relative}
-.about-main-card{background:linear-gradient(160deg,#0D2B4E 0%,#0a2040 60%,#071a38 100%);border-radius:16px;padding:40px 36px 88px;color:#fff;position:relative;z-index:1;border:1px solid rgba(0,107,117,0.2);box-shadow:0 12px 48px rgba(13,43,78,0.25)}
-.about-main-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--bteal));border-radius:16px 16px 0 0}
-.about-main-title{font-size:22px;font-weight:800;color:var(--teal);margin-bottom:6px}
-.about-main-ar{font-size:14px;color:var(--mgrey);font-family:var(--font-ar);margin-bottom:20px}
-.about-main-line{width:48px;height:3px;background:linear-gradient(90deg,var(--teal),var(--bteal));border-radius:2px;margin-bottom:20px}
-.about-main-body{font-size:14px;color:rgba(255,255,255,0.78);line-height:1.8}
-.about-float{position:absolute;bottom:-20px;right:-20px;background:linear-gradient(135deg,#fff 80%,rgba(0,107,117,0.05) 100%);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow-lg);min-width:180px;z-index:2;border:1px solid rgba(0,107,117,0.12)}
-[dir="rtl"] .about-float{right:auto;left:-20px}
-.about-float-val{font-size:28px;font-weight:800;color:var(--teal)}
-.about-float-lbl{font-size:12px;color:var(--mgrey);margin-top:2px}
+.about-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:70px;align-items:center}
+.about-img-block{position:relative;perspective:1000px}
+.about-main-card{
+  background: linear-gradient(135deg, rgba(11, 25, 41, 0.95) 0%, rgba(6, 18, 32, 0.9) 100%);
+  border-radius:24px;padding:50px 40px 90px;color:#fff;
+  position:relative;z-index:1;
+  border:1px solid rgba(0, 168, 150, 0.25);
+  box-shadow: 0 30px 60px rgba(11,25,41,0.3), 0 0 30px rgba(0,168,150,0.1);
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
+}
+.about-main-card:hover {
+  transform: rotateY(4deg) rotateX(3deg) translateY(-8px);
+  box-shadow: 0 40px 80px rgba(11,25,41,0.4), 0 0 40px rgba(0,168,150,0.2);
+}
+/* Holographic grid lines inside main card */
+.about-main-card::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(0, 168, 150, 0.12) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  opacity: 0.5; z-index: 0; pointer-events: none;
+}
+.about-main-card * { position: relative; z-index: 2; }
+.about-main-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--teal),var(--bteal));
+  border-radius:24px 24px 0 0;
+}
+.about-main-title{
+  font-size:26px;font-weight:800;
+  background: linear-gradient(135deg, #fff 0%, var(--teal) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom:8px;
+}
+.about-main-ar{font-size:15px;color:var(--mgrey);font-family:var(--font-ar);margin-bottom:24px;letter-spacing:0.5px}
+.about-main-line{width:64px;height:4px;background:linear-gradient(90deg,var(--teal),var(--bteal));border-radius:2px;margin-bottom:24px}
+.about-main-body{font-size:14.5px;color:rgba(255,255,255,0.85);line-height:1.9}
+.about-float{
+  position:absolute;bottom:-15px;right:-15px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-radius:16px;padding:20px 24px;
+  box-shadow: 0 15px 35px rgba(13,43,78,0.15);
+  min-width:200px;z-index:2;
+  border:1px solid rgba(0, 168, 150, 0.2);
+  transition: transform 0.3s ease;
+}
+.about-float:hover { transform: scale(1.08) translateY(-5px); }
+[dir="rtl"] .about-float{right:auto;left:-15px}
+.about-float-val{
+  font-size:30px;font-weight:900;
+  background: linear-gradient(135deg, var(--teal), var(--bteal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  display: flex; align-items: center; gap: 8px;
+}
+.about-float-val::after {
+  content: ''; display: inline-block; width: 8px; height: 8px;
+  background: var(--teal); border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+.about-float-lbl{font-size:12.5px;color:var(--dgrey);margin-top:4px;font-weight:600}
 .about-right{}
-.about-vision-card{background:linear-gradient(135deg,#005f68 0%,var(--teal) 40%,var(--bteal) 100%);border-radius:12px;padding:24px;color:#fff;margin-bottom:16px;box-shadow:0 8px 32px rgba(0,107,117,0.3)}
-.about-vision-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;opacity:.75;margin-bottom:6px}
-.about-vision-text{font-size:15px;font-weight:600;line-height:1.6}
-.about-values{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-.value-item{background:linear-gradient(135deg,#fff 0%,rgba(0,107,117,0.03) 100%);border:1px solid #dde6f0;border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;border-left:3px solid var(--teal);transition:0.3s ease;box-shadow:var(--shadow-card)}
-.value-item:hover{background:linear-gradient(135deg,rgba(0,107,117,0.05) 0%,rgba(46,134,171,0.05) 100%);transform:translateY(-2px);box-shadow:var(--shadow)}
-[dir="rtl"] .value-item{border-left:none;border-right:3px solid var(--teal)}
-.value-icon{font-size:18px;flex-shrink:0}
-.value-text{font-size:13px;font-weight:600;color:var(--nav)}
+
+/* Vision Card Hologram Upgrade */
+.about-vision-card{
+  background: linear-gradient(135deg, rgba(2, 128, 144, 0.06) 0%, rgba(0, 168, 150, 0.03) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 168, 150, 0.25);
+  border-radius:16px;padding:28px;color:var(--nav);margin-bottom:24px;
+  box-shadow: 0 10px 30px rgba(0, 168, 150, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.about-vision-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0, 168, 150, 0.08), transparent);
+  opacity: 0.5; pointer-events: none;
+}
+.about-vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 168, 150, 0.12);
+  border-color: var(--teal);
+}
+.about-vision-label{
+  font-size:11px;font-weight:800;letter-spacing:3px;
+  text-transform:uppercase;color:var(--teal);margin-bottom:10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.about-vision-label::before {
+  content: '👁️'; font-size: 14px; animation: pulse 2s infinite;
+}
+.about-vision-text{font-size:15.5px;font-weight:700;line-height:1.7;color:var(--dgrey)}
+
+/* Values Interactive Hub */
+.about-values{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.value-item{
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(221, 230, 240, 0.7);
+  border-radius:12px;padding:16px 20px;
+  display:flex;align-items:center;gap:14px;
+  border-left: 4px solid rgba(var(--gc, 0, 168, 150), 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-card);
+}
+.value-item:hover {
+  background: #fff;
+  transform: translateY(-4px);
+  border-left-width: 8px;
+  box-shadow: 0 12px 28px rgba(var(--gc, 0, 168, 150), 0.15);
+}
+[dir="rtl"] .value-item{border-left:none;border-right: 4px solid rgba(var(--gc, 0, 168, 150), 1)}
+[dir="rtl"] .value-item:hover{border-right-width: 8px;}
+.value-icon{
+  font-size:22px;flex-shrink:0;
+  transition: transform 0.3s ease;
+}
+.value-item:hover .value-icon { transform: scale(1.25) rotate(8deg); }
+.value-text{font-size:14px;font-weight:800;color:var(--nav)}
 
 /* ═══════════════════════════════════════ SERVICES ═══════════ */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -877,12 +975,12 @@ footer::before {
           <div class="about-vision-text" data-en="To be the leading ESG and compliance advisory firm in Egypt and the GCC — enabling organisations to build sustainable, well-governed, and compliant businesses." data-ar="أن نكون الشركة الاستشارية الرائدة في ESG والامتثال في مصر ودول الخليج — تمكين المنظمات من بناء أعمال مستدامة ومحكومة وملتزمة.">To be the leading ESG and compliance advisory firm in Egypt and the GCC — enabling organisations to build sustainable, well-governed, and compliant businesses.</div>
         </div>
         <div class="about-values">
-          <div class="value-item"><span class="value-icon">🎯</span><span class="value-text" data-en="Integrity" data-ar="النزاهة">Integrity</span></div>
-          <div class="value-item"><span class="value-icon">📊</span><span class="value-text" data-en="Data-Driven" data-ar="مبني على البيانات">Data-Driven</span></div>
-          <div class="value-item"><span class="value-icon">🌍</span><span class="value-text" data-en="Impact-Focused" data-ar="موجّه نحو الأثر">Impact-Focused</span></div>
-          <div class="value-item"><span class="value-icon">🤝</span><span class="value-text" data-en="Client-First" data-ar="العميل أولاً">Client-First</span></div>
-          <div class="value-item"><span class="value-icon">⚖️</span><span class="value-text" data-en="Regulatory Depth" data-ar="العمق التنظيمي">Regulatory Depth</span></div>
-          <div class="value-item"><span class="value-icon">💡</span><span class="value-text" data-en="Innovation" data-ar="الابتكار">Innovation</span></div>
+          <div class="value-item" style="--gc: 224, 110, 0"><span class="value-icon">🎯</span><span class="value-text" data-en="Integrity" data-ar="النزاهة">Integrity</span></div>
+          <div class="value-item" style="--gc: 46, 134, 171"><span class="value-icon">📊</span><span class="value-text" data-en="Data-Driven" data-ar="مبني على البيانات">Data-Driven</span></div>
+          <div class="value-item" style="--gc: 0, 107, 117"><span class="value-icon">🌍</span><span class="value-text" data-en="Impact-Focused" data-ar="موجّه نحو الأثر">Impact-Focused</span></div>
+          <div class="value-item" style="--gc: 13, 43, 78"><span class="value-icon">🤝</span><span class="value-text" data-en="Client-First" data-ar="العميل أولاً">Client-First</span></div>
+          <div class="value-item" style="--gc: 192, 0, 0"><span class="value-icon">⚖️</span><span class="value-text" data-en="Regulatory Depth" data-ar="العمق التنظيمي">Regulatory Depth</span></div>
+          <div class="value-item" style="--gc: 0, 107, 60"><span class="value-icon">💡</span><span class="value-text" data-en="Innovation" data-ar="الابتكار">Innovation</span></div>
         </div>
       </div>
     </div>
