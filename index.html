@@ -727,6 +727,102 @@ footer{background:var(--nav);color:rgba(255,255,255,0.65);padding-top:60px}
   -webkit-text-fill-color: transparent;
 }
 
+
+/* ══════════════════════ REGULATORY COVERAGE ══════════════════════════════ */
+.reg-cov-section { background: var(--bg-body); }
+.reg-cov-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.reg-cov-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(11,25,41,0.07); border: 1px solid rgba(11,25,41,0.07); transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease; }
+.reg-cov-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(11,25,41,0.13); }
+.reg-cov-header { padding: 20px 24px; display: flex; align-items: center; gap: 14px; }
+.reg-cov-flag { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; background: rgba(255,255,255,0.15); flex-shrink: 0; }
+.reg-cov-country { font-size: 17px; font-weight: 800; color: #fff; font-family: var(--font-en); }
+.reg-cov-body { padding: 20px 24px; display: flex; flex-direction: column; gap: 10px; }
+.reg-cov-row { display: flex; align-items: flex-start; gap: 14px; padding: 10px 0; border-bottom: 1px solid rgba(11,25,41,0.06); }
+.reg-cov-row:last-child { border-bottom: none; }
+.reg-cov-code { font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--teal); min-width: 52px; padding-top: 2px; }
+.reg-cov-name { font-size: 13px; color: #334155; line-height: 1.5; }
+
+.reg-intl-band { margin-top: 40px; background: rgba(11,25,41,0.03); border: 1px solid rgba(11,25,41,0.08); border-radius: 14px; padding: 28px 32px; }
+.reg-intl-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(11,25,41,0.4); margin-bottom: 18px; }
+.reg-intl-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.reg-intl-pill { font-size: 12px; font-weight: 600; color: var(--nav); background: #fff; border: 1.5px solid rgba(11,25,41,0.12); border-radius: 24px; padding: 7px 18px; transition: all 0.25s ease; cursor: default; }
+.reg-intl-pill:hover { background: var(--teal); color: #fff; border-color: var(--teal); transform: translateY(-2px); }
+
+/* ══════════════════════ REGULATORY REMEDIATION ═══════════════════════════ */
+.remediation-section { background: linear-gradient(160deg, #F0F6FF 0%, #EDF8F8 100%); }
+.remediation-wrap { display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: start; margin-top: 48px; }
+.remediation-issues { display: flex; flex-direction: column; gap: 14px; }
+.remediation-issue-title { font-size: 15px; font-weight: 700; color: var(--nav); margin-bottom: 20px; }
+.rem-issue-card { display: flex; align-items: center; gap: 16px; background: #fff; border: 1px solid rgba(11,25,41,0.08); border-radius: 12px; padding: 16px 20px; transition: all 0.3s ease; box-shadow: 0 2px 12px rgba(11,25,41,0.05); }
+.rem-issue-card:hover { border-color: rgba(0,168,150,0.3); box-shadow: 0 8px 28px rgba(0,168,150,0.1); transform: translateX(6px); }
+[dir="rtl"] .rem-issue-card:hover { transform: translateX(-6px); }
+.rem-issue-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(0,107,117,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.rem-issue-text { font-size: 14px; color: #334155; line-height: 1.5; font-weight: 500; }
+
+.remediation-approach { background: linear-gradient(145deg, #0B1929, #0d2742); border-radius: 20px; padding: 36px; color: #fff; position: relative; overflow: hidden; }
+.remediation-approach::before { content: ''; position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(0,168,150,0.15), transparent 70%); border-radius: 50%; }
+.rem-approach-title { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 10px; }
+.rem-approach-sub { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; }
+.rem-step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
+.rem-step-dot { width: 8px; height: 8px; background: var(--teal); border-radius: 50%; flex-shrink: 0; margin-top: 6px; box-shadow: 0 0 8px rgba(0,168,150,0.5); }
+.rem-step-text { font-size: 13px; color: rgba(255,255,255,0.78); line-height: 1.5; }
+.rem-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; background: var(--teal); color: #fff; padding: 12px 22px; border-radius: 10px; font-weight: 700; font-size: 13px; border: none; cursor: pointer; transition: all 0.3s ease; }
+.rem-cta:hover { background: var(--bteal); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,168,150,0.35); }
+
+/* ══════════════════════ HOW WE WORK ══════════════════════════════════════ */
+.how-section { background: linear-gradient(160deg, #0B1929 0%, #0d2040 100%); position: relative; overflow: hidden; }
+.how-section::before { content:''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300A896' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.how-section .section-label { color: var(--teal); }
+.how-section .section-title { color: #fff; }
+.how-section .section-title span { background: linear-gradient(135deg, var(--teal) 0%, #00d4c8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.how-section .section-sub { color: rgba(255,255,255,0.5); }
+.how-steps { display: flex; align-items: flex-start; gap: 0; margin-top: 64px; position: relative; }
+.how-steps::before { content:''; position: absolute; top: 36px; left: 72px; right: 72px; height: 2px; background: rgba(255,255,255,0.08); z-index: 0; }
+.how-step { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; padding: 0 16px; }
+.how-step-icon { width: 72px; height: 72px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 2px solid rgba(0,168,150,0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; position: relative; transition: all 0.4s ease; }
+.how-step:hover .how-step-icon { background: rgba(0,168,150,0.15); border-color: var(--teal); box-shadow: 0 0 30px rgba(0,168,150,0.25); transform: scale(1.1); }
+.how-step-icon svg { color: rgba(255,255,255,0.6); transition: color 0.4s; }
+.how-step:hover .how-step-icon svg { color: var(--teal); }
+.how-step-num { position: absolute; top: -8px; right: -8px; width: 20px; height: 20px; background: var(--teal); border-radius: 50%; font-size: 10px; font-weight: 800; color: #fff; display: flex; align-items: center; justify-content: center; }
+.how-step-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+.how-step-body { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; max-width: 160px; }
+.how-cta-row { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-top: 64px; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 48px; }
+.how-cta-sub { font-size: 14px; color: rgba(255,255,255,0.4); }
+.how-cta-btn { background: var(--teal); color: #fff; padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; transition: all 0.3s ease; }
+.how-cta-btn:hover { background: var(--bteal); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,168,150,0.35); }
+
+/* ══════════════════════ WHY INTEGRYS ═════════════════════════════════════ */
+.why-new-section { background: #fff; }
+.why-new-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.why-new-card { background: #fff; border: 1.5px solid rgba(11,25,41,0.09); border-radius: 16px; padding: 32px 28px; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); }
+.why-new-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, var(--teal), var(--bteal)); border-radius: 4px 0 0 4px; opacity: 0; transition: opacity 0.35s ease; }
+.why-new-card:hover { border-color: rgba(0,168,150,0.2); box-shadow: 0 16px 48px rgba(11,25,41,0.1); transform: translateY(-6px); }
+.why-new-card:hover::before { opacity: 1; }
+.why-new-icon { width: 48px; height: 48px; background: rgba(0,107,117,0.08); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: all 0.3s ease; }
+.why-new-card:hover .why-new-icon { background: rgba(0,168,150,0.15); transform: scale(1.1) rotate(5deg); }
+.why-new-title { font-size: 16px; font-weight: 800; color: var(--nav); margin-bottom: 10px; }
+.why-new-body { font-size: 13px; color: #64748b; line-height: 1.7; }
+
+.industries-band { margin-top: 56px; }
+.industries-label { font-size: 16px; font-weight: 800; color: var(--nav); margin-bottom: 20px; }
+.industries-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.industry-pill { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #334155; background: #F8FAFC; border: 1.5px solid rgba(11,25,41,0.1); border-radius: 30px; padding: 9px 18px; transition: all 0.25s ease; cursor: default; }
+.industry-pill:hover { background: rgba(0,107,117,0.07); border-color: rgba(0,107,117,0.25); color: var(--teal); transform: translateY(-2px); }
+.industry-pill svg { flex-shrink: 0; }
+
+/* Responsive adjustments */
+@media(max-width:1024px) {
+  .reg-cov-grid, .why-new-grid { grid-template-columns: repeat(2, 1fr); }
+  .remediation-wrap { grid-template-columns: 1fr; }
+  .how-steps { flex-wrap: wrap; gap: 32px; }
+  .how-steps::before { display: none; }
+  .how-step { flex: 0 0 calc(50% - 16px); }
+}
+@media(max-width:768px) {
+  .reg-cov-grid, .why-new-grid { grid-template-columns: 1fr; }
+  .how-step { flex: 0 0 100%; }
+}
+
 </style>
 
 <style id="new-premium-styles">
@@ -1961,6 +2057,380 @@ footer::before {
   </div>
 </section>
 
+
+
+
+<!-- ══════════════════════ REGULATORY COVERAGE ══════════════════════════════ -->
+<section class="section reg-cov-section" id="reg-coverage">
+  <div class="container">
+    <div class="section-header section-center reveal">
+      <span class="section-label" data-en="REGIONAL COVERAGE" data-ar="التغطية الإقليمية">REGIONAL COVERAGE</span>
+      <h2 class="section-title" data-en="Regulatory <span>Coverage</span>" data-ar="التغطية <span>التنظيمية</span>">Regulatory <span>Coverage</span></h2>
+      <p class="section-sub" data-en="Integrys advises on regulatory frameworks across Egypt, Saudi Arabia, UAE, and international standards — ensuring cross-border compliance readiness." data-ar="تقدم إنتيجريس المشورة بشأن الأطر التنظيمية في مصر والمملكة العربية السعودية والإمارات والمعايير الدولية — لضمان الجاهزية للامتثال عبر الحدود.">Integrys advises on regulatory frameworks across Egypt, Saudi Arabia, UAE, and international standards — ensuring cross-border compliance readiness.</p>
+    </div>
+
+    <div class="reg-cov-grid">
+      <!-- Egypt -->
+      <div class="reg-cov-card reveal">
+        <div class="reg-cov-header" style="background: linear-gradient(135deg, #0B3D2E, #006B3C)">
+          <div class="reg-cov-flag">🇪🇬</div>
+          <div class="reg-cov-country">Egypt</div>
+        </div>
+        <div class="reg-cov-body">
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">FRA</span>
+            <span class="reg-cov-name" data-en="Financial Regulatory Authority" data-ar="الهيئة العامة للرقابة المالية">Financial Regulatory Authority</span>
+          </div>
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">CBE</span>
+            <span class="reg-cov-name" data-en="Central Bank of Egypt" data-ar="البنك المركزي المصري">Central Bank of Egypt</span>
+          </div>
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">EGX</span>
+            <span class="reg-cov-name" data-en="Egyptian Exchange" data-ar="البورصة المصرية">Egyptian Exchange</span>
+          </div>
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">EMLCU</span>
+            <span class="reg-cov-name" data-en="Money Laundering Combating Unit" data-ar="وحدة مكافحة غسل الأموال وتمويل الإرهاب">Money Laundering Combating Unit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saudi Arabia -->
+      <div class="reg-cov-card reveal">
+        <div class="reg-cov-header" style="background: linear-gradient(135deg, #0B3D1A, #1A6B2F)">
+          <div class="reg-cov-flag">🇸🇦</div>
+          <div class="reg-cov-country">Saudi Arabia</div>
+        </div>
+        <div class="reg-cov-body">
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">SAMA</span>
+            <span class="reg-cov-name" data-en="Saudi Arabian Monetary Authority" data-ar="مؤسسة النقد العربي السعودي">Saudi Arabian Monetary Authority</span>
+          </div>
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">CMA</span>
+            <span class="reg-cov-name" data-en="Capital Market Authority" data-ar="هيئة السوق المالية">Capital Market Authority</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- UAE -->
+      <div class="reg-cov-card reveal">
+        <div class="reg-cov-header" style="background: linear-gradient(135deg, #0B2D52, #1A4B7A)">
+          <div class="reg-cov-flag">🇦🇪</div>
+          <div class="reg-cov-country">UAE</div>
+        </div>
+        <div class="reg-cov-body">
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">CBUAE</span>
+            <span class="reg-cov-name" data-en="Central Bank of UAE" data-ar="المصرف المركزي الإماراتي">Central Bank of UAE</span>
+          </div>
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">ADGM</span>
+            <span class="reg-cov-name" data-en="Abu Dhabi Global Market" data-ar="سوق أبوظبي العالمي">Abu Dhabi Global Market</span>
+          </div>
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">DIFC</span>
+            <span class="reg-cov-name" data-en="Dubai International Financial Centre" data-ar="مركز دبي المالي العالمي">Dubai International Financial Centre</span>
+          </div>
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">DFSA</span>
+            <span class="reg-cov-name" data-en="Dubai Financial Services Authority" data-ar="هيئة دبي للخدمات المالية">Dubai Financial Services Authority</span>
+          </div>
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">FSRA</span>
+            <span class="reg-cov-name" data-en="Financial Services Regulatory Authority" data-ar="هيئة تنظيم الخدمات المالية">Financial Services Regulatory Authority</span>
+          </div>
+          <div class="reg-cov-row">
+            <span class="reg-cov-code">VARA</span>
+            <span class="reg-cov-name" data-en="Virtual Assets Regulatory Authority" data-ar="هيئة الأصول الافتراضية">Virtual Assets Regulatory Authority</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- International Standards -->
+    <div class="reg-intl-band reveal">
+      <div class="reg-intl-label" data-en="INTERNATIONAL STANDARDS &amp; FRAMEWORKS" data-ar="المعايير والأطر الدولية">INTERNATIONAL STANDARDS &amp; FRAMEWORKS</div>
+      <div class="reg-intl-pills">
+        <span class="reg-intl-pill">ISO 37301</span>
+        <span class="reg-intl-pill">ISO 31000</span>
+        <span class="reg-intl-pill">ISO 37001</span>
+        <span class="reg-intl-pill">COSO ERM</span>
+        <span class="reg-intl-pill">GRI Standards</span>
+        <span class="reg-intl-pill">IFRS Sustainability S1 &amp; S2</span>
+        <span class="reg-intl-pill">GHG Protocol</span>
+        <span class="reg-intl-pill">FATF 40 Recommendations</span>
+        <span class="reg-intl-pill">Basel III / IV</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ REGULATORY REMEDIATION ═══════════════════════════ -->
+<section class="section remediation-section" id="remediation">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label" data-en="REGULATORY RESPONSE" data-ar="الاستجابة التنظيمية">REGULATORY RESPONSE</span>
+      <h2 class="section-title" data-en="Regulatory Inspection &amp; <span>Remediation</span>" data-ar="التفتيش التنظيمي و<span>المعالجة</span>">Regulatory Inspection &amp; <span>Remediation</span></h2>
+      <p class="section-sub" data-en="Dedicated support for organisations facing regulatory findings, corrective action requirements, or supervisory scrutiny — from root cause analysis through to verified remediation." data-ar="دعم مخصص للمؤسسات التي تواجه النتائج التنظيمية، ومتطلبات الإجراءات التصحيحية، أو التدقيق الرقابي — من تحليل الأسباب الجذرية إلى المعالجة الموثقة.">Dedicated support for organisations facing regulatory findings, corrective action requirements, or supervisory scrutiny — from root cause analysis through to verified remediation.</p>
+    </div>
+
+    <div class="remediation-wrap">
+      <!-- Left: Issues list -->
+      <div class="remediation-issues reveal">
+        <p class="remediation-issue-title" data-en="We work with organisations that are dealing with:" data-ar="نعمل مع المؤسسات التي تتعامل مع:">We work with organisations that are dealing with:</p>
+
+        <div class="rem-issue-card">
+          <div class="rem-issue-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <span class="rem-issue-text" data-en="Regulatory findings requiring formal response and remediation plans" data-ar="النتائج التنظيمية التي تتطلب ردوداً رسمية وخطط معالجة">Regulatory findings requiring formal response and remediation plans</span>
+        </div>
+
+        <div class="rem-issue-card">
+          <div class="rem-issue-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <span class="rem-issue-text" data-en="Corrective Action Plans (CAPs) mandated by the regulator" data-ar="خطط الإجراءات التصحيحية (CAPs) بتفويض من الجهة التنظيمية">Corrective Action Plans (CAPs) mandated by the regulator</span>
+        </div>
+
+        <div class="rem-issue-card">
+          <div class="rem-issue-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <span class="rem-issue-text" data-en="Independent compliance reviews for internal or board assurance" data-ar="مراجعات الامتثال المستقلة لضمان الجودة الداخلية أو ضمان مجلس الإدارة">Independent compliance reviews for internal or board assurance</span>
+        </div>
+
+        <div class="rem-issue-card">
+          <div class="rem-issue-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="rem-issue-text" data-en="Regulatory inspection preparation and readiness assessments" data-ar="التحضير للتفتيش التنظيمي وتقييمات الجاهزية">Regulatory inspection preparation and readiness assessments</span>
+        </div>
+
+        <div class="rem-issue-card">
+          <div class="rem-issue-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="rem-issue-text" data-en="Root cause analysis of compliance failures and control gaps" data-ar="تحليل الأسباب الجذرية لإخفاقات الامتثال وفجوات الضوابط">Root cause analysis of compliance failures and control gaps</span>
+        </div>
+
+        <div class="rem-issue-card">
+          <div class="rem-issue-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="rem-issue-text" data-en="Regulatory response drafting and liaison support" data-ar="صياغة الردود التنظيمية ودعم التواصل مع الجهات الرقابية">Regulatory response drafting and liaison support</span>
+        </div>
+      </div>
+
+      <!-- Right: Approach card -->
+      <div class="remediation-approach reveal">
+        <div class="rem-approach-title" data-en="Our Remediation Approach" data-ar="منهجيتنا في المعالجة">Our Remediation Approach</div>
+        <div class="rem-approach-sub" data-en="A structured methodology to address regulatory findings efficiently — from initial triage to confirmed closure." data-ar="منهجية منظمة لمعالجة النتائج التنظيمية بكفاءة — من الفرز الأولي إلى الإغلاق المؤكد.">A structured methodology to address regulatory findings efficiently — from initial triage to confirmed closure.</div>
+        <div class="rem-step">
+          <div class="rem-step-dot"></div>
+          <div class="rem-step-text" data-en="Finding Triage &amp; Risk Prioritisation" data-ar="فرز النتائج وترتيب أولويات المخاطر">Finding Triage &amp; Risk Prioritisation</div>
+        </div>
+        <div class="rem-step">
+          <div class="rem-step-dot"></div>
+          <div class="rem-step-text" data-en="Root Cause &amp; Control Gap Analysis" data-ar="تحليل الأسباب الجذرية وفجوات الضوابط">Root Cause &amp; Control Gap Analysis</div>
+        </div>
+        <div class="rem-step">
+          <div class="rem-step-dot"></div>
+          <div class="rem-step-text" data-en="Corrective Action Plan Design" data-ar="تصميم خطة الإجراءات التصحيحية">Corrective Action Plan Design</div>
+        </div>
+        <div class="rem-step">
+          <div class="rem-step-dot"></div>
+          <div class="rem-step-text" data-en="Implementation &amp; Evidence Compilation" data-ar="التنفيذ وتجميع الأدلة والوثائق">Implementation &amp; Evidence Compilation</div>
+        </div>
+        <div class="rem-step">
+          <div class="rem-step-dot"></div>
+          <div class="rem-step-text" data-en="Regulatory Response &amp; Closure Confirmation" data-ar="الرد التنظيمي وتأكيد الإغلاق">Regulatory Response &amp; Closure Confirmation</div>
+        </div>
+        <button class="rem-cta" onclick="scrollTo('#contact')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-en="Talk to an Expert" data-ar="تحدث مع خبير">Talk to an Expert</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ HOW WE WORK ═════════════════════════════════════ -->
+<section class="section how-section" id="how-we-work">
+  <div class="container">
+    <div class="section-header section-center reveal">
+      <span class="section-label" data-en="OUR APPROACH" data-ar="منهجيتنا">OUR APPROACH</span>
+      <h2 class="section-title" data-en="How We <span>Work</span>" data-ar="كيف <span>نعمل</span>">How We <span>Work</span></h2>
+      <p class="section-sub" data-en="A structured engagement model designed to deliver measurable outcomes — from initial diagnostic through to verified implementation." data-ar="نموذج مشاركة منظم مصمم لتحقيق نتائج قابلة للقياس — من التشخيص الأولي إلى التنفيذ الموثق.">A structured engagement model designed to deliver measurable outcomes — from initial diagnostic through to verified implementation.</p>
+    </div>
+
+    <div class="how-steps reveal">
+      <div class="how-step">
+        <div class="how-step-icon">
+          <span class="how-step-num">1</span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="how-step-title" data-en="Discovery Call" data-ar="مكالمة الاستكشاف">Discovery Call</div>
+        <div class="how-step-body" data-en="Understand your context, objectives, and priorities" data-ar="فهم سياقك وأهدافك وأولوياتك">Understand your context, objectives, and priorities</div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-icon">
+          <span class="how-step-num">2</span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="how-step-title" data-en="Scoping Proposal" data-ar="اقتراح النطاق">Scoping Proposal</div>
+        <div class="how-step-body" data-en="Tailored engagement proposal with clear deliverables" data-ar="مقترح مخصص للارتباط بمخرجات واضحة">Tailored engagement proposal with clear deliverables</div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-icon">
+          <span class="how-step-num">3</span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="how-step-title" data-en="Diagnostic" data-ar="التشخيص">Diagnostic</div>
+        <div class="how-step-body" data-en="Structured assessment against requirements and standards" data-ar="تقييم منظم وفق المتطلبات والمعايير">Structured assessment against requirements and standards</div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-icon">
+          <span class="how-step-num">4</span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="how-step-title" data-en="Implementation" data-ar="التنفيذ">Implementation</div>
+        <div class="how-step-body" data-en="Hands-on delivery of frameworks, policies, and controls" data-ar="تسليم عملي للأطر والسياسات والضوابط">Hands-on delivery of frameworks, policies, and controls</div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-icon">
+          <span class="how-step-num">5</span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="how-step-title" data-en="Validation" data-ar="التحقق والإغلاق">Validation</div>
+        <div class="how-step-body" data-en="Review, sign-off, and confirmed regulatory readiness" data-ar="مراجعة واعتماد وتأكيد الجاهزية التنظيمية">Review, sign-off, and confirmed regulatory readiness</div>
+      </div>
+    </div>
+
+    <div class="how-cta-row reveal">
+      <div class="how-cta-sub" data-en="Ready to start? Book a discovery call — no obligation, no sales pitch." data-ar="هل أنت مستعد للبدء؟ احجز مكالمة استكشاف — بدون التزامات أو عروض ترويجية.">Ready to start? Book a discovery call — no obligation, no sales pitch.</div>
+      <button class="how-cta-btn" onclick="scrollTo('#contact')" data-en="Book a Discovery Call" data-ar="احجز مكالمة استكشاف">Book a Discovery Call</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ WHY INTEGRYS ══════════════════════════════════════ -->
+<section class="section why-new-section" id="why-integrys">
+  <div class="container">
+    <div class="section-header section-center reveal">
+      <span class="section-label" data-en="WHY CHOOSE US" data-ar="لماذا تختارنا">WHY CHOOSE US</span>
+      <h2 class="section-title" data-en="Why <span>Integrys</span>" data-ar="لماذا <span>إنتيجريس</span>">Why <span>Integrys</span></h2>
+      <p class="section-sub" data-en="What sets our advisory apart in a market where governance, risk, and compliance are critical to business continuity and regulatory standing." data-ar="ما يميز استشاراتنا في سوق تُعدّ فيه الحوكمة والمخاطر والامتثال أساسيات لاستمرارية الأعمال والوضع التنظيمي.">What sets our advisory apart in a market where governance, risk, and compliance are critical to business continuity and regulatory standing.</p>
+    </div>
+
+    <div class="why-new-grid">
+      <div class="why-new-card reveal">
+        <div class="why-new-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="why-new-title" data-en="Integrated Advisory" data-ar="استشارات متكاملة">Integrated Advisory</div>
+        <div class="why-new-body" data-en="A single firm that connects governance, risk, AML, ESG, carbon, technology, and AI advisory — eliminating the gap between specialist silos." data-ar="شركة واحدة تربط الحوكمة والمخاطر ومكافحة غسل الأموال والـ ESG والكربون والتكنولوجيا وحوكمة الذكاء الاصطناعي — تُلغي الفجوة بين الصوامع المتخصصة.">A single firm that connects governance, risk, AML, ESG, carbon, technology, and AI advisory — eliminating the gap between specialist silos.</div>
+      </div>
+
+      <div class="why-new-card reveal">
+        <div class="why-new-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="why-new-title" data-en="Senior Specialists" data-ar="متخصصون رفيعو المستوى">Senior Specialists</div>
+        <div class="why-new-body" data-en="Every engagement is led and delivered by senior practitioners. No delegation to junior staff. Consistent quality and executive-level accountability." data-ar="كل مشاركة يقودها ويُنفذها كبار الممارسين. لا تفويض للموظفين الأقل خبرة. جودة ثابتة ومساءلة على مستوى تنفيذي.">Every engagement is led and delivered by senior practitioners. No delegation to junior staff. Consistent quality and executive-level accountability.</div>
+      </div>
+
+      <div class="why-new-card reveal">
+        <div class="why-new-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="why-new-title" data-en="MENA Regulatory Expertise" data-ar="الخبرة التنظيمية في منطقة منا">MENA Regulatory Expertise</div>
+        <div class="why-new-body" data-en="Deep, current knowledge of CBE, FRA, EGX, EMLCU, SAMA, CBUAE, ADGM, DIFC, and DFSA regulatory requirements — across Egypt, Saudi Arabia, and UAE." data-ar="معرفة عميقة وحالية بمتطلبات البنك المركزي المصري والرقابة المالية والبورصة المصرية والـ EMLCU وSAMA وCBUAE وADGM وDIFC وDFSA.">Deep, current knowledge of CBE, FRA, EGX, EMLCU, SAMA, CBUAE, ADGM, DIFC, and DFSA regulatory requirements — across Egypt, Saudi Arabia, and UAE.</div>
+      </div>
+
+      <div class="why-new-card reveal">
+        <div class="why-new-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="why-new-title" data-en="Technology Enabled" data-ar="مدعوم بالتكنولوجيا">Technology Enabled</div>
+        <div class="why-new-body" data-en="Experienced in RegTech evaluation, digital compliance solutions, and technology risk governance — helping clients stay ahead of the digital regulatory curve." data-ar="خبرة في تقييم تقنية RegTech وحلول الامتثال الرقمي وحوكمة مخاطر التكنولوجيا — لمساعدة العملاء في البقاء في طليعة المتطلبات التنظيمية الرقمية.">Experienced in RegTech evaluation, digital compliance solutions, and technology risk governance — helping clients stay ahead of the digital regulatory curve.</div>
+      </div>
+
+      <div class="why-new-card reveal">
+        <div class="why-new-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="why-new-title" data-en="Practical Implementation" data-ar="تنفيذ عملي">Practical Implementation</div>
+        <div class="why-new-body" data-en="We do not stop at recommendations. We work alongside client teams to implement frameworks, policies, and controls that function in the real operating environment." data-ar="لا نقف عند التوصيات. نعمل جنباً إلى جنب مع فرق العملاء لتنفيذ الأطر والسياسات والضوابط التي تعمل في البيئة التشغيلية الفعلية.">We do not stop at recommendations. We work alongside client teams to implement frameworks, policies, and controls that function in the real operating environment.</div>
+      </div>
+
+      <div class="why-new-card reveal">
+        <div class="why-new-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="why-new-title" data-en="Executive-Level Experience" data-ar="خبرة على المستوى التنفيذي">Executive-Level Experience</div>
+        <div class="why-new-body" data-en="Our team brings experience from senior roles in banking, financial services, and multinational organisations — advising at the board and C-suite level." data-ar="يجلب فريقنا خبرة من أدوار رفيعة في البنوك والخدمات المالية والمنظمات متعددة الجنسيات — تقديم المشورة على مستوى مجلس الإدارة وكبار المديرين.">Our team brings experience from senior roles in banking, financial services, and multinational organisations — advising at the board and C-suite level.</div>
+      </div>
+    </div>
+
+    <!-- Industries We Serve -->
+    <div class="industries-band reveal">
+      <div class="industries-label" data-en="Industries We Serve" data-ar="القطاعات التي نخدمها">Industries We Serve</div>
+      <div class="industries-pills">
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span data-en="Banking" data-ar="البنوك">Banking</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span data-en="Financial Services" data-ar="الخدمات المالية">Financial Services</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span data-en="FinTech" data-ar="التكنولوجيا المالية">FinTech</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span data-en="Insurance" data-ar="التأمين">Insurance</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span data-en="Investment Management" data-ar="إدارة الاستثمار">Investment Management</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span data-en="Government &amp; Public Sector" data-ar="الحكومة والقطاع العام">Government &amp; Public Sector</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <span data-en="Healthcare" data-ar="الرعاية الصحية">Healthcare</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span data-en="Manufacturing" data-ar="التصنيع">Manufacturing</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span data-en="Energy &amp; Utilities" data-ar="الطاقة والمرافق">Energy &amp; Utilities</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span data-en="Technology" data-ar="التكنولوجيا">Technology</span>
+        </span>
+        <span class="industry-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#006B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-en="Real Estate" data-ar="العقارات">Real Estate</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- ═══════════════════ PRICING ══════════════════════════════ -->
