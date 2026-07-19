@@ -683,131 +683,6 @@ footer{background:var(--nav);color:rgba(255,255,255,0.65);padding-top:60px}
   --glow-blue: rgba(2,128,144,0.12);
 }
 
-/* Fonts */
-h1, h2, h3, h4, .section-title, .hero-title, .nav-logo-en {
-  font-family: 'Plus Jakarta Sans', var(--font-en);
-}
-
-/* Hero Section */
-.hero { min-height: 100vh; position: relative; overflow: hidden; }
-.hero-bg-gradient { background: linear-gradient(135deg, #0B1929 0%, #0a3050 100%); position: absolute; inset: 0; }
-.hero-grid {
-  background-image: 
-    linear-gradient(rgba(0,168,150,0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,168,150,0.1) 1px, transparent 1px);
-  background-size: 40px 40px; opacity: 0.5; position: absolute; inset: 0;
-}
-.hero-title {
-  font-size: clamp(44px, 6vw, 80px); font-weight: 800;
-  background: linear-gradient(135deg, #fff 0%, var(--teal) 60%, #00d4c8 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-}
-.hero-subtitle {
-  overflow: hidden; border-right: .15em solid orange;
-  animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
-}
-@keyframes typing { from { max-width: 0 } to { max-width: 100% } }
-@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: orange; } }
-
-.hero-stat { animation: float 6s ease-in-out infinite; }
-.hero-stat:nth-child(1) { animation-delay: 0s; }
-.hero-stat:nth-child(2) { animation-delay: 1s; }
-.hero-stat:nth-child(3) { animation-delay: 2s; }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-
-.btn-primary { animation: glowPulse 3s ease-in-out infinite; }
-@keyframes glowPulse { 0% { box-shadow: 0 0 0 0 var(--glow-teal); } 50% { box-shadow: 0 0 20px 10px var(--glow-teal); } 100% { box-shadow: 0 0 0 0 var(--glow-teal); } }
-
-.hero-badge { position: relative; overflow: hidden; }
-.hero-badge::after {
-  content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  animation: shimmerSweep 3s infinite;
-}
-@keyframes shimmerSweep { 100% { left: 200%; } }
-
-.bg-orb {
-  position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.4;
-  animation: floatOrb 8s ease-in-out infinite; pointer-events: none; z-index: 0;
-}
-.orb1 { width: 300px; height: 300px; background: var(--teal); top: -50px; left: -50px; animation-duration: 12s; }
-.orb2 { width: 400px; height: 400px; background: var(--bteal); bottom: -100px; right: -100px; animation-duration: 15s; }
-.orb3 { width: 250px; height: 250px; background: var(--amber); top: 50%; left: 50%; animation-duration: 10s; }
-@keyframes floatOrb { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(30px, -30px); } }
-
-/* Marquee */
-.cred-strip { overflow: hidden; white-space: nowrap; background: var(--nav); position: relative; }
-.cred-inner { display: inline-flex; width: max-content; animation: marquee 30s linear infinite; }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.cred-item { box-shadow: 0 0 10px var(--glow-teal); margin-right: 15px; }
-
-/* Section headings */
-.section-title {
-  background: linear-gradient(135deg, var(--nav) 0%, var(--teal) 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-}
-.section-title span { -webkit-text-fill-color: var(--teal); }
-
-/* Reveal classes */
-.reveal, .reveal-left, .reveal-right, .reveal-scale { opacity: 0; transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1); }
-.reveal { transform: translateY(24px); }
-.reveal-left { transform: translateX(-60px); }
-.reveal-right { transform: translateX(60px); }
-.reveal-scale { transform: scale(0.85); }
-.visible { opacity: 1; transform: none; }
-.reveal:nth-child(1) { transition-delay: 0.05s; } .reveal:nth-child(2) { transition-delay: 0.15s; }
-.reveal:nth-child(3) { transition-delay: 0.25s; } .reveal:nth-child(4) { transition-delay: 0.35s; }
-.reveal:nth-child(5) { transition-delay: 0.45s; } .reveal:nth-child(6) { transition-delay: 0.55s; }
-
-/* Service cards */
-.service-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.5); }
-.service-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,168,150,0.15); }
-.service-card::before {
-  content: ''; position: absolute; inset: 0; border: 2px solid transparent;
-  background: linear-gradient(135deg, var(--teal), var(--bteal)) border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: destination-out;
-  mask-composite: exclude; opacity: 0; transition: opacity 0.3s;
-}
-.service-card:hover::before { opacity: 1; }
-.service-card::after {
-  content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transform: translateX(-100%);
-}
-.service-card:hover::after { animation: shimmerSweep 1s forwards; }
-
-/* Pricing */
-.pricing-card.featured { background: linear-gradient(135deg, #0B1929 0%, #0a3050 100%); }
-.pricing-card:not(.featured) { background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); }
-.pricing-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px var(--glow-teal); }
-
-/* Contact */
-.form-group { position: relative; }
-.form-group::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.3s ease; }
-.form-group:focus-within::after { width: 100%; }
-
-/* Footer */
-footer { position: relative; }
-footer::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, transparent, var(--teal), transparent); background-size: 200% 100%;
-  animation: gradientMove 3s linear infinite;
-}
-@keyframes gradientMove { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
-
-/* Navbar */
-.navbar { background: rgba(11,25,41,0.85); backdrop-filter: blur(20px); }
-.navbar.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
-.nav-links a { position: relative; }
-.nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.3s; }
-.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-
-/* Dividers */
-.svg-wave { width: 100%; height: 50px; background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%230B1929" opacity=".25"></path></svg>') no-repeat center; background-size: cover; }
-
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--bg-body); }
-::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 5px; }
-
-
 
 /* ── CARBON ── */
 .carbon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
@@ -1091,6 +966,8 @@ footer::before {
   box-shadow: var(--shadow-lg);
   position: relative;
   overflow: hidden;
+  max-width: 320px;
+  margin: 0 auto;
 }
 .leader-photo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(0deg, rgba(0, 168, 150, 0.15), transparent); }
 .leader-initials { font-size: 60px; font-weight: 800; color: rgba(0, 168, 150, 0.4); letter-spacing: -2px; user-select: none; }
@@ -1178,7 +1055,7 @@ footer::before {
 }
 
 @media(max-width:768px){
-  .services-grid, .carbon-grid, .reg-grid, .case-grid, .why-grid, .coverage-grid { grid-template-columns: 1fr; }
+  .services-grid, .carbon-grid, .reg-grid, .cases-grid, .why-grid, .coverage-grid { grid-template-columns: 1fr; }
   .method-grid, .engage-steps, .form-row { grid-template-columns: 1fr; }
   .network-band { flex-direction: column; text-align: center; padding: 24px; }
 }
@@ -1644,6 +1521,7 @@ footer::before {
 
 <!-- ═══════════════════ METHODOLOGY ══════════════════════════ -->
 
+
 <section class="section" id="methodology">
   <div class="container">
     <div class="section-header section-center reveal">
@@ -1662,89 +1540,82 @@ footer::before {
         
         <div class="iesg-pillars">
           <!-- Pillar E -->
-          <div class="iesg-pillar" style="--c:#006B3C">
-            <div class="pillar-letter">E</div>
-            <div class="pillar-info">
-              <div class="pillar-name" data-en="Environmental" data-ar="البيئية">Environmental</div>
-              <div class="pillar-weight" data-en="Weight: 30% · Scope 1/2/3, Energy, Water, Waste" data-ar="الوزن: 30% · انبعاثات 1/2/3، الطاقة والمياه والمخلفات">Weight: 30% · Scope 1/2/3, Energy, Water, Waste</div>
-            </div>
+          <div class="iesg-pillar" style="--pc:#006B3C">
+            <div class="pillar-code">E</div>
+            <div class="pillar-name" data-en="Environmental" data-ar="البيئية">Environmental</div>
+            <div class="pillar-weight" data-en="Weight: 30% · Scope 1/2/3, Energy, Water, Waste" data-ar="الوزن: 30% · انبعاثات 1/2/3، الطاقة والمياه والمخلفات">Weight: 30% · Scope 1/2/3, Energy, Water, Waste</div>
           </div>
           
           <!-- Pillar S -->
-          <div class="iesg-pillar" style="--c:#2E86AB">
-            <div class="pillar-letter">S</div>
-            <div class="pillar-info">
-              <div class="pillar-name" data-en="Social" data-ar="الاجتماعية">Social</div>
-              <div class="pillar-weight" data-en="Weight: 25% · Safety, Labour, Diversity, Community" data-ar="الوزن: 25% · السلامة والعمل والتنوع والمجتمع">Weight: 25% · Safety, Labour, Diversity, Community</div>
-            </div>
+          <div class="iesg-pillar" style="--pc:#2E86AB">
+            <div class="pillar-code">S</div>
+            <div class="pillar-name" data-en="Social" data-ar="الاجتماعية">Social</div>
+            <div class="pillar-weight" data-en="Weight: 25% · Safety, Labour, Diversity, Community" data-ar="الوزن: 25% · السلامة والعمل والتنوع والمجتمع">Weight: 25% · Safety, Labour, Diversity, Community</div>
           </div>
           
           <!-- Pillar G -->
-          <div class="iesg-pillar" style="--c:#C06E00">
-            <div class="pillar-letter">G</div>
-            <div class="pillar-info">
-              <div class="pillar-name" data-en="Governance" data-ar="الحوكمة">Governance</div>
-              <div class="pillar-weight" data-en="Weight: 30% · Board, Controls, Anti-Corruption, Disclosure" data-ar="الوزن: 30% · مجلس الإدارة والضوابط ومكافحة الفساد والإفصاح">Weight: 30% · Board, Controls, Anti-Corruption, Disclosure</div>
-            </div>
+          <div class="iesg-pillar" style="--pc:#C06E00">
+            <div class="pillar-code">G</div>
+            <div class="pillar-name" data-en="Governance" data-ar="الحوكمة">Governance</div>
+            <div class="pillar-weight" data-en="Weight: 30% · Board, Controls, Anti-Corruption, Disclosure" data-ar="الوزن: 30% · مجلس الإدارة والضوابط ومكافحة الفساد والإفصاح">Weight: 30% · Board, Controls, Anti-Corruption, Disclosure</div>
           </div>
           
-          <!-- Pillar I (Integration) -->
-          <div class="iesg-pillar" style="--c:#9B59B6">
-            <div class="pillar-letter">I</div>
-            <div class="pillar-info">
-              <div class="pillar-name" data-en="Integration" data-ar="التكامل">Integration</div>
-              <div class="pillar-weight" data-en="Weight: 15% · Business value, alignment, implementation" data-ar="الوزن: 15% · قيمة الأعمال والمواءمة والتنفيذ الفعلي">Weight: 15% · Business value, alignment, implementation</div>
-            </div>
+          <!-- Pillar I -->
+          <div class="iesg-pillar" style="--pc:#9B59B6">
+            <div class="pillar-code">I</div>
+            <div class="pillar-name" data-en="Integration" data-ar="التكامل">Integration</div>
+            <div class="pillar-weight" data-en="Weight: 15% · Business value, alignment, implementation" data-ar="الوزن: 15% · قيمة الأعمال والمواءمة والتنفيذ الفعلي">Weight: 15% · Business value, alignment, implementation</div>
           </div>
         </div>
       </div>
       
       <!-- Right: How We Deliver (5 Steps) -->
-      <div class="method-steps">
-        <h3 class="step-main-title" style="margin-bottom: 20px; font-size: 16px; font-weight: 700; color: var(--nav); letter-spacing: 1px;" data-en="How We Deliver" data-ar="كيفية التقديم">How We Deliver</h3>
-        
-        <!-- Step 1 -->
-        <div class="method-step reveal">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h4 class="step-title" data-en="Discovery &amp; Diagnostic" data-ar="الاستكشاف والتشخيص">Discovery &amp; Diagnostic</h4>
-            <p class="step-body" data-en="Understand your context, objectives, and priorities." data-ar="فهم السياق والأهداف والأولويات الخاصة بك بدقة.">Understand your context, objectives, and priorities.</p>
+      <div class="method-right">
+        <h3 class="step-main-title" style="margin-bottom: 24px; font-size: 16px; font-weight: 800; color: var(--nav); letter-spacing: 1.5px; text-transform: uppercase;" data-en="How We Deliver" data-ar="كيفية التقديم">How We Deliver</h3>
+        <div class="method-steps">
+          <!-- Step 1 -->
+          <div class="method-step reveal">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4 class="step-title" data-en="Discovery &amp; Diagnostic" data-ar="الاستكشاف والتشخيص">Discovery &amp; Diagnostic</h4>
+              <p class="step-body" data-en="Understand your context, objectives, and priorities." data-ar="فهم السياق والأهداف والأولويات الخاصة بك بدقة.">Understand your context, objectives, and priorities.</p>
+            </div>
           </div>
-        </div>
-        
-        <!-- Step 2 -->
-        <div class="method-step reveal">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h4 class="step-title" data-en="Scoping &amp; Proposal" data-ar="تحديد النطاق والتقديم">Scoping &amp; Proposal</h4>
-            <p class="step-body" data-en="Tailored engagement proposal with clear deliverables." data-ar="مقترح مخصص للارتباط مع مخرجات وخطوات واضحة تماماً.">Tailored engagement proposal with clear deliverables.</p>
+          
+          <!-- Step 2 -->
+          <div class="method-step reveal">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4 class="step-title" data-en="Scoping &amp; Proposal" data-ar="تحديد النطاق والتقديم">Scoping &amp; Proposal</h4>
+              <p class="step-body" data-en="Tailored engagement proposal with clear deliverables." data-ar="مقترح مخصص للارتباط مع مخرجات وخطوات واضحة تماماً.">Tailored engagement proposal with clear deliverables.</p>
+            </div>
           </div>
-        </div>
-        
-        <!-- Step 3 -->
-        <div class="method-step reveal">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h4 class="step-title" data-en="Assessment &amp; Analysis" data-ar="التقييم والتحليل">Assessment &amp; Analysis</h4>
-            <p class="step-body" data-en="Structured assessment against requirements and standards." data-ar="تقييم منظم ومفصل مقابل المعايير والمتطلبات والتشريعات المحددة.">Structured assessment against requirements and standards.</p>
+          
+          <!-- Step 3 -->
+          <div class="method-step reveal">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4 class="step-title" data-en="Assessment &amp; Analysis" data-ar="التقييم والتحليل">Assessment &amp; Analysis</h4>
+              <p class="step-body" data-en="Structured assessment against requirements and standards." data-ar="تقييم منظم ومفصل مقابل المعايير والمتطلبات والتشريعات المحددة.">Structured assessment against requirements and standards.</p>
+            </div>
           </div>
-        </div>
-        
-        <!-- Step 4 -->
-        <div class="method-step reveal">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <h4 class="step-title" data-en="Delivery &amp; Implementation" data-ar="التقديم والتنفيذ">Delivery &amp; Implementation</h4>
-            <p class="step-body" data-en="Hands-on delivery of frameworks, policies, and controls." data-ar="مساعدة عملية لتنفيذ الأطر وتطوير السياسات وضوابط العمل.">Hands-on delivery of frameworks, policies, and controls.</p>
+          
+          <!-- Step 4 -->
+          <div class="method-step reveal">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4 class="step-title" data-en="Delivery &amp; Implementation" data-ar="التقديم والتنفيذ">Delivery &amp; Implementation</h4>
+              <p class="step-body" data-en="Hands-on delivery of frameworks, policies, and controls." data-ar="مساعدة عملية لتنفيذ الأطر وتطوير السياسات وضوابط العمل.">Hands-on delivery of frameworks, policies, and controls.</p>
+            </div>
           </div>
-        </div>
-        
-        <!-- Step 5 -->
-        <div class="method-step reveal">
-          <div class="step-num">5</div>
-          <div class="step-content">
-            <h4 class="step-title" data-en="Review &amp; Sign-off" data-ar="المراجعة والاعتماد النهائي">Review &amp; Sign-off</h4>
-            <p class="step-body" data-en="Review, sign-off, and confirmed regulatory readiness." data-ar="المراجعة وتأكيد الجاهزية والامتثال للمتطلبات التنظيمية.">Review, sign-off, and confirmed regulatory readiness.</p>
+          
+          <!-- Step 5 -->
+          <div class="method-step reveal">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h4 class="step-title" data-en="Review &amp; Sign-off" data-ar="المراجعة والاعتماد النهائي">Review &amp; Sign-off</h4>
+              <p class="step-body" data-en="Review, sign-off, and confirmed regulatory readiness." data-ar="المراجعة وتأكيد الجاهزية والامتثال للمتطلبات التنظيمية.">Review, sign-off, and confirmed regulatory readiness.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1753,7 +1624,9 @@ footer::before {
 </section>
 
 
+
 <!-- ═══════════════════ REGULATORY ════════════════════════════ -->
+
 
 <section class="section section-alt" id="regulatory">
   <div class="container">
@@ -1766,12 +1639,14 @@ footer::before {
     <div class="reg-grid">
       <!-- FRA -->
       <div class="reg-card reveal" style="--rc:#006B75">
-        <div class="reg-card-header" style="background:linear-gradient(135deg,#003c42,#006b75)">
+        <div class="reg-header" style="background:linear-gradient(135deg,#003c42,#006b75)">
           <div class="reg-badge" style="background:rgba(0,107,117,0.25)">FRA</div>
-          <div class="reg-name-en">Financial Regulatory Authority</div>
-          <div class="reg-name-ar">الهيئة العامة للرقابة المالية</div>
+          <div>
+            <div class="reg-name-en">Financial Regulatory Authority</div>
+            <div class="reg-name-ar">الهيئة العامة للرقابة المالية</div>
+          </div>
         </div>
-        <div class="reg-card-body">
+        <div class="reg-body">
           <ul class="reg-list">
             <li data-en="Capital markets governance &amp; compliance" data-ar="حوكمة أسواق رأس المال والامتثال">Capital markets governance &amp; compliance</li>
             <li data-en="Investment fund licensing &amp; reporting" data-ar="ترخيص وإعداد تقارير صناديق الاستثمار">Investment fund licensing &amp; reporting</li>
@@ -1783,12 +1658,14 @@ footer::before {
 
       <!-- CBE -->
       <div class="reg-card reveal" style="--rc:#2E86AB">
-        <div class="reg-card-header" style="background:linear-gradient(135deg,#154257,#2e86ab)">
+        <div class="reg-header" style="background:linear-gradient(135deg,#154257,#2e86ab)">
           <div class="reg-badge" style="background:rgba(46,134,171,0.25)">CBE</div>
-          <div class="reg-name-en">Central Bank of Egypt</div>
-          <div class="reg-name-ar">البنك المركزي المصري</div>
+          <div>
+            <div class="reg-name-en">Central Bank of Egypt</div>
+            <div class="reg-name-ar">البنك المركزي المصري</div>
+          </div>
         </div>
-        <div class="reg-card-body">
+        <div class="reg-body">
           <ul class="reg-list">
             <li data-en="Banking regulation &amp; prudential standards" data-ar="اللوائح المصرفية والمعايير الاحترازية">Banking regulation &amp; prudential standards</li>
             <li data-en="AML/CFT banking compliance" data-ar="امتثال البنوك لمكافحة غسل الأموال">AML/CFT banking compliance</li>
@@ -1800,16 +1677,18 @@ footer::before {
 
       <!-- EGX -->
       <div class="reg-card reveal" style="--rc:#C06E00">
-        <div class="reg-card-header" style="background:linear-gradient(135deg,#5c3500,#c06e00)">
+        <div class="reg-header" style="background:linear-gradient(135deg,#5c3500,#c06e00)">
           <div class="reg-badge" style="background:rgba(192,110,0,0.25)">EGX</div>
-          <div class="reg-name-en">The Egyptian Exchange</div>
-          <div class="reg-name-ar">البورصة المصرية</div>
+          <div>
+            <div class="reg-name-en">The Egyptian Exchange</div>
+            <div class="reg-name-ar">البورصة المصرية</div>
+          </div>
         </div>
-        <div class="reg-card-body">
+        <div class="reg-body">
           <ul class="reg-list">
             <li data-en="Listed company compliance &amp; disclosure" data-ar="امتثال وإفصاح الشركات المدرجة">Listed company compliance &amp; disclosure</li>
             <li data-en="Corporate governance code alignment" data-ar="التوافق مع دليل حوكمة الشركات">Corporate governance code alignment</li>
-            <li data-en="ESG disclosure requirements" data-ar="متطلبات إفصاحات ESG في البورصة">ESG disclosure requirements</li>
+            <li data-en="ESG disclosure requirements" data-ar="متمتطلبات إفصاحات ESG في البورصة">ESG disclosure requirements</li>
             <li data-en="Market conduct &amp; insider trading controls" data-ar="سلوك السوق وضوابط التداول بناءً على معلومات داخلية">Market conduct &amp; insider trading controls</li>
           </ul>
         </div>
@@ -1817,12 +1696,14 @@ footer::before {
 
       <!-- EMLCU -->
       <div class="reg-card reveal" style="--rc:#C00000">
-        <div class="reg-card-header" style="background:linear-gradient(135deg,#3d0000,#7a0000)">
+        <div class="reg-header" style="background:linear-gradient(135deg,#3d0000,#7a0000)">
           <div class="reg-badge" style="background:rgba(192,0,0,0.25)">EMLCU</div>
-          <div class="reg-name-en">Money Laundering &amp; Terrorist Financing Unit</div>
-          <div class="reg-name-ar">وحدة مكافحة غسل الأموال وتمويل الإرهاب</div>
+          <div>
+            <div class="reg-name-en">Money Laundering Unit</div>
+            <div class="reg-name-ar">وحدة مكافحة غسل الأموال وتمويل الإرهاب</div>
+          </div>
         </div>
-        <div class="reg-card-body">
+        <div class="reg-body">
           <ul class="reg-list">
             <li data-en="AML/CFT compliance programme review" data-ar="مراجعة برنامج امتثال AML/CFT">AML/CFT compliance programme review</li>
             <li data-en="Suspicious transaction reporting (STR)" data-ar="تقارير المعاملات المشبوهة (STR)">Suspicious transaction reporting (STR)</li>
@@ -1932,6 +1813,7 @@ footer::before {
     </div>
   </div>
 </section>
+
 
 
 <!-- ═══════════════════ PRICING ══════════════════════════════ -->
@@ -2075,6 +1957,7 @@ footer::before {
 
 <!-- ═══════════════════ CASE STUDIES ═══════════════════════════ -->
 
+
 <section class="section section-alt" id="engagements">
   <div class="container">
     <div class="section-header section-center reveal">
@@ -2083,105 +1966,70 @@ footer::before {
       <p class="section-sub" data-en="Real-world case summaries showing how we help organizations navigate ESG and complex regulatory environments." data-ar="ملخصات حالات واقعية توضح كيف نساعد المؤسسات على التنقل في مجالات ESG والبيئات التنظيمية المعقدة.">Real-world case summaries showing how we help organizations navigate ESG and complex regulatory environments.</p>
     </div>
     
-    <div class="case-grid">
+    <div class="cases-grid">
       <!-- Card 1 -->
-      <div class="case-card reveal">
-        <div class="case-card-inner">
-          <div class="case-sector" data-en="Banking &bull; Egypt" data-ar="الخدمات المصرفية &bull; مصر">Banking &bull; Egypt</div>
-          <div class="case-title" data-en="AML Programme Redesign &amp; EMLCU Readiness" data-ar="إعادة تصميم برنامج مكافحة غسيل الأموال وجاهزية EMLCU">AML Programme Redesign &amp; EMLCU Readiness</div>
-          
-          <div class="case-details">
-            <div class="case-block">
-              <div class="case-block-label" data-en="Challenge" data-ar="التحدي">Challenge</div>
-              <div class="case-block-text" data-en="A mid-tier Egyptian bank received regulatory observations on its AML/CFT programme, requiring a structured remediation response and strengthened controls." data-ar="تلقى بنك مصري متوسط الحجم ملاحظات رقابية على برنامجه لمكافحة غسل الأموال وتمويل الإرهاب، مما تطلب استجابة منهجية للمعالجة وتعزيز الضوابط.">A mid-tier Egyptian bank received regulatory observations on its AML/CFT programme, requiring a structured remediation response and strengthened controls.</div>
-            </div>
-            
-            <div class="case-block">
-              <div class="case-block-label" data-en="Solution" data-ar="الحل">Solution</div>
-              <div class="case-block-text" data-en="End-to-end AML programme redesign including KYC/CDD enhancement, transaction monitoring tuning, and preparation of regulatory response documentation." data-ar="إعادة تصميم شاملة لبرنامج مكافحة غسل الأموال بما في ذلك تحسين إجراءات اعرف عميلك والعناية الواجبة وتعديل مراقبة المعاملات وإعداد وثائق الرد الرقابي.">End-to-end AML programme redesign including KYC/CDD enhancement, transaction monitoring tuning, and preparation of regulatory response documentation.</div>
-            </div>
-            
-            <div class="case-block">
-              <div class="case-outcome-label" data-en="Outcome" data-ar="النتيجة">Outcome</div>
-              <div class="case-outcome-text" data-en="Regulatory findings formally closed within 90 days. Sustained improvement in compliance monitoring metrics." data-ar="تم إغلاق النتائج التنظيمية رسمياً خلال 90 يوماً. تحسن مستمر في مؤشرات مراقبة الامتثال.">Regulatory findings formally closed within 90 days. Sustained improvement in compliance monitoring metrics.</div>
-            </div>
+      <div class="case-card reveal expandable" style="--c:#2E86AB">
+        <span class="case-badge" data-en="AML &bull; GRC" data-ar="مكافحة غسل الأموال &bull; الحوكمة">AML &bull; GRC</span>
+        <h3 class="case-title" data-en="AML Programme Redesign &amp; EMLCU Readiness" data-ar="إعادة تصميم برنامج مكافحة غسيل الأموال وجاهزية EMLCU">AML Programme Redesign &amp; EMLCU Readiness</h3>
+        <p class="case-challenge" data-en="A mid-tier Egyptian bank received regulatory observations on its AML/CFT programme, requiring a structured remediation response and strengthened controls." data-ar="تلقى بنك مصري متوسط الحجم ملاحظات رقابية على برنامجه لمكافحة غسل الأموال وتمويل الإرهاب، مما تطلب استجابة منهجية للمعالجة وتعزيز الضوابط.">A mid-tier Egyptian bank received regulatory observations on its AML/CFT programme, requiring a structured remediation response and strengthened controls.</p>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="View Full Case" data-ar="عرض الحالة كاملة">View Full Case</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="case-steps">
+            <div class="case-step"><b>1.</b><span data-en="CDD/KYC enhancement and customer risk-rating model revision." data-ar="تحسين إجراءات العناية الواجبة واعرف عميلك ومراجعة نموذج تصنيف مخاطر العملاء.">CDD/KYC enhancement and customer risk-rating model revision.</span></div>
+            <div class="case-step"><b>2.</b><span data-en="Transaction monitoring rules tuning to reduce false positive alerts." data-ar="ضبط قواعد مراقبة المعاملات لتقليل التنبيهات الإيجابية الكاذبة.">Transaction monitoring rules tuning to reduce false positive alerts.</span></div>
+            <div class="case-step"><b>3.</b><span data-en="Drafting regulatory response and corrective action plan compilation." data-ar="صياغة الرد الرقابي وتجميع خطة العمل التصحيحية.">Drafting regulatory response and corrective action plan compilation.</span></div>
           </div>
-          
-          <div class="case-footer">
-            <span class="case-footer-tag" data-en="AML &bull; GRC" data-ar="مكافحة غسيل الأموال &bull; الحوكمة والمخاطر والامتثال">AML &bull; GRC</span>
-            <button class="read-more" onclick="scrollTo('#contact')">
-              <span data-en="Read More" data-ar="اقرأ المزيد">Read More</span> <span>➔</span>
-            </button>
-          </div>
+          <div class="expand-case-ref" data-en="Result: Regulatory findings formally closed within 90 days. Sustained improvement in compliance monitoring metrics." data-ar="النتيجة: تم إغلاق النتائج التنظيمية رسمياً خلال 90 يوماً. تحسن مستمر في مؤشرات مراقبة الامتثال.">Result: Regulatory findings formally closed within 90 days. Sustained improvement in compliance monitoring metrics.</div>
+        </div>
+        <div class="case-meta">
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Duration" data-ar="المدة">Duration</div><div class="case-meta-val" data-en="12 weeks" data-ar="12 أسبوعاً">12 weeks</div></div>
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Regulator" data-ar="الجهة الرقابية">Regulator</div><div class="case-meta-val">CBE · EMLCU</div></div>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="case-card reveal">
-        <div class="case-card-inner">
-          <div class="case-sector" data-en="Financial Services &bull; MENA" data-ar="الخدمات المالية &bull; الشرق الأوسط وشمال إفريقيا">Financial Services &bull; MENA</div>
-          <div class="case-title" data-en="ESG Strategy &amp; Sustainability Framework Implementation" data-ar="استراتيجية ESG وتطبيق إطار العمل للاستدامة">ESG Strategy &amp; Sustainability Framework Implementation</div>
-          
-          <div class="case-details">
-            <div class="case-block">
-              <div class="case-block-label" data-en="Challenge" data-ar="التحدي">Challenge</div>
-              <div class="case-block-text" data-en="A regional investment management firm needed to develop a credible ESG strategy and reporting capability aligned to international disclosure standards." data-ar="احتاجت شركة إقليمية لإدارة الاستثمارات إلى تطوير استراتيجية موثوقة لـ ESG وإمكانية إعداد التقارير متوافقة مع معايير الإفصاح الدولية.">A regional investment management firm needed to develop a credible ESG strategy and reporting capability aligned to international disclosure standards.</div>
-            </div>
-            
-            <div class="case-block">
-              <div class="case-block-label" data-en="Solution" data-ar="الحل">Solution</div>
-              <div class="case-block-text" data-en="Applied the I-ESG™ Framework to conduct a materiality assessment, develop an ESG strategy, and build a GRI-aligned sustainability report." data-ar="تطبيق إطار عمل I-ESG™ لإجراء تقييم الأهمية النسبية، وتطوير استراتيجية ESG، وإنشاء تقرير استدامة متوافق مع معايير GRI.">Applied the I-ESG™ Framework to conduct a materiality assessment, develop an ESG strategy, and build a GRI-aligned sustainability report.</div>
-            </div>
-            
-            <div class="case-block">
-              <div class="case-outcome-label" data-en="Outcome" data-ar="النتيجة">Outcome</div>
-              <div class="case-outcome-text" data-en="First sustainability report published within one year. ESG data infrastructure established for ongoing reporting cycles." data-ar="نشر أول تقرير استدامة خلال عام واحد. إنشاء بنية تحتية لبيانات ESG لدورات إعداد التقارير المستمرة.">First sustainability report published within one year. ESG data infrastructure established for ongoing reporting cycles.</div>
-            </div>
+      <div class="case-card reveal expandable" style="--c:#006B3C">
+        <span class="case-badge" data-en="ESG &bull; I-ESG™" data-ar="الاستدامة &bull; إطار I-ESG™">ESG &bull; I-ESG™</span>
+        <h3 class="case-title" data-en="ESG Strategy &amp; Sustainability Framework" data-ar="استراتيجية ESG وإطار عمل الاستدامة">ESG Strategy &amp; Sustainability Framework</h3>
+        <p class="case-challenge" data-en="A regional investment management firm needed to develop a credible ESG strategy and reporting capability aligned to international disclosure standards." data-ar="احتاجت شركة إقليمية لإدارة الاستثمارات إلى تطوير استراتيجية موثوقة لـ ESG وإمكانية إعداد التقارير متوافقة مع معايير الإفصاح الدولية.">A regional investment management firm needed to develop a credible ESG strategy and reporting capability aligned to international disclosure standards.</p>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="View Full Case" data-ar="عرض الحالة كاملة">View Full Case</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="case-steps">
+            <div class="case-step"><b>1.</b><span data-en="Applied the I-ESG™ Framework to conduct a structured materiality assessment." data-ar="تطبيق إطار عمل I-ESG™ لإجراء تقييم الأهمية النسبية المنظم.">Applied the I-ESG™ Framework to conduct a structured materiality assessment.</span></div>
+            <div class="case-step"><b>2.</b><span data-en="Developed an ESG strategy and created board level policy suite." data-ar="تطوير استراتيجية ESG وإنشاء مجموعة السياسات على مستوى مجلس الإدارة.">Developed an ESG strategy and created board level policy suite.</span></div>
+            <div class="case-step"><b>3.</b><span data-en="Built a GRI-aligned sustainability report and data framework." data-ar="إنشاء تقرير استدامة متوافق مع معايير GRI وإطار عمل البيانات.">Built a GRI-aligned sustainability report and data framework.</span></div>
           </div>
-          
-          <div class="case-footer">
-            <span class="case-footer-tag" data-en="ESG &bull; I-ESG™" data-ar="الحوكمة البيئية والاجتماعية &bull; إطار I-ESG™">ESG &bull; I-ESG™</span>
-            <button class="read-more" onclick="scrollTo('#contact')">
-              <span data-en="Read More" data-ar="اقرأ المزيد">Read More</span> <span>➔</span>
-            </button>
-          </div>
+          <div class="expand-case-ref" data-en="Result: First sustainability report published within one year. ESG data infrastructure established for ongoing reporting cycles." data-ar="النتيجة: نشر أول تقرير استدامة خلال عام واحد. إنشاء بنية تحتية لبيانات ESG لدورات إعداد التقارير المستمرة.">Result: First sustainability report published within one year. ESG data infrastructure established for ongoing reporting cycles.</div>
+        </div>
+        <div class="case-meta">
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Duration" data-ar="المدة">Duration</div><div class="case-meta-val" data-en="16 weeks" data-ar="16 أسبوعاً">16 weeks</div></div>
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Regulator" data-ar="الجهة الرقابية">Regulator</div><div class="case-meta-val">FRA · EGX</div></div>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="case-card reveal">
-        <div class="case-card-inner">
-          <div class="case-sector" data-en="Multinational &bull; Egypt &amp; GCC" data-ar="شركة متعددة الجنسيات &bull; مصر ودول الخليج">Multinational &bull; Egypt &amp; GCC</div>
-          <div class="case-title" data-en="Enterprise Governance &amp; Risk Framework Build-out" data-ar="بناء إطار عمل الحوكمة وإدارة المخاطر للمؤسسة">Enterprise Governance &amp; Risk Framework Build-out</div>
-          
-          <div class="case-details">
-            <div class="case-block">
-              <div class="case-block-label" data-en="Challenge" data-ar="التحدي">Challenge</div>
-              <div class="case-block-text" data-en="A regional enterprise lacked a consistent group-level risk and governance framework, causing regulatory exposure across jurisdictions." data-ar="افتقرت شركة إقليمية إلى إطار عمل متسق للمخاطر وحوكمة الشركات على مستوى المجموعة، مما خلق مخاطر تنظيمية متعددة.">A regional enterprise lacked a consistent group-level risk and governance framework, causing regulatory exposure across jurisdictions.</div>
-            </div>
-            
-            <div class="case-block">
-              <div class="case-block-label" data-en="Solution" data-ar="الحل">Solution</div>
-              <div class="case-block-text" data-en="Designed and implemented a Group-level ERM framework, corporate governance structure, and a compliance programme aligned to ISO 37301." data-ar="تصميم وتنفيذ إطار عمل ERM على مستوى المجموعة، وهيكل حوكمة الشركات، وبرنامج امتثال متوافق مع معايير ISO 37301.">Designed and implemented a Group-level ERM framework, corporate governance structure, and a compliance programme aligned to ISO 37301.</div>
-            </div>
-            
-            <div class="case-block">
-              <div class="case-outcome-label" data-en="Outcome" data-ar="النتيجة">Outcome</div>
-              <div class="case-outcome-text" data-en="Unified governance structure embedded across subsidiaries. Risk appetite approved by board within six months of engagement." data-ar="ترسيخ هيكل حوكمة موحد عبر الشركات التابعة. موافقة مجلس الإدارة على شهية المخاطر خلال ستة أشهر من بدء العمل.">Unified governance structure embedded across subsidiaries. Risk appetite approved by board within six months of engagement.</div>
-            </div>
+      <div class="case-card reveal expandable" style="--c:#C06E00">
+        <span class="case-badge" data-en="GRC &bull; ERM" data-ar="الحوكمة &bull; إدارة المخاطر">GRC &bull; ERM</span>
+        <h3 class="case-title" data-en="Enterprise Governance &amp; Risk Framework" data-ar="حوكمة الشركات وإطار عمل المخاطر للمؤسسة">Enterprise Governance &amp; Risk Framework</h3>
+        <p class="case-challenge" data-en="A regional enterprise lacked a consistent group-level risk and governance framework, causing regulatory exposure across jurisdictions." data-ar="افتقرت شركة إقليمية إلى إطار عمل متسق للمخاطر وحوكمة الشركات على مستوى المجموعة، مما خلق مخاطر تنظيمية متعددة.">A regional enterprise lacked a consistent group-level risk and governance framework, causing regulatory exposure across jurisdictions.</p>
+        <button class="expand-toggle" onclick="toggleExpand(this)"><span data-en="View Full Case" data-ar="عرض الحالة كاملة">View Full Case</span><span class="chev">▾</span></button>
+        <div class="expand-content">
+          <div class="case-steps">
+            <div class="case-step"><b>1.</b><span data-en="Designed and implemented a Group-level ERM framework and risk appetite." data-ar="تصميم وتنفيذ إطار عمل ERM على مستوى المجموعة وتحديد شهية المخاطر.">Designed and implemented a Group-level ERM framework and risk appetite.</span></div>
+            <div class="case-step"><b>2.</b><span data-en="Defined corporate governance structure and board oversight protocols." data-ar="تحديد هيكل حوكمة الشركات وبروتوكولات إشراف مجلس الإدارة.">Defined corporate governance structure and board oversight protocols.</span></div>
+            <div class="case-step"><b>3.</b><span data-en="Built compliance programme aligned to ISO 37301 standards." data-ar="بناء برنامج امتثال متوافق مع معايير ISO 37301.">Built compliance programme aligned to ISO 37301 standards.</span></div>
           </div>
-          
-          <div class="case-footer">
-            <span class="case-footer-tag" data-en="GRC &bull; ERM" data-ar="الحوكمة والمخاطر &bull; إدارة المخاطر المؤسسية">GRC &bull; ERM</span>
-            <button class="read-more" onclick="scrollTo('#contact')">
-              <span data-en="Read More" data-ar="اقرأ المزيد">Read More</span> <span>➔</span>
-            </button>
-          </div>
+          <div class="expand-case-ref" data-en="Result: Unified governance structure embedded across subsidiaries. Risk appetite approved by board within six months of engagement." data-ar="النتيجة: ترسيخ هيكل حوكمة موحد عبر الشركات التابعة. موافقة مجلس الإدارة على شهية المخاطر خلال ستة أشهر من بدء العمل.">Result: Unified governance structure embedded across subsidiaries. Risk appetite approved by board within six months of engagement.</div>
+        </div>
+        <div class="case-meta">
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Duration" data-ar="المدة">Duration</div><div class="case-meta-val" data-en="24 weeks" data-ar="24 أسبوعاً">24 weeks</div></div>
+          <div class="case-meta-item"><div class="case-meta-lbl" data-en="Standards" data-ar="المعايير">Standards</div><div class="case-meta-val">ISO 37301</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 <!-- ═══════════════════ CONTACT ══════════════════════════════ -->
