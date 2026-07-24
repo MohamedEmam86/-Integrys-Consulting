@@ -91,7 +91,7 @@ h1,h2,h3,h4{color:var(--nav);line-height:1.2}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
 .btn-primary{background:var(--teal);color:#fff;padding:13px 28px;border-radius:8px;font-size:15px;font-weight:600;border:none;cursor:pointer;transition:var(--transition);font-family:var(--font)}
 .btn-primary:hover{background:#005a63;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,107,117,0.4)}
-.btn-outline{background:transparent;color:#fff;padding:13px 28px;border-radius:8px;font-size:15px;font-weight:600;border:2px solid rgba(255,255,255,0.3);cursor:pointer;transition:var(--transition);font-family:var(--font)}
+.btn-outline{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:transparent;color:#fff;padding:13px 28px;border-radius:8px;font-size:15px;font-weight:600;border:2px solid rgba(255,255,255,0.3);cursor:pointer;transition:var(--transition);font-family:var(--font)}
 .btn-outline:hover{border-color:rgba(255,255,255,0.7);transform:translateY(-2px)}
 .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
 .hero-stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px 16px;text-align:center}
@@ -836,6 +836,36 @@ footer{background:var(--nav);color:rgba(255,255,255,0.65);padding-top:60px}
   .how-step { flex: 0 0 100%; }
 }
 
+
+/* ══ BOOK DISCOVERY CALL — MODAL ══ */
+.bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(5,16,28,0.72);backdrop-filter:blur(6px);opacity:0;transition:opacity .25s ease}
+.bk-overlay.open{display:flex}
+.bk-overlay.show{opacity:1}
+.bk-modal{position:relative;width:100%;max-width:600px;max-height:92vh;overflow-y:auto;background:linear-gradient(160deg,#0D2B4E 0%,#08203c 100%);border:1px solid rgba(0,168,150,0.28);border-radius:18px;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,0.55);transform:translateY(18px) scale(.97);transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.bk-overlay.show .bk-modal{transform:translateY(0) scale(1)}
+.bk-close{position:absolute;top:14px;inset-inline-end:14px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);border-radius:9px;cursor:pointer;font-size:19px;line-height:1;transition:var(--transition)}
+.bk-close:hover{background:rgba(0,168,150,0.18);color:#fff}
+.bk-eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.bk-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+.bk-title{font-size:25px;font-weight:800;color:#fff;line-height:1.25;margin-bottom:8px}
+.bk-sub{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:24px}
+.bk-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bk-group{margin-bottom:14px;text-align:start}
+.bk-label{display:block;font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px}
+.bk-input,.bk-select,.bk-textarea{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:9px;padding:11px 13px;color:#fff;font-size:14.5px;font-family:var(--font);transition:var(--transition);box-sizing:border-box}
+.bk-textarea{min-height:88px;resize:vertical}
+.bk-input:focus,.bk-select:focus,.bk-textarea:focus{outline:none;border-color:var(--teal);background:rgba(0,107,117,0.12);box-shadow:0 0 0 3px rgba(0,168,150,0.15)}
+.bk-select option{background:#0D2B4E;color:#fff}
+.bk-input::-webkit-calendar-picker-indicator{filter:invert(1) opacity(.55);cursor:pointer}
+.bk-submit{width:100%;margin-top:8px;background:linear-gradient(135deg,var(--teal) 0%,#00A896 100%);color:#fff;border:none;border-radius:9px;padding:14px;font-size:15px;font-weight:700;font-family:var(--font);cursor:pointer;transition:var(--transition)}
+.bk-submit:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.bk-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.bk-note{font-size:12px;color:rgba(255,255,255,0.38);text-align:center;margin-top:12px;line-height:1.6}
+.bk-status{display:none;margin-top:14px;padding:12px 14px;border-radius:9px;font-size:14px;line-height:1.6}
+.bk-status.ok{display:block;background:rgba(0,168,150,0.14);border:1px solid rgba(0,168,150,0.4);color:#7fe8da}
+.bk-status.err{display:block;background:rgba(192,60,60,0.14);border:1px solid rgba(192,60,60,0.4);color:#ffb0b0}
+body.bk-lock{overflow:hidden}
+@media(max-width:600px){.bk-modal{padding:24px 20px}.bk-row{grid-template-columns:1fr;gap:0}.bk-title{font-size:21px}}
 </style>
 
 <style id="new-premium-styles">
@@ -1461,14 +1491,14 @@ footer::before {
         <p class="hero-title-ar" id="heroSubtitleAr"><span class="tw-text" id="heroTwText">استشارات متكاملة | إنتيجريس للاستشارات</span><span class="tw-cursor" id="heroTwCursor" aria-hidden="true"></span></p>
         <p class="hero-subtitle" data-en="A multidisciplinary advisory firm delivering integrated solutions across GRC, AML, ESG, Carbon, Technology Risk, and AI Governance for banks, financial institutions, and regulated enterprises." data-ar="شركة استشارات متعددة التخصصات تقدم حلولاً متكاملة عبر الحوكمة والامتثال والاستدامة ومخاطر التكنولوجيا للبنوك والمؤسسات المالية والشركات الخاضعة للتنظيم.">A multidisciplinary advisory firm delivering integrated solutions across GRC, AML, ESG, Carbon, Technology Risk, and AI Governance for banks, financial institutions, and regulated enterprises.</p>
         <div class="hero-btns">
-          <button class="btn-primary" onclick="scrollTo('#contact')">
+          <button class="btn-primary" onclick="openBooking()">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span data-en="Book Discovery Call" data-ar="حجز مكالمة استكشاف">Book Discovery Call</span>
           </button>
-          <button class="btn-outline" onclick="scrollTo('#services')">
+          <a class="btn-outline" href="#services" onclick="scrollTo('#services'); return false;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <span data-en="Explore Services" data-ar="استكشف الخدمات">Explore Services</span>
-          </button>
+          </a>
         </div>
         <div class="hero-stats">
           <div class="hero-stat">
@@ -2356,7 +2386,7 @@ footer::before {
 
     <div class="how-cta-row reveal">
       <div class="how-cta-sub" data-en="Ready to start? Book a discovery call — no obligation, no sales pitch." data-ar="هل أنت مستعد للبدء؟ احجز مكالمة استكشاف — بدون التزامات أو عروض ترويجية.">Ready to start? Book a discovery call — no obligation, no sales pitch.</div>
-      <button class="how-cta-btn" onclick="scrollTo('#contact')" data-en="Book a Discovery Call" data-ar="احجز مكالمة استكشاف">Book a Discovery Call</button>
+      <button class="how-cta-btn" onclick="openBooking()" data-en="Book a Discovery Call" data-ar="احجز مكالمة استكشاف">Book a Discovery Call</button>
     </div>
   </div>
 </section>
@@ -2859,6 +2889,76 @@ footer::before {
   <span id="toastMsg">Message sent successfully</span>
 </div>
 
+<!-- ══ BOOK DISCOVERY CALL MODAL ══ -->
+<div class="bk-overlay" id="bkOverlay" role="dialog" aria-modal="true" aria-labelledby="bkTitle">
+  <div class="bk-modal">
+    <button class="bk-close" id="bkClose" aria-label="Close">&times;</button>
+    <div class="bk-eyebrow" data-en="Free 30-Minute Call" data-ar="مكالمة مجانية 30 دقيقة">Free 30-Minute Call</div>
+    <div class="bk-title" id="bkTitle" data-en="Book a Discovery Call" data-ar="احجز مكالمة استكشاف">Book a Discovery Call</div>
+    <div class="bk-sub" data-en="No obligation, no sales pitch. Tell us a little about your organisation and pick a time that suits you — we confirm within one business day." data-ar="بدون التزام أو عروض ترويجية. أخبرنا قليلاً عن مؤسستك واختر الوقت المناسب لك — نؤكد الحجز خلال يوم عمل واحد.">No obligation, no sales pitch. Tell us a little about your organisation and pick a time that suits you — we confirm within one business day.</div>
+
+    <form id="bookingForm" novalidate>
+      <div class="bk-row">
+        <div class="bk-group">
+          <label class="bk-label" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+          <input class="bk-input" type="text" name="name" required>
+        </div>
+        <div class="bk-group">
+          <label class="bk-label" data-en="Work Email *" data-ar="البريد الإلكتروني للعمل *">Work Email *</label>
+          <input class="bk-input" type="email" name="email" required>
+        </div>
+      </div>
+      <div class="bk-row">
+        <div class="bk-group">
+          <label class="bk-label" data-en="Company *" data-ar="الشركة *">Company *</label>
+          <input class="bk-input" type="text" name="company" required>
+        </div>
+        <div class="bk-group">
+          <label class="bk-label" data-en="Phone / WhatsApp" data-ar="الهاتف / واتساب">Phone / WhatsApp</label>
+          <input class="bk-input" type="tel" name="phone" dir="ltr">
+        </div>
+      </div>
+      <div class="bk-group">
+        <label class="bk-label" data-en="Service of Interest" data-ar="الخدمة المطلوبة">Service of Interest</label>
+        <select class="bk-select" name="service">
+          <option value="" data-en="Select a service..." data-ar="اختر خدمة...">Select a service...</option>
+          <option value="GRC &amp; Enterprise Risk" data-en="GRC &amp; Enterprise Risk" data-ar="الحوكمة وإدارة مخاطر المؤسسة">GRC &amp; Enterprise Risk</option>
+          <option value="AML &amp; Financial Crime" data-en="AML &amp; Financial Crime" data-ar="مكافحة غسل الأموال والجرائم المالية">AML &amp; Financial Crime</option>
+          <option value="ESG &amp; Sustainability" data-en="ESG &amp; Sustainability" data-ar="الاستدامة والمسؤولية البيئية">ESG &amp; Sustainability</option>
+          <option value="Carbon Footprint Assessment" data-en="Carbon Footprint Assessment" data-ar="تقييم البصمة الكربونية">Carbon Footprint Assessment</option>
+          <option value="Technology Risk &amp; RegTech" data-en="Technology Risk &amp; RegTech" data-ar="مخاطر التكنولوجيا والتقنيات التنظيمية">Technology Risk &amp; RegTech</option>
+          <option value="AI Governance" data-en="AI Governance" data-ar="حوكمة الذكاء الاصطناعي">AI Governance</option>
+          <option value="Other" data-en="Other / Not sure" data-ar="أخرى / غير متأكد">Other / Not sure</option>
+        </select>
+      </div>
+      <div class="bk-row">
+        <div class="bk-group">
+          <label class="bk-label" data-en="Preferred Date" data-ar="التاريخ المفضل">Preferred Date</label>
+          <input class="bk-input" type="date" name="preferred_date" id="bkDate">
+        </div>
+        <div class="bk-group">
+          <label class="bk-label" data-en="Preferred Time (Cairo)" data-ar="الوقت المفضل (توقيت القاهرة)">Preferred Time (Cairo)</label>
+          <select class="bk-select" name="preferred_time">
+            <option value="09:00 - 11:00">09:00 - 11:00</option>
+            <option value="11:00 - 13:00">11:00 - 13:00</option>
+            <option value="13:00 - 15:00">13:00 - 15:00</option>
+            <option value="15:00 - 17:00">15:00 - 17:00</option>
+            <option value="17:00 - 19:00">17:00 - 19:00</option>
+          </select>
+        </div>
+      </div>
+      <div class="bk-group">
+        <label class="bk-label" data-en="What would you like to discuss?" data-ar="ما الذي تود مناقشته؟">What would you like to discuss?</label>
+        <textarea class="bk-textarea" name="message" data-en-placeholder="Briefly describe your challenge, regulator, or upcoming deadline..." data-ar-placeholder="صف باختصار التحدي أو الجهة الرقابية أو الموعد النهائي القادم..." placeholder="Briefly describe your challenge, regulator, or upcoming deadline..."></textarea>
+      </div>
+      <!-- honeypot: bots fill this, humans never see it -->
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0">
+      <button type="submit" class="bk-submit" data-en="Request My Discovery Call" data-ar="اطلب مكالمة الاستكشاف">Request My Discovery Call</button>
+      <div class="bk-note" data-en="We reply within one business day. Your details are never shared." data-ar="نرد خلال يوم عمل واحد. لا تتم مشاركة بياناتك أبداً.">We reply within one business day. Your details are never shared.</div>
+      <div class="bk-status" id="bkStatus" role="status"></div>
+    </form>
+  </div>
+</div>
 <script>
 // ══════════════════════════════════════════════════════════════
 //  LANGUAGE SYSTEM
@@ -2989,30 +3089,41 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // ══════════════════════════════════════════════════════════════
 //  CONTACT FORM
 // ══════════════════════════════════════════════════════════════
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.form-submit');
   const orig = btn.textContent;
   btn.textContent = currentLang === 'ar' ? 'جاري الإرسال...' : 'Sending...';
   btn.disabled = true;
 
-  setTimeout(() => {
-    btn.textContent = orig;
-    btn.disabled = false;
-    e.target.reset();
+  // Collect the contact form fields into a real payload.
+  const data = new FormData();
+  data.append('name', (document.getElementById('fname').value + ' ' + document.getElementById('lname').value).trim());
+  data.append('email', document.getElementById('email').value);
+  data.append('company', document.getElementById('company').value);
+  data.append('service', document.getElementById('service').value);
+  data.append('message', document.getElementById('message').value);
+  data.append('_subject', 'Website Contact — ' + (document.getElementById('company').value || ''));
 
-    // Show inline success
+  const ok = await sendForm(data);
+
+  btn.textContent = orig;
+  btn.disabled = false;
+
+  if (ok) {
+    e.target.reset();
     const success = document.getElementById('formSuccess');
     success.style.display = 'block';
-    const msg = success.getAttribute('data-' + currentLang) || success.getAttribute('data-en');
-    success.textContent = msg;
+    success.textContent = success.getAttribute('data-' + currentLang) || success.getAttribute('data-en');
     setTimeout(() => { success.style.display = 'none'; }, 6000);
-
-    // Toast
     showToast(currentLang === 'ar'
       ? 'تم إرسال رسالتكم بنجاح. سنتواصل معكم قريباً.'
       : 'Message received. We will respond within 1 business day.');
-  }, 1200);
+  } else {
+    showToast(currentLang === 'ar'
+      ? 'تعذر الإرسال. يرجى مراسلتنا مباشرة.'
+      : 'Could not send. Please email us directly.');
+  }
 }
 
 function showToast(msg) {
@@ -3255,6 +3366,133 @@ window.addEventListener('scroll', () => {
   });
   window.addEventListener('pagehide', pause);
 })();
+
+
+/* ══════════════════════════════════════════════════════════════
+   BOOKING MODAL + REAL FORM SUBMISSION
+   ──────────────────────────────────────────────────────────────
+   TODO: paste your Formspree endpoint below, then redeploy.
+   1. Sign up free at https://formspree.io  (or https://web3forms.com)
+   2. Create a form -> copy the endpoint, e.g. https://formspree.io/f/xexamples
+   3. Replace the empty string below. Both the booking modal and the
+      contact form will start delivering to your inbox immediately.
+   Until this is set, submissions fall back to opening the user's
+   email client so no enquiry is silently lost.
+   ══════════════════════════════════════════════════════════════ */
+const FORM_ENDPOINT = '';           // <-- PASTE FORMSPREE URL HERE
+const FALLBACK_EMAIL = 'info@integrys-consulting.com';   // <-- change if needed
+
+(function () {
+  const overlay = document.getElementById('bkOverlay');
+  const form = document.getElementById('bookingForm');
+  const statusEl = document.getElementById('bkStatus');
+  const closeBtn = document.getElementById('bkClose');
+  if (!overlay || !form) return;
+
+  let lastFocus = null;
+
+  window.openBooking = function () {
+    lastFocus = document.activeElement;
+    statusEl.className = 'bk-status';
+    statusEl.textContent = '';
+    overlay.classList.add('open');
+    requestAnimationFrame(() => overlay.classList.add('show'));
+    document.body.classList.add('bk-lock');
+    const d = document.getElementById('bkDate');
+    if (d && !d.value) {
+      const t = new Date(Date.now() + 2 * 864e5);
+      d.min = new Date().toISOString().slice(0, 10);
+      d.value = t.toISOString().slice(0, 10);
+    }
+    setTimeout(() => { const f = form.querySelector('input'); if (f) f.focus(); }, 260);
+  };
+
+  window.closeBooking = function () {
+    overlay.classList.remove('show');
+    document.body.classList.remove('bk-lock');
+    setTimeout(() => overlay.classList.remove('open'), 250);
+    if (lastFocus) lastFocus.focus();
+  };
+
+  closeBtn.addEventListener('click', closeBooking);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeBooking(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) closeBooking();
+  });
+
+  const T = {
+    sending: { en: 'Sending...', ar: 'جاري الإرسال...' },
+    ok: { en: 'Request received. We will confirm your call within one business day.',
+          ar: 'تم استلام طلبك. سنؤكد موعد المكالمة خلال يوم عمل واحد.' },
+    err: { en: 'Something went wrong. Please email us directly at ' + FALLBACK_EMAIL,
+           ar: 'حدث خطأ. يرجى مراسلتنا مباشرة على ' + FALLBACK_EMAIL },
+    req: { en: 'Please fill in name, email and company.',
+           ar: 'يرجى إدخال الاسم والبريد الإلكتروني والشركة.' }
+  };
+  const t = (k) => T[k][(typeof currentLang !== 'undefined' && currentLang === 'ar') ? 'ar' : 'en'];
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.bk-submit');
+    const data = new FormData(form);
+
+    if (data.get('_gotcha')) return;                      // bot
+    if (!form.checkValidity()) {
+      statusEl.className = 'bk-status err';
+      statusEl.textContent = t('req');
+      form.reportValidity();
+      return;
+    }
+
+    data.append('_subject', 'Discovery Call Request — ' + (data.get('company') || ''));
+
+    const orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = t('sending');
+    statusEl.className = 'bk-status';
+
+    const ok = await sendForm(data);
+
+    btn.disabled = false;
+    btn.textContent = orig;
+    statusEl.className = 'bk-status ' + (ok ? 'ok' : 'err');
+    statusEl.textContent = ok ? t('ok') : t('err');
+    if (ok) {
+      form.reset();
+      if (typeof showToast === 'function') showToast(t('ok'));
+      setTimeout(closeBooking, 3200);
+    }
+  });
+})();
+
+/* Shared sender: Formspree if configured, mailto fallback otherwise. */
+async function sendForm(formData) {
+  if (FORM_ENDPOINT) {
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' }
+      });
+      return res.ok;
+    } catch (err) {
+      console.error('Form submission failed:', err);
+      return false;
+    }
+  }
+  // No endpoint configured yet — hand off to the user's mail client
+  // so the enquiry is not silently dropped.
+  const lines = [];
+  for (const [k, v] of formData.entries()) {
+    if (k.startsWith('_') || !v) continue;
+    lines.push(k.replace(/_/g, ' ').toUpperCase() + ': ' + v);
+  }
+  const subject = formData.get('_subject') || 'Website Enquiry';
+  window.location.href = 'mailto:' + FALLBACK_EMAIL +
+    '?subject=' + encodeURIComponent(subject) +
+    '&body=' + encodeURIComponent(lines.join('\n'));
+  return true;
+}
 
 </script>
 </body>
