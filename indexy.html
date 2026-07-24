@@ -869,8 +869,26 @@ h1, h2, h3, h4, .section-title, .hero-title, .nav-logo-en {
   background: linear-gradient(135deg, #fff 0%, var(--teal) 60%, #00d4c8 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-/* .hero-subtitle renders as plain static text (typewriter cursor removed) */
-.hero-subtitle { border-right: none !important; animation: none !important; overflow: visible; }
+/* .hero-subtitle: no typewriter cursor. Smooth word-by-word reveal instead. */
+.hero-subtitle { border-right: none !important; overflow: visible; }
+.hero-subtitle .rw {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.45em);
+  filter: blur(5px);
+  will-change: opacity, transform, filter;
+}
+.hero-subtitle.rw-run .rw {
+  animation: rwIn 0.62s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--rw-d, 0s);
+}
+@keyframes rwIn {
+  from { opacity: 0; transform: translateY(0.45em); filter: blur(5px); }
+  to   { opacity: 1; transform: translateY(0);      filter: blur(0);   }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-subtitle .rw { opacity: 1; transform: none; filter: none; animation: none !important; }
+}
 
 .hero-stat { animation: float 6s ease-in-out infinite; }
 .hero-stat:nth-child(1) { animation-delay: 0s; }
@@ -3111,6 +3129,58 @@ window.addEventListener('scroll', () => {
   });
 
   window.addEventListener('pagehide', pause);
+})();
+
+
+/* ── Word-by-word reveal for the English hero paragraph ── */
+(function () {
+  const el = document.querySelector('.hero-subtitle');
+  if (!el) return;
+
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let building = false;
+
+  function build() {
+    if (reduce) return;
+    building = true;
+    const words = (el.textContent || '').trim().split(/\s+/);
+    el.innerHTML = '';
+    words.forEach((w, i) => {
+      const span = document.createElement('span');
+      span.className = 'rw';
+      span.textContent = w;
+      span.style.setProperty('--rw-d', (i * 0.035).toFixed(3) + 's');
+      el.appendChild(span);
+      if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
+    });
+    building = false;
+  }
+
+  function play() {
+    el.classList.remove('rw-run');
+    void el.offsetWidth;   // force reflow so the animation restarts cleanly
+    el.classList.add('rw-run');
+  }
+
+  build();
+  if (reduce) return;
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) play(); });
+    }, { threshold: 0.25 });
+    io.observe(el);
+  } else {
+    play();
+  }
+
+  // Re-split and replay after a language switch (applyLang rewrites textContent).
+  const mo = new MutationObserver(() => {
+    if (building) return;
+    build();
+    play();
+  });
+  mo.observe(el, { childList: true, characterData: true, subtree: true });
 })();
 
 </script>
