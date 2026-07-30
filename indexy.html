@@ -1444,7 +1444,7 @@ footer::before {
           <span class="lang-icon">🌐</span>
           <span id="langLabel">العربية</span>
         </button>
-        <button class="nav-cta" id="navCta" onclick="scrollTo('#contact')" data-en="Get Started" data-ar="ابدأ الآن">Get Started</button>
+        <button class="nav-cta" id="navCta" onclick="openEnquiry('booking')" data-en="Get Started" data-ar="ابدأ الآن">Get Started</button>
       </div>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -1492,7 +1492,7 @@ footer::before {
         <p class="hero-title-ar" id="heroSubtitleAr"><span class="tw-text" id="heroTwText">استشارات متكاملة | إنتيجريس للاستشارات</span><span class="tw-cursor" id="heroTwCursor" aria-hidden="true"></span></p>
         <p class="hero-subtitle" data-en="A multidisciplinary advisory firm delivering integrated solutions across GRC, AML, ESG, Carbon, Technology Risk, and AI Governance for banks, financial institutions, and regulated enterprises." data-ar="شركة استشارات متعددة التخصصات تقدم حلولاً متكاملة عبر الحوكمة والامتثال والاستدامة ومخاطر التكنولوجيا للبنوك والمؤسسات المالية والشركات الخاضعة للتنظيم.">A multidisciplinary advisory firm delivering integrated solutions across GRC, AML, ESG, Carbon, Technology Risk, and AI Governance for banks, financial institutions, and regulated enterprises.</p>
         <div class="hero-btns">
-          <button class="btn-primary" onclick="openBooking()">
+          <button class="btn-primary" onclick="openEnquiry('booking')">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span data-en="Book Discovery Call" data-ar="حجز مكالمة استكشاف">Book Discovery Call</span>
           </button>
@@ -2320,7 +2320,7 @@ footer::before {
           <div class="rem-step-dot"></div>
           <div class="rem-step-text" data-en="Regulatory Response &amp; Closure Confirmation" data-ar="الرد التنظيمي وتأكيد الإغلاق">Regulatory Response &amp; Closure Confirmation</div>
         </div>
-        <button class="rem-cta" onclick="scrollTo('#contact')">
+        <button class="rem-cta" onclick="openEnquiry('expert')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           <span data-en="Talk to an Expert" data-ar="تحدث مع خبير">Talk to an Expert</span>
         </button>
@@ -2387,7 +2387,7 @@ footer::before {
 
     <div class="how-cta-row reveal">
       <div class="how-cta-sub" data-en="Ready to start? Book a discovery call — no obligation, no sales pitch." data-ar="هل أنت مستعد للبدء؟ احجز مكالمة استكشاف — بدون التزامات أو عروض ترويجية.">Ready to start? Book a discovery call — no obligation, no sales pitch.</div>
-      <button class="how-cta-btn" onclick="openBooking()" data-en="Book a Discovery Call" data-ar="احجز مكالمة استكشاف">Book a Discovery Call</button>
+      <button class="how-cta-btn" onclick="openEnquiry('booking')" data-en="Book a Discovery Call" data-ar="احجز مكالمة استكشاف">Book a Discovery Call</button>
     </div>
   </div>
 </section>
@@ -2526,7 +2526,7 @@ footer::before {
           <li><div class="pricing-check">✓</div><span data-en="ESG policy (3 core policies)" data-ar="سياسة ESG (3 سياسات أساسية)">ESG policy (3 core policies)</span></li>
           <li><div class="pricing-check">✓</div><span data-en="EGX ESG template draft" data-ar="مسودة نموذج بورصة مصر لـ ESG">EGX ESG template draft</span></li>
         </ul>
-        <button class="pricing-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})" data-en="Get a Proposal" data-ar="احصل على عرض">Get a Proposal</button>
+        <button class="pricing-btn" onclick="openEnquiry('proposal')" data-en="Get a Proposal" data-ar="احصل على عرض">Get a Proposal</button>
       </div>
 
       <div class="pricing-card featured reveal">
@@ -2542,7 +2542,7 @@ footer::before {
           <li><div class="pricing-check">✓</div><span data-en="EGX template submission" data-ar="تقديم نموذج البورصة">EGX template submission</span></li>
           <li><div class="pricing-check">✓</div><span data-en="Arabic &amp; English versions" data-ar="نسختا العربية والإنجليزية">Arabic &amp; English versions</span></li>
         </ul>
-        <button class="pricing-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})" data-en="Get a Proposal" data-ar="احصل على عرض">Get a Proposal</button>
+        <button class="pricing-btn" onclick="openEnquiry('proposal')" data-en="Get a Proposal" data-ar="احصل على عرض">Get a Proposal</button>
       </div>
 
       <div class="pricing-card reveal">
@@ -2556,7 +2556,7 @@ footer::before {
           <li><div class="pricing-check">✓</div><span data-en="AML/CFT programme" data-ar="برنامج مكافحة غسل الأموال">AML/CFT programme</span></li>
           <li><div class="pricing-check">✓</div><span data-en="Compliance calendar" data-ar="تقويم الامتثال">Compliance calendar</span></li>
         </ul>
-        <button class="pricing-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})" data-en="Get a Proposal" data-ar="احصل على عرض">Get a Proposal</button>
+        <button class="pricing-btn" onclick="openEnquiry('proposal')" data-en="Get a Proposal" data-ar="احصل على عرض">Get a Proposal</button>
       </div>
 
     </div>
@@ -2622,7 +2622,7 @@ footer::before {
           <span class="leader-tag" data-en="MENA Regulatory Advisory" data-ar="الاستشارات التنظيمية في الشرق الأوسط">MENA Regulatory Advisory</span>
         </div>
 
-        <a href="https://linkedin.com/in/hussein-el-gaafary" target="_blank" class="leader-linkedin">
+        <a href="https://www.linkedin.com/in/hussein-el-gaafary-021783124" target="_blank" rel="noopener noreferrer" class="leader-linkedin">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           <span data-en="Connect on LinkedIn" data-ar="تواصل عبر لينكد إن">Connect on LinkedIn</span>
         </a>
@@ -2866,8 +2866,8 @@ footer::before {
           <li><a href="mailto:info@integrysconsultant.com">info@integrysconsultant.com</a></li>
           <li><a href="tel:+201097988812">+20 10 9798 8812</a></li>
           <li><a href="https://wa.me/201097988812" target="_blank" rel="noopener" data-en="WhatsApp Us" data-ar="راسلنا عبر واتساب">WhatsApp Us</a></li>
-          <li><a href="#contact" data-en="Request a Proposal" data-ar="اطلب عرضاً">Request a Proposal</a></li>
-          <li><a href="#contact" data-en="Schedule a Call" data-ar="جدول مكالمة">Schedule a Call</a></li>
+          <li><a href="#" onclick="openEnquiry('proposal');return false;" data-en="Request a Proposal" data-ar="اطلب عرضاً">Request a Proposal</a></li>
+          <li><a href="#" onclick="openEnquiry('booking');return false;" data-en="Schedule a Call" data-ar="جدول مكالمة">Schedule a Call</a></li>
           <li><a href="#team" data-en="Our Team" data-ar="فريقنا">Our Team</a></li>
           <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
         </ul>
@@ -2890,72 +2890,18 @@ footer::before {
   <span id="toastMsg">Message sent successfully</span>
 </div>
 
-<!-- ══ BOOK DISCOVERY CALL MODAL ══ -->
+<!-- ══ ENQUIRY MODAL (booking / expert / proposal) ══ -->
 <div class="bk-overlay" id="bkOverlay" role="dialog" aria-modal="true" aria-labelledby="bkTitle">
   <div class="bk-modal">
     <button class="bk-close" id="bkClose" aria-label="Close">&times;</button>
-    <div class="bk-eyebrow" data-en="Free 30-Minute Call" data-ar="مكالمة مجانية 30 دقيقة">Free 30-Minute Call</div>
-    <div class="bk-title" id="bkTitle" data-en="Book a Discovery Call" data-ar="احجز مكالمة استكشاف">Book a Discovery Call</div>
-    <div class="bk-sub" data-en="No obligation, no sales pitch. Tell us a little about your organisation and pick a time that suits you — we confirm within one business day." data-ar="بدون التزام أو عروض ترويجية. أخبرنا قليلاً عن مؤسستك واختر الوقت المناسب لك — نؤكد الحجز خلال يوم عمل واحد.">No obligation, no sales pitch. Tell us a little about your organisation and pick a time that suits you — we confirm within one business day.</div>
-
+    <div class="bk-eyebrow" id="bkEyebrow"></div>
+    <div class="bk-title" id="bkTitle"></div>
+    <div class="bk-sub" id="bkSub"></div>
     <form id="bookingForm" novalidate>
-      <div class="bk-row">
-        <div class="bk-group">
-          <label class="bk-label" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
-          <input class="bk-input" type="text" name="name" required>
-        </div>
-        <div class="bk-group">
-          <label class="bk-label" data-en="Work Email *" data-ar="البريد الإلكتروني للعمل *">Work Email *</label>
-          <input class="bk-input" type="email" name="email" required>
-        </div>
-      </div>
-      <div class="bk-row">
-        <div class="bk-group">
-          <label class="bk-label" data-en="Company *" data-ar="الشركة *">Company *</label>
-          <input class="bk-input" type="text" name="company" required>
-        </div>
-        <div class="bk-group">
-          <label class="bk-label" data-en="Phone / WhatsApp" data-ar="الهاتف / واتساب">Phone / WhatsApp</label>
-          <input class="bk-input" type="tel" name="phone" dir="ltr">
-        </div>
-      </div>
-      <div class="bk-group">
-        <label class="bk-label" data-en="Service of Interest" data-ar="الخدمة المطلوبة">Service of Interest</label>
-        <select class="bk-select" name="service">
-          <option value="" data-en="Select a service..." data-ar="اختر خدمة...">Select a service...</option>
-          <option value="GRC &amp; Enterprise Risk" data-en="GRC &amp; Enterprise Risk" data-ar="الحوكمة وإدارة مخاطر المؤسسة">GRC &amp; Enterprise Risk</option>
-          <option value="AML &amp; Financial Crime" data-en="AML &amp; Financial Crime" data-ar="مكافحة غسل الأموال والجرائم المالية">AML &amp; Financial Crime</option>
-          <option value="ESG &amp; Sustainability" data-en="ESG &amp; Sustainability" data-ar="الاستدامة والمسؤولية البيئية">ESG &amp; Sustainability</option>
-          <option value="Carbon Footprint Assessment" data-en="Carbon Footprint Assessment" data-ar="تقييم البصمة الكربونية">Carbon Footprint Assessment</option>
-          <option value="Technology Risk &amp; RegTech" data-en="Technology Risk &amp; RegTech" data-ar="مخاطر التكنولوجيا والتقنيات التنظيمية">Technology Risk &amp; RegTech</option>
-          <option value="AI Governance" data-en="AI Governance" data-ar="حوكمة الذكاء الاصطناعي">AI Governance</option>
-          <option value="Other" data-en="Other / Not sure" data-ar="أخرى / غير متأكد">Other / Not sure</option>
-        </select>
-      </div>
-      <div class="bk-row">
-        <div class="bk-group">
-          <label class="bk-label" data-en="Preferred Date" data-ar="التاريخ المفضل">Preferred Date</label>
-          <input class="bk-input" type="date" name="preferred_date" id="bkDate">
-        </div>
-        <div class="bk-group">
-          <label class="bk-label" data-en="Preferred Time (Cairo)" data-ar="الوقت المفضل (توقيت القاهرة)">Preferred Time (Cairo)</label>
-          <select class="bk-select" name="preferred_time">
-            <option value="09:00 - 11:00">09:00 - 11:00</option>
-            <option value="11:00 - 13:00">11:00 - 13:00</option>
-            <option value="13:00 - 15:00">13:00 - 15:00</option>
-            <option value="15:00 - 17:00">15:00 - 17:00</option>
-            <option value="17:00 - 19:00">17:00 - 19:00</option>
-          </select>
-        </div>
-      </div>
-      <div class="bk-group">
-        <label class="bk-label" data-en="What would you like to discuss?" data-ar="ما الذي تود مناقشته؟">What would you like to discuss?</label>
-        <textarea class="bk-textarea" name="message" data-en-placeholder="Briefly describe your challenge, regulator, or upcoming deadline..." data-ar-placeholder="صف باختصار التحدي أو الجهة الرقابية أو الموعد النهائي القادم..." placeholder="Briefly describe your challenge, regulator, or upcoming deadline..."></textarea>
-      </div>
-      <!-- honeypot: bots fill this, humans never see it -->
+      <div id="bkFields"></div>
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0">
-      <button type="submit" class="bk-submit" data-en="Request My Discovery Call" data-ar="اطلب مكالمة الاستكشاف">Request My Discovery Call</button>
-      <div class="bk-note" data-en="We reply within one business day. Your details are never shared." data-ar="نرد خلال يوم عمل واحد. لا تتم مشاركة بياناتك أبداً.">We reply within one business day. Your details are never shared.</div>
+      <button type="submit" class="bk-submit" id="bkSubmit"></button>
+      <div class="bk-note" id="bkNote"></div>
       <div class="bk-status" id="bkStatus" role="status"></div>
     </form>
   </div>
@@ -3007,6 +2953,8 @@ function applyLang(lang) {
     const ph = el.getAttribute(key);
     if (ph) el.placeholder = ph;
   });
+
+  window.dispatchEvent(new Event('langchange'));
 
   // Update page title
   document.title = isAr
@@ -3370,18 +3318,87 @@ window.addEventListener('scroll', () => {
 
 
 /* ══════════════════════════════════════════════════════════════
-   BOOKING MODAL + REAL FORM SUBMISSION
-   ──────────────────────────────────────────────────────────────
-   TODO: paste your Formspree endpoint below, then redeploy.
-   1. Sign up free at https://formspree.io  (or https://web3forms.com)
-   2. Create a form -> copy the endpoint, e.g. https://formspree.io/f/xexamples
-   3. Replace the empty string below. Both the booking modal and the
-      contact form will start delivering to your inbox immediately.
-   Until this is set, submissions fall back to opening the user's
-   email client so no enquiry is silently lost.
+   ENQUIRY MODAL — Book a Discovery Call / Talk to an Expert /
+   Request a Proposal. Posts to /api/contact, which emails
+   info@integrysconsult.com and sends the enquirer an automated
+   acknowledgement.
    ══════════════════════════════════════════════════════════════ */
-const FORM_ENDPOINT = '';           // <-- PASTE FORMSPREE URL HERE
-const FALLBACK_EMAIL = 'info@integrysconsultant.com';   // <-- change if needed
+const FALLBACK_EMAIL = 'info@integrysconsult.com';
+
+const SERVICE_OPTS = [
+  ['', 'Select a service...', 'اختر خدمة...'],
+  ['GRC & Enterprise Risk', 'GRC & Enterprise Risk', 'الحوكمة وإدارة مخاطر المؤسسة'],
+  ['AML & Financial Crime', 'AML & Financial Crime', 'مكافحة غسل الأموال والجرائم المالية'],
+  ['ESG & Sustainability', 'ESG & Sustainability', 'الاستدامة والمسؤولية البيئية'],
+  ['Carbon Footprint Assessment', 'Carbon Footprint Assessment', 'تقييم البصمة الكربونية'],
+  ['Technology Risk & RegTech', 'Technology Risk & RegTech', 'مخاطر التكنولوجيا والتقنيات التنظيمية'],
+  ['AI Governance', 'AI Governance', 'حوكمة الذكاء الاصطناعي'],
+  ['Other / Not sure', 'Other / Not sure', 'أخرى / غير متأكد']
+];
+
+const F = {
+  name:    { t:'text',  half:1, req:1, en:'Full Name *', ar:'الاسم الكامل *' },
+  email:   { t:'email', half:1, req:1, en:'Work Email *', ar:'البريد الإلكتروني للعمل *' },
+  company: { t:'text',  half:1, req:1, en:'Company *', ar:'الشركة *' },
+  phone:   { t:'tel',   half:1, en:'Phone / WhatsApp', ar:'الهاتف / واتساب', ltr:1 },
+  service: { t:'select', opts:SERVICE_OPTS, en:'Service of Interest', ar:'الخدمة المطلوبة' },
+  preferred_date: { t:'date', half:1, en:'Preferred Date', ar:'التاريخ المفضل' },
+  preferred_time: { t:'select', half:1, en:'Preferred Time (Cairo)', ar:'الوقت المفضل (توقيت القاهرة)',
+    opts:[['09:00 - 11:00','09:00 - 11:00','09:00 - 11:00'],['11:00 - 13:00','11:00 - 13:00','11:00 - 13:00'],
+          ['13:00 - 15:00','13:00 - 15:00','13:00 - 15:00'],['15:00 - 17:00','15:00 - 17:00','15:00 - 17:00'],
+          ['17:00 - 19:00','17:00 - 19:00','17:00 - 19:00']] },
+  role:    { t:'text', half:1, en:'Your Role', ar:'المسمى الوظيفي' },
+  urgency: { t:'select', half:1, en:'How urgent is this?', ar:'ما مدى إلحاح الأمر؟',
+    opts:[['Exploring','Exploring — no deadline','استكشاف — بدون موعد نهائي'],
+          ['Within a quarter','Within a quarter','خلال ربع سنة'],
+          ['Regulatory deadline','We have a regulatory deadline','لدينا موعد رقابي نهائي'],
+          ['Urgent','Urgent — inspection or finding','عاجل — تفتيش أو ملاحظة رقابية']] },
+  regulator: { t:'text', en:'Regulator / framework involved', ar:'الجهة الرقابية أو الإطار المعني' },
+  timeline:  { t:'select', half:1, en:'Required Timeline', ar:'الجدول الزمني المطلوب',
+    opts:[['Not yet defined','Not yet defined','لم يُحدد بعد'],['Within 1 month','Within 1 month','خلال شهر'],
+          ['1–3 months','1–3 months','1–3 أشهر'],['3–6 months','3–6 months','3–6 أشهر'],['6+ months','6+ months','أكثر من 6 أشهر']] },
+  budget:    { t:'select', half:1, en:'Indicative Budget (optional)', ar:'الميزانية التقريبية (اختياري)',
+    opts:[['Prefer not to say','Prefer not to say','أفضل عدم الإفصاح'],['Under 100k EGP','Under 100k EGP','أقل من 100 ألف جنيه'],
+          ['100k–300k EGP','100k–300k EGP','100–300 ألف جنيه'],['300k–750k EGP','300k–750k EGP','300–750 ألف جنيه'],
+          ['750k+ EGP','750k+ EGP','أكثر من 750 ألف جنيه']] },
+  message: { t:'textarea', en:'', ar:'' }
+};
+
+const FORMS = {
+  booking: {
+    eyebrow:['Free 30-Minute Call','مكالمة مجانية 30 دقيقة'],
+    title:['Book a Discovery Call','احجز مكالمة استكشاف'],
+    sub:['No obligation, no sales pitch. Tell us a little about your organisation and pick a time that suits you — we confirm within one business day.',
+         'بدون التزام أو عروض ترويجية. أخبرنا قليلاً عن مؤسستك واختر الوقت المناسب لك — نؤكد الحجز خلال يوم عمل واحد.'],
+    fields:['name','email','company','phone','service','preferred_date','preferred_time','message'],
+    msg:['What would you like to discuss?','ما الذي تود مناقشته؟'],
+    ph:['Briefly describe your challenge, regulator, or upcoming deadline...','صف باختصار التحدي أو الجهة الرقابية أو الموعد النهائي القادم...'],
+    cta:['Request My Discovery Call','اطلب مكالمة الاستكشاف'],
+    note:['We reply within one business day. Your details are never shared.','نرد خلال يوم عمل واحد. لا تتم مشاركة بياناتك أبداً.']
+  },
+  expert: {
+    eyebrow:['Senior Practitioner','ممارس أول'],
+    title:['Talk to an Expert','تحدث مع خبير'],
+    sub:['Facing a regulatory finding, an inspection, or a control gap you need a straight answer on? Tell us what you are dealing with and we will route it to the practitioner who covers that area.',
+         'تواجه ملاحظة رقابية أو تفتيشاً أو فجوة في الضوابط وتحتاج إجابة مباشرة؟ أخبرنا بما تتعامل معه وسنوجهه إلى الممارس المختص.'],
+    fields:['name','email','company','phone','role','urgency','service','regulator','message'],
+    msg:['What are you dealing with?','ما الذي تتعامل معه؟'],
+    ph:['Describe the finding, deadline, or question. The more specific, the more useful our first reply will be...','صف الملاحظة أو الموعد النهائي أو السؤال. كلما زادت التفاصيل كان ردنا الأول أكثر فائدة...'],
+    cta:['Send to a Specialist','أرسل إلى مختص'],
+    note:['Treated as confidential. We reply within one business day — sooner if a deadline is involved.','تُعامل بسرية تامة. نرد خلال يوم عمل واحد — وأسرع إذا كان هناك موعد نهائي.']
+  },
+  proposal: {
+    eyebrow:['Scoped & Priced','بنطاق وسعر محدد'],
+    title:['Request a Proposal','اطلب عرضاً'],
+    sub:['Tell us the scope and we will send a written proposal with defined deliverables, a timeline and fees — separating regulatory requirements from optional best practice.',
+         'أخبرنا بالنطاق وسنرسل عرضاً مكتوباً بمخرجات وجدول زمني وأتعاب محددة — مع الفصل بين المتطلبات الرقابية والممارسات الفضلى الاختيارية.'],
+    fields:['name','email','company','phone','service','timeline','budget','message'],
+    msg:['Scope of work required','نطاق العمل المطلوب'],
+    ph:['What needs to be delivered? Include the regulator, any deadline, entity size, and whether this follows an inspection or finding...','ما المطلوب تسليمه؟ اذكر الجهة الرقابية وأي موعد نهائي وحجم الكيان وما إذا كان ذلك بعد تفتيش أو ملاحظة...'],
+    cta:['Request My Proposal','اطلب عرضي'],
+    note:['Written proposal within 2–3 business days. No obligation.','عرض مكتوب خلال 2–3 أيام عمل. بدون أي التزام.']
+  }
+};
 
 (function () {
   const overlay = document.getElementById('bkOverlay');
@@ -3390,23 +3407,56 @@ const FALLBACK_EMAIL = 'info@integrysconsultant.com';   // <-- change if needed
   const closeBtn = document.getElementById('bkClose');
   if (!overlay || !form) return;
 
-  let lastFocus = null;
+  let lastFocus = null, current = 'booking';
+  const L = () => (typeof currentLang !== 'undefined' && currentLang === 'ar') ? 1 : 0;
 
-  window.openBooking = function () {
+  function field(key, cfg) {
+    const f = F[key]; const i = L();
+    const label = (key === 'message') ? cfg.msg[i] : (i ? f.ar : f.en);
+    const req = f.req ? ' required' : '';
+    let input;
+    if (f.t === 'select') {
+      input = `<select class="bk-select" name="${key}">` +
+        f.opts.map(o => `<option value="${o[0]}">${i ? o[2] : o[1]}</option>`).join('') + `</select>`;
+    } else if (f.t === 'textarea') {
+      input = `<textarea class="bk-textarea" name="${key}" placeholder="${cfg.ph[i]}"></textarea>`;
+    } else {
+      input = `<input class="bk-input" type="${f.t}" name="${key}"${req}${f.ltr ? ' dir="ltr"' : ''}>`;
+    }
+    return `<div class="bk-group"><label class="bk-label">${label}</label>${input}</div>`;
+  }
+
+  function render(type) {
+    const cfg = FORMS[type], i = L();
+    document.getElementById('bkEyebrow').textContent = cfg.eyebrow[i];
+    document.getElementById('bkTitle').textContent = cfg.title[i];
+    document.getElementById('bkSub').textContent = cfg.sub[i];
+    document.getElementById('bkSubmit').textContent = cfg.cta[i];
+    document.getElementById('bkNote').textContent = cfg.note[i];
+
+    let html = '', buf = [];
+    cfg.fields.forEach(k => {
+      if (F[k].half) { buf.push(field(k, cfg)); if (buf.length === 2) { html += `<div class="bk-row">${buf.join('')}</div>`; buf = []; } }
+      else { if (buf.length) { html += `<div class="bk-row">${buf.join('')}</div>`; buf = []; } html += field(k, cfg); }
+    });
+    if (buf.length) html += `<div class="bk-row">${buf.join('')}</div>`;
+    document.getElementById('bkFields').innerHTML = html;
+
+    const d = form.querySelector('input[type=date]');
+    if (d) { d.min = new Date().toISOString().slice(0, 10); d.value = new Date(Date.now() + 2 * 864e5).toISOString().slice(0, 10); }
+  }
+
+  window.openEnquiry = function (type) {
+    current = FORMS[type] ? type : 'booking';
     lastFocus = document.activeElement;
-    statusEl.className = 'bk-status';
-    statusEl.textContent = '';
+    statusEl.className = 'bk-status'; statusEl.textContent = '';
+    render(current);
     overlay.classList.add('open');
     requestAnimationFrame(() => overlay.classList.add('show'));
     document.body.classList.add('bk-lock');
-    const d = document.getElementById('bkDate');
-    if (d && !d.value) {
-      const t = new Date(Date.now() + 2 * 864e5);
-      d.min = new Date().toISOString().slice(0, 10);
-      d.value = t.toISOString().slice(0, 10);
-    }
     setTimeout(() => { const f = form.querySelector('input'); if (f) f.focus(); }, 260);
   };
+  window.openBooking = () => window.openEnquiry('booking');   // backward compatible
 
   window.closeBooking = function () {
     overlay.classList.remove('show');
@@ -3416,83 +3466,73 @@ const FALLBACK_EMAIL = 'info@integrysconsultant.com';   // <-- change if needed
   };
 
   closeBtn.addEventListener('click', closeBooking);
-  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeBooking(); });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay.classList.contains('open')) closeBooking();
-  });
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeBooking(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('open')) closeBooking(); });
+  window.addEventListener('langchange', () => { if (overlay.classList.contains('open')) render(current); });
 
   const T = {
-    sending: { en: 'Sending...', ar: 'جاري الإرسال...' },
-    ok: { en: 'Request received. We will confirm your call within one business day.',
-          ar: 'تم استلام طلبك. سنؤكد موعد المكالمة خلال يوم عمل واحد.' },
-    err: { en: 'Something went wrong. Please email us directly at ' + FALLBACK_EMAIL,
-           ar: 'حدث خطأ. يرجى مراسلتنا مباشرة على ' + FALLBACK_EMAIL },
-    req: { en: 'Please fill in name, email and company.',
-           ar: 'يرجى إدخال الاسم والبريد الإلكتروني والشركة.' }
+    sending:['Sending...','جاري الإرسال...'],
+    ok:['Thank you. Your request has been received and a confirmation email is on its way to you.','شكراً لك. تم استلام طلبك وسيصلك بريد تأكيد خلال لحظات.'],
+    req:['Please fill in your name, work email and company.','يرجى إدخال الاسم والبريد الإلكتروني للعمل واسم الشركة.']
   };
-  const t = (k) => T[k][(typeof currentLang !== 'undefined' && currentLang === 'ar') ? 'ar' : 'en'];
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const btn = form.querySelector('.bk-submit');
-    const data = new FormData(form);
+    const i = L(), btn = document.getElementById('bkSubmit');
+    const fd = new FormData(form);
+    if (fd.get('_gotcha')) return;
 
-    if (data.get('_gotcha')) return;                      // bot
     if (!form.checkValidity()) {
-      statusEl.className = 'bk-status err';
-      statusEl.textContent = t('req');
-      form.reportValidity();
-      return;
+      statusEl.className = 'bk-status err'; statusEl.textContent = T.req[i];
+      form.reportValidity(); return;
     }
 
-    data.append('_subject', 'Discovery Call Request — ' + (data.get('company') || ''));
+    const payload = { formType: current, lang: i ? 'ar' : 'en' };
+    fd.forEach((v, k) => { if (v) payload[k] = v; });
 
     const orig = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = t('sending');
+    btn.disabled = true; btn.textContent = T.sending[i];
     statusEl.className = 'bk-status';
 
-    const ok = await sendForm(data);
+    try {
+      const r = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || 'send failed');
 
-    btn.disabled = false;
-    btn.textContent = orig;
-    statusEl.className = 'bk-status ' + (ok ? 'ok' : 'err');
-    statusEl.textContent = ok ? t('ok') : t('err');
-    if (ok) {
+      statusEl.className = 'bk-status ok'; statusEl.textContent = T.ok[i];
       form.reset();
-      if (typeof showToast === 'function') showToast(t('ok'));
-      setTimeout(closeBooking, 3200);
+      if (typeof showToast === 'function') showToast(T.ok[i]);
+      setTimeout(closeBooking, 3600);
+    } catch (err) {
+      statusEl.className = 'bk-status err';
+      statusEl.textContent = (err.message && err.message !== 'send failed')
+        ? err.message
+        : (i ? 'تعذر الإرسال. يرجى مراسلتنا على ' : 'Could not send. Please email us at ') + FALLBACK_EMAIL;
+    } finally {
+      btn.disabled = false; btn.textContent = orig;
     }
   });
 })();
 
-/* Shared sender: Formspree if configured, mailto fallback otherwise. */
+/* Shared sender used by the inline contact form at the bottom of the page. */
 async function sendForm(formData) {
-  if (FORM_ENDPOINT) {
-    try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        body: formData,
-        headers: { Accept: 'application/json' }
-      });
-      return res.ok;
-    } catch (err) {
-      console.error('Form submission failed:', err);
-      return false;
-    }
+  const payload = { formType: 'expert', lang: (typeof currentLang !== 'undefined' ? currentLang : 'en') };
+  formData.forEach((v, k) => { if (v && !k.startsWith('_')) payload[k] = v; });
+  try {
+    const r = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return r.ok;
+  } catch (err) {
+    console.error('Form submission failed:', err);
+    return false;
   }
-  // No endpoint configured yet — hand off to the user's mail client
-  // so the enquiry is not silently dropped.
-  const lines = [];
-  for (const [k, v] of formData.entries()) {
-    if (k.startsWith('_') || !v) continue;
-    lines.push(k.replace(/_/g, ' ').toUpperCase() + ': ' + v);
-  }
-  const subject = formData.get('_subject') || 'Website Enquiry';
-  window.location.href = 'mailto:' + FALLBACK_EMAIL +
-    '?subject=' + encodeURIComponent(subject) +
-    '&body=' + encodeURIComponent(lines.join('\n'));
-  return true;
 }
 
 </script>
