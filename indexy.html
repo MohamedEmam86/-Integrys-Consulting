@@ -3219,9 +3219,23 @@ window.addEventListener('scroll', () => {
   let chars = [], caret = null, i = 0, deleting = false;
   let timer = null, running = false, rebuilding = false, visible = true;
 
+  function isArabic() {
+    return (typeof currentLang !== 'undefined' && currentLang === 'ar')
+        || document.documentElement.getAttribute('dir') === 'rtl';
+  }
+
   function build() {
     rebuilding = true;
     const text = (el.textContent || '').replace(/\s+/g, ' ').trim();
+    // Arabic is cursive: wrapping each letter in its own span breaks letter
+    // joining, so the typewriter is disabled for Arabic and the paragraph
+    // renders as plain static text.
+    if (isArabic()) {
+      el.textContent = text;
+      chars = []; caret = null;
+      rebuilding = false;
+      return;
+    }
     el.innerHTML = '';
     chars = [];
     text.split(' ').forEach((word, wi, arr) => {
@@ -3274,7 +3288,7 @@ window.addEventListener('scroll', () => {
   }
 
   function start() {
-    if (running || reduce) return;
+    if (running || reduce || !caret || !chars.length) return;
     running = true;
     caret.classList.add('live');
     moveCaret();
@@ -3302,12 +3316,18 @@ window.addEventListener('scroll', () => {
   }
 
   // Re-split and restart after a language switch (applyLang rewrites textContent).
-  new MutationObserver(() => {
-    if (rebuilding) return;
+  // The observer MUST be disconnected while build() runs: its own DOM writes
+  // would otherwise re-trigger this callback forever and freeze the page.
+  const OBS = { childList: true, characterData: true, subtree: true };
+  const mo = new MutationObserver(() => {
+    mo.disconnect();
     pause();
     build();
+    mo.takeRecords();        // drop the records build() just generated
+    mo.observe(el, OBS);
     if (visible) start();
-  }).observe(el, { childList: true, characterData: true, subtree: true });
+  });
+  mo.observe(el, OBS);
 
   window.addEventListener('resize', () => { moveCaret(); });
   document.addEventListener('visibilitychange', () => {
