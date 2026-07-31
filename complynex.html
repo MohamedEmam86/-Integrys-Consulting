@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ComplyNex | The Egyptian Compliance Operating System — Integrys Consulting</title>
+<link rel="icon" href="integrys-icon.png" type="image/png" sizes="256x256">
+<link rel="apple-touch-icon" href="integrys-icon.png">
+<meta name="description" content="ComplyNex is Integrys Consulting's in-house compliance operating system, built exclusively for the Egyptian market. AML, sanctions screening in Arabic, ESG and carbon, enterprise risk, governance and regulatory reporting in one on-premise system.">
+<link rel="canonical" href="https://integrysconsult.com/complynex.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Integrys Consulting">
+<meta property="og:url" content="https://integrysconsult.com/complynex.html">
+<meta property="og:title" content="ComplyNex — The Egyptian Compliance Operating System">
+<meta property="og:description" content="One system for AML, Arabic-native screening, ESG and carbon, enterprise risk, governance and CBE/FRA regulatory reporting. Hosted on your own infrastructure.">
+<meta property="og:image" content="https://integrysconsult.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nav:#0D2B4E;--navdk:#081D36;--teal:#006B75;--teal2:#00A896;--bteal:#2E86AB;
+  --mgrey:#9EAFC0;--body:#44607A;--line:#DCE5EE;--wash:#F3F7FA;
+  --bg-body:#F8FAFB;--white:#fff;
+  --font-en:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --font-ar:'Tajawal','Segoe UI',Tahoma,sans-serif;--font:var(--font-en);
+  --transition:0.3s ease;--radius:10px;
+  --shadow-card:0 2px 12px rgba(13,43,78,0.08),0 1px 3px rgba(0,107,117,0.05);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg-body);color:var(--body);line-height:1.7;overflow-x:hidden}
+[dir="rtl"]{font-family:var(--font-ar)}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,43,78,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,107,117,0.2)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-en{font-size:14px;font-weight:700;color:#fff;line-height:1.1}
+.nav-logo-ar{font-size:11px;color:var(--mgrey);line-height:1.1;font-family:var(--font-ar)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:13.5px;font-weight:500;padding:8px 12px;border-radius:6px;transition:var(--transition)}
+.nav-links a:hover{color:#fff;background:rgba(0,168,150,0.15)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.lang-btn{display:flex;align-items:center;gap:6px;background:rgba(0,107,117,0.2);border:1px solid var(--teal);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:20px;cursor:pointer;font-family:var(--font-ar)}
+.nav-cta{background:var(--teal2);color:#fff;font-size:13px;font-weight:600;padding:8px 18px;border-radius:7px;cursor:pointer;border:none;font-family:var(--font)}
+.nav-cta:hover{filter:brightness(1.1)}
+.hero{background:linear-gradient(160deg,#0D2B4E 0%,#081D36 100%);padding:150px 0 90px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:620px;height:620px;border-radius:50%;background:#113A55;top:-180px;right:-160px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:52px;align-items:center;position:relative;z-index:1}
+.eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal2);margin-bottom:14px}
+.hero h1{font-size:clamp(38px,5.4vw,60px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px}
+.hero-tag{font-size:clamp(17px,2vw,21px);color:var(--teal2);font-weight:600;margin-bottom:20px;line-height:1.5}
+.hero p{font-size:15.5px;color:#C7D6E4;max-width:560px;margin-bottom:28px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+.pill{background:var(--navdk);border:1px solid rgba(0,168,150,0.4);color:var(--teal2);font-size:12px;font-weight:600;padding:7px 15px;border-radius:20px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font);font-size:15px;font-weight:600;padding:13px 26px;border-radius:8px;transition:var(--transition);text-decoration:none}
+.btn-p{background:var(--teal2);color:#fff}
+.btn-p:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.btn-o{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.3)}
+.btn-o:hover{border-color:var(--teal2);color:var(--teal2)}
+.shot{width:100%;border-radius:12px;border:1px solid var(--line);background:#E8EEF4;padding:6px;display:block}
+.hero .shot{border-color:rgba(255,255,255,0.14);background:rgba(255,255,255,0.06)}
+.section{padding:84px 0}
+.section.alt{background:#fff}
+.section.dark{background:linear-gradient(160deg,#0D2B4E 0%,#081D36 100%)}
+.label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal2);margin-bottom:10px;display:block}
+h2.st{font-size:clamp(26px,3.4vw,38px);font-weight:800;color:var(--nav);margin-bottom:14px;line-height:1.2}
+.dark h2.st{color:#fff}
+.ss{font-size:16px;color:var(--body);max-width:720px;margin-bottom:40px}
+.dark .ss{color:#C7D6E4}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;box-shadow:var(--shadow-card)}
+.card.d{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12)}
+.card h3{font-size:17px;font-weight:700;color:var(--nav);margin-bottom:9px}
+.card.d h3{color:#fff}
+.card p{font-size:14px;color:var(--body)}
+.card.d p{color:#BFD2E2}
+.num{width:38px;height:38px;border-radius:9px;background:var(--teal2);color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.stat{font-size:40px;font-weight:800;color:var(--teal2);line-height:1}
+.stat-l{font-size:13.5px;color:var(--body);margin-top:8px}
+.dark .stat-l{color:#BFD2E2}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.ul{list-style:none}
+.ul li{padding-left:26px;position:relative;margin-bottom:11px;font-size:14.5px}
+.ul li::before{content:'';position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--teal2)}
+[dir="rtl"] .ul li{padding-left:0;padding-right:26px}
+[dir="rtl"] .ul li::before{left:auto;right:0}
+table.cmp{width:100%;border-collapse:separate;border-spacing:0 8px}
+table.cmp td{padding:15px 18px;font-size:14.5px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table.cmp td:first-child{border-left:1px solid var(--line);border-radius:10px 0 0 10px;color:var(--nav);font-weight:500}
+table.cmp td:last-child{border-right:1px solid var(--line);border-radius:0 10px 10px 0;text-align:center;width:150px}
+table.cmp td.mid{text-align:center;width:170px;color:#B0492F}
+table.cmp th{font-size:12.5px;font-weight:700;color:var(--body);padding:0 18px 8px;text-align:center}
+table.cmp th:first-child{text-align:left}
+[dir="rtl"] table.cmp th:first-child{text-align:right}
+.yes{color:#0E8A6A;font-weight:800;font-size:17px}
+.no{color:#B0492F;font-weight:800;font-size:16px}
+.cta{background:linear-gradient(160deg,#0D2B4E 0%,#081D36 100%);border-radius:16px;padding:52px 44px;text-align:center;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(25px,3.2vw,36px);font-weight:800;color:#fff;margin-bottom:12px}
+.cta p{color:#C7D6E4;max-width:620px;margin:0 auto 26px;font-size:15.5px}
+footer{background:var(--navdk);padding:52px 0 26px;color:var(--mgrey)}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px;margin-bottom:30px}
+footer h4{color:#fff;font-size:14px;font-weight:700;margin-bottom:14px}
+footer a{color:var(--mgrey);text-decoration:none;font-size:13.5px;display:block;margin-bottom:9px}
+footer a:hover{color:var(--teal2)}
+.f-bot{border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.note{background:rgba(192,110,0,0.09);border:1px solid rgba(192,110,0,0.3);border-radius:10px;padding:16px 20px;font-size:14px;color:#8A5200;margin-top:22px}
+.bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(5,16,28,0.72);backdrop-filter:blur(6px);opacity:0;transition:opacity .25s ease}
+.bk-overlay.open{display:flex}.bk-overlay.show{opacity:1}
+.bk-modal{position:relative;width:100%;max-width:580px;max-height:92vh;overflow-y:auto;background:linear-gradient(160deg,#0D2B4E 0%,#08203c 100%);border:1px solid rgba(0,168,150,0.28);border-radius:18px;padding:32px;transform:translateY(18px) scale(.97);transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.bk-overlay.show .bk-modal{transform:none}
+.bk-close{position:absolute;top:14px;inset-inline-end:14px;width:34px;height:34px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);border-radius:9px;cursor:pointer;font-size:19px;line-height:1}
+.bk-close:hover{background:rgba(0,168,150,0.18);color:#fff}
+.bk-title{font-size:25px;font-weight:800;color:#fff;margin-bottom:8px}
+.bk-sub{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:22px}
+.bk-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bk-group{margin-bottom:14px;text-align:start}
+.bk-label{display:block;font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px}
+.bk-input,.bk-select,.bk-textarea{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:9px;padding:11px 13px;color:#fff;font-size:14.5px;font-family:var(--font);box-sizing:border-box}
+.bk-textarea{min-height:82px;resize:vertical}
+.bk-input:focus,.bk-select:focus,.bk-textarea:focus{outline:none;border-color:var(--teal2);background:rgba(0,107,117,0.12)}
+.bk-select option{background:#0D2B4E;color:#fff}
+.bk-submit{width:100%;margin-top:8px;background:var(--teal2);color:#fff;border:none;border-radius:9px;padding:14px;font-size:15px;font-weight:700;font-family:var(--font);cursor:pointer}
+.bk-submit:hover{filter:brightness(1.12)}.bk-submit:disabled{opacity:.6}
+.bk-note{font-size:12px;color:rgba(255,255,255,0.38);text-align:center;margin-top:12px}
+.bk-status{display:none;margin-top:14px;padding:12px 14px;border-radius:9px;font-size:14px}
+.bk-status.ok{display:block;background:rgba(0,168,150,0.14);border:1px solid rgba(0,168,150,0.4);color:#7fe8da}
+.bk-status.err{display:block;background:rgba(192,60,60,0.14);border:1px solid rgba(192,60,60,0.4);color:#ffb0b0}
+body.bk-lock{overflow:hidden}
+@media(max-width:600px){.bk-row{grid-template-columns:1fr;gap:0}.bk-modal{padding:24px 20px}}
+@media(max-width:960px){
+  .hero-grid,.split,.grid2{grid-template-columns:1fr}
+  .grid3,.grid4{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .f-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){.grid3,.grid4{grid-template-columns:1fr}.cta{padding:36px 22px}}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="integrys-icon.png" alt="Integrys" style="width:40px;height:40px;object-fit:contain;border-radius:8px">
+        <div>
+          <span class="nav-logo-en" style="display:block">Integrys Consulting</span>
+          <span class="nav-logo-ar" style="display:block">إنتيجريس للاستشارات</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="#problem" data-en="Why" data-ar="لماذا">Why</a>
+        <a href="#pillars" data-en="Modules" data-ar="الوحدات">Modules</a>
+        <a href="#screens" data-en="Product" data-ar="المنتج">Product</a>
+        <a href="#egypt" data-en="Built for Egypt" data-ar="مصمم لمصر">Built for Egypt</a>
+        <a href="#deploy" data-en="Deployment" data-ar="التركيب">Deployment</a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-btn" onclick="toggleLang()"><span>🌐</span><span id="langLabel">العربية</span></button>
+        <button class="nav-cta" onclick="openDemo()" data-en="Request a Demo" data-ar="اطلب عرضاً">Request a Demo</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow" data-en="Integrys In-House Platform" data-ar="منصة إنتيجريس الداخلية">Integrys In-House Platform</span>
+        <h1>ComplyNex</h1>
+        <div class="hero-tag" data-en="The compliance operating system built exclusively for the Egyptian market." data-ar="نظام تشغيل الامتثال المصمم خصيصاً للسوق المصري.">The compliance operating system built exclusively for the Egyptian market.</div>
+        <p data-en="Most Egyptian institutions run compliance across five or more disconnected tools. ComplyNex replaces them with one system — financial crime, enterprise risk, ESG and carbon, governance, conduct and regulatory reporting — hosted on your own infrastructure." data-ar="تدير معظم المؤسسات المصرية الامتثال عبر خمس أدوات منفصلة أو أكثر. تستبدلها كومبلاي‑نكس بنظام واحد — الجرائم المالية وإدارة المخاطر والاستدامة والبصمة الكربونية والحوكمة والسلوك والتقارير الرقابية — مستضاف على بنيتكم التحتية.">Most Egyptian institutions run compliance across five or more disconnected tools. ComplyNex replaces them with one system — financial crime, enterprise risk, ESG and carbon, governance, conduct and regulatory reporting — hosted on your own infrastructure.</p>
+        <div class="hero-pills">
+          <span class="pill">AML/CFT</span><span class="pill">ESG &amp; Carbon</span><span class="pill">Enterprise Risk</span>
+          <span class="pill">KYC/KYB</span><span class="pill">Governance</span><span class="pill">On-Premise</span>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn btn-p" onclick="openDemo()" data-en="Request a Demo" data-ar="اطلب عرضاً توضيحياً">Request a Demo</button>
+          <a class="btn btn-o" href="#pillars" data-en="See the Modules" data-ar="استعرض الوحدات">See the Modules</a>
+        </div>
+      </div>
+      <div><img src="shots/dash.jpg" alt="ComplyNex executive dashboard" class="shot" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="problem">
+  <div class="container">
+    <span class="label" data-en="The problem" data-ar="المشكلة">The problem</span>
+    <h2 class="st" data-en="Compliance runs on disconnected tools" data-ar="الامتثال يعمل على أدوات منفصلة">Compliance runs on disconnected tools</h2>
+    <p class="ss" data-en="Spreadsheets for the risk register. Email chains for approvals. A global screening tool blind to Arabic names. Separate HR software for training. Evidence assembled by hand before every inspection." data-ar="جداول بيانات لسجل المخاطر. سلاسل بريد إلكتروني للموافقات. أداة فحص عالمية لا تقرأ الأسماء العربية. برامج موارد بشرية منفصلة للتدريب. وأدلة تُجمع يدوياً قبل كل تفتيش.">Spreadsheets for the risk register. Email chains for approvals. A global screening tool blind to Arabic names. Separate HR software for training. Evidence assembled by hand before every inspection.</p>
+    <div class="grid4">
+      <div class="card"><div class="stat">5+</div><div class="stat-l" data-en="Disconnected tools replaced by one system" data-ar="أدوات منفصلة يستبدلها نظام واحد">Disconnected tools replaced by one system</div></div>
+      <div class="card"><div class="stat">55,203</div><div class="stat-l" data-en="Transactions monitored continuously" data-ar="معاملة تُراقب باستمرار">Transactions monitored continuously</div></div>
+      <div class="card"><div class="stat">2.5M+</div><div class="stat-l" data-en="Screening records across 8 sources" data-ar="سجل فحص عبر 8 مصادر">Screening records across 8 sources</div></div>
+      <div class="card"><div class="stat">48h</div><div class="stat-l" data-en="SLA clock on every alert, auto-escalated" data-ar="مهلة على كل تنبيه مع تصعيد تلقائي">SLA clock on every alert, auto-escalated</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pillars">
+  <div class="container">
+    <span class="label" data-en="What is inside" data-ar="ما بداخلها">What is inside</span>
+    <h2 class="st" data-en="Five pillars, one platform" data-ar="خمس ركائز ومنصة واحدة">Five pillars, one platform</h2>
+    <p class="ss" data-en="Deploy the modules you need today and add the rest as the compliance function matures. Every module writes to the same risk register, the same control library and the same evidence trail." data-ar="ابدأ بالوحدات التي تحتاجها اليوم وأضف الباقي مع نضوج وظيفة الامتثال. كل وحدة تكتب في نفس سجل المخاطر ونفس مكتبة الضوابط ونفس سجل الأدلة.">Deploy the modules you need today and add the rest as the compliance function matures. Every module writes to the same risk register, the same control library and the same evidence trail.</p>
+    <div class="grid3">
+      <div class="card"><div class="num">01</div><h3 data-en="Financial Crime" data-ar="الجرائم المالية">Financial Crime</h3><p data-en="AML programme, transaction monitoring with SLA clocks, Arabic-native sanctions and PEP screening, adverse media, eKYC and merchant KYB onboarding." data-ar="برنامج مكافحة غسل الأموال، مراقبة المعاملات بمهل زمنية، فحص العقوبات والأشخاص السياسيين بالعربية، الأخبار السلبية، والتحقق الرقمي من العملاء والتجار.">AML programme, transaction monitoring with SLA clocks, Arabic-native sanctions and PEP screening, adverse media, eKYC and merchant KYB onboarding.</p></div>
+      <div class="card"><div class="num">02</div><h3 data-en="ESG &amp; Carbon" data-ar="الاستدامة والبصمة الكربونية">ESG &amp; Carbon</h3><p data-en="ESG data capture and carbon footprint measurement, connected directly to the enterprise risk register rather than sitting in a separate reporting silo." data-ar="جمع بيانات الاستدامة وقياس البصمة الكربونية، متصلة مباشرة بسجل مخاطر المؤسسة بدلاً من العمل في صومعة منفصلة.">ESG data capture and carbon footprint measurement, connected directly to the enterprise risk register rather than sitting in a separate reporting silo.</p></div>
+      <div class="card"><div class="num">03</div><h3 data-en="Governance &amp; Risk" data-ar="الحوكمة والمخاطر">Governance &amp; Risk</h3><p data-en="Enterprise risk register with automated KRIs against defined appetite, control library, board fit &amp; proper assessments and the full internal audit lifecycle." data-ar="سجل مخاطر المؤسسة مع مؤشرات آلية مقابل حدود المخاطر المقبولة، مكتبة الضوابط، تقييم كفاءة أعضاء المجلس، ودورة التدقيق الداخلي كاملة.">Enterprise risk register with automated KRIs against defined appetite, control library, board fit &amp; proper assessments and the full internal audit lifecycle.</p></div>
+      <div class="card"><div class="num">04</div><h3 data-en="Conduct &amp; Protection" data-ar="السلوك وحماية العملاء">Conduct &amp; Protection</h3><p data-en="Anonymous whistleblowing intake, CBE-aligned consumer complaint handling with hardcoded 15-day resolution timers, and a dedicated cyber incident hub." data-ar="قنوات إبلاغ مجهولة، معالجة شكاوى العملاء وفق متطلبات البنك المركزي مع مهلة 15 يوماً، ومركز مخصص لحوادث الأمن السيبراني.">Anonymous whistleblowing intake, CBE-aligned consumer complaint handling with hardcoded 15-day resolution timers, and a dedicated cyber incident hub.</p></div>
+      <div class="card"><div class="num">05</div><h3 data-en="Policy &amp; Learning" data-ar="السياسات والتعلم">Policy &amp; Learning</h3><p data-en="Bilingual policy library with mandatory digital signatures, a built-in training centre, and GHE, conflict of interest and code of ethics declarations." data-ar="مكتبة سياسات ثنائية اللغة بتوقيعات رقمية إلزامية، مركز تدريب مدمج، وإقرارات الهدايا وتضارب المصالح وقواعد السلوك.">Bilingual policy library with mandatory digital signatures, a built-in training centre, and GHE, conflict of interest and code of ethics declarations.</p></div>
+      <div class="card" style="border-color:rgba(0,168,150,0.35);background:#F2FAF8"><div class="num">06</div><h3 data-en="Regulatory Reporting Hub" data-ar="مركز التقارير الرقابية">Regulatory Reporting Hub</h3><p data-en="Filings pre-mapped to the Central Bank of Egypt, the Financial Regulatory Authority and the EMLCU, with deadline tracking and calendar export." data-ar="تقارير مربوطة مسبقاً بالبنك المركزي المصري والهيئة العامة للرقابة المالية ووحدة مكافحة غسل الأموال، مع تتبع المواعيد وتصدير التقويم.">Filings pre-mapped to the Central Bank of Egypt, the Financial Regulatory Authority and the EMLCU, with deadline tracking and calendar export.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="screens">
+  <div class="container">
+    <span class="label" data-en="The product" data-ar="المنتج">The product</span>
+    <h2 class="st" data-en="Live screens, not mockups" data-ar="شاشات حقيقية وليست تصورات">Live screens, not mockups</h2>
+    <p class="ss" data-en="Every screen below is the running system." data-ar="كل شاشة أدناه من النظام العامل فعلياً.">Every screen below is the running system.</p>
+    <div class="grid2" style="margin-bottom:26px">
+      <div><img src="shots/alerts.jpg" class="shot" alt="AML alerts queue" loading="lazy"><h3 style="margin-top:14px;font-size:16px;color:var(--nav)" data-en="AML alerts queue" data-ar="قائمة تنبيهات غسل الأموال">AML alerts queue</h3><p style="font-size:14px" data-en="508 active alerts triaged by severity, each on a 48-hour SLA clock." data-ar="508 تنبيهاً نشطاً مرتبة حسب الخطورة، كل منها بمهلة 48 ساعة.">508 active alerts triaged by severity, each on a 48-hour SLA clock.</p></div>
+      <div><img src="shots/screening.jpg" class="shot" alt="Arabic sanctions screening" loading="lazy"><h3 style="margin-top:14px;font-size:16px;color:var(--nav)" data-en="Arabic-native screening" data-ar="الفحص باللغة العربية">Arabic-native screening</h3><p style="font-size:14px" data-en="Transliteration-aware name matching across OFAC, UN, EU, UK and Egypt EMLCU." data-ar="مطابقة أسماء تراعي الكتابة الصوتية عبر قوائم أوفاك والأمم المتحدة والاتحاد الأوروبي وبريطانيا ووحدة غسل الأموال المصرية.">Transliteration-aware name matching across OFAC, UN, EU, UK and Egypt EMLCU.</p></div>
+      <div><img src="shots/risk.jpg" class="shot" alt="Risk management dashboard" loading="lazy"><h3 style="margin-top:14px;font-size:16px;color:var(--nav)" data-en="Enterprise risk &amp; KRIs" data-ar="مخاطر المؤسسة والمؤشرات">Enterprise risk &amp; KRIs</h3><p style="font-size:14px" data-en="Heat map, residual scoring and automated indicators against risk appetite." data-ar="خريطة حرارية وتقييم للمخاطر المتبقية ومؤشرات آلية مقابل حدود المخاطر.">Heat map, residual scoring and automated indicators against risk appetite.</p></div>
+      <div><img src="shots/reports.jpg" class="shot" alt="Regulatory reporting hub" loading="lazy"><h3 style="margin-top:14px;font-size:16px;color:var(--nav)" data-en="Regulatory reporting hub" data-ar="مركز التقارير الرقابية">Regulatory reporting hub</h3><p style="font-size:14px" data-en="CBE, FRA and EMLCU submissions tracked to the day, with overdue escalation." data-ar="تقارير البنك المركزي والرقابة المالية ووحدة غسل الأموال متتبعة باليوم مع تصعيد المتأخر.">CBE, FRA and EMLCU submissions tracked to the day, with overdue escalation.</p></div>
+      <div><img src="shots/kyc.jpg" class="shot" alt="Merchant KYC directory" loading="lazy"><h3 style="margin-top:14px;font-size:16px;color:var(--nav)" data-en="KYC &amp; merchant onboarding" data-ar="التحقق من العملاء والتجار">KYC &amp; merchant onboarding</h3><p style="font-size:14px" data-en="CR numbers, National ID with OCR extraction, and UBO verification tracking." data-ar="السجل التجاري والرقم القومي باستخراج ضوئي وتتبع المستفيد الحقيقي.">CR numbers, National ID with OCR extraction, and UBO verification tracking.</p></div>
+      <div><img src="shots/lms.jpg" class="shot" alt="Policy hub and training" loading="lazy"><h3 style="margin-top:14px;font-size:16px;color:var(--nav)" data-en="Policy hub &amp; training" data-ar="مركز السياسات والتدريب">Policy hub &amp; training</h3><p style="font-size:14px" data-en="Bilingual policies with digital signature tracking and mandatory course completion." data-ar="سياسات ثنائية اللغة مع تتبع التوقيع الرقمي وإتمام الدورات الإلزامية.">Bilingual policies with digital signature tracking and mandatory course completion.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="egypt">
+  <div class="container">
+    <span class="label" data-en="Why not a global platform" data-ar="لماذا ليست منصة عالمية">Why not a global platform</span>
+    <h2 class="st" data-en="Built for the region. Ready for the exam." data-ar="مصممة للمنطقة. جاهزة للتفتيش.">Built for the region. Ready for the exam.</h2>
+    <p class="ss" data-en="Global compliance platforms are built for Western regulators and Latin-script names. The gaps show up exactly where an Egyptian institution is examined." data-ar="المنصات العالمية مصممة للجهات الرقابية الغربية وللأسماء اللاتينية. وتظهر الفجوات تحديداً حيث تُفحص المؤسسة المصرية.">Global compliance platforms are built for Western regulators and Latin-script names. The gaps show up exactly where an Egyptian institution is examined.</p>
+    <table class="cmp">
+      <tr><th data-en="Capability" data-ar="القدرة">Capability</th><th data-en="Generic global SaaS" data-ar="منصة عالمية عامة">Generic global SaaS</th><th style="color:var(--teal2)">ComplyNex</th></tr>
+      <tr><td data-en="Transliteration-aware Arabic name matching" data-ar="مطابقة الأسماء العربية مع مراعاة الكتابة الصوتية">Transliteration-aware Arabic name matching</td><td class="mid"><span class="no">✕</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td data-en="Local EMLCU and Egypt-specific PEP databases" data-ar="قواعد بيانات وحدة غسل الأموال والأشخاص السياسيين المصريين">Local EMLCU and Egypt-specific PEP databases</td><td class="mid"><span class="no">✕</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td data-en="CBE and FRA regulatory reporting calendar" data-ar="تقويم التقارير الرقابية للبنك المركزي والرقابة المالية">CBE and FRA regulatory reporting calendar</td><td class="mid"><span class="no">✕</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td data-en="Arabic-language adverse media monitoring" data-ar="مراقبة الأخبار السلبية باللغة العربية">Arabic-language adverse media monitoring</td><td class="mid"><span class="no">✕</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td data-en="On-premise hosting for data sovereignty" data-ar="استضافة داخلية لسيادة البيانات">On-premise hosting for data sovereignty</td><td class="mid"><span class="no">✕</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td data-en="GRC, financial crime, ESG and carbon in one system" data-ar="الحوكمة والجرائم المالية والاستدامة والكربون في نظام واحد">GRC, financial crime, ESG and carbon in one system</td><td class="mid"><span class="no">✕</span></td><td><span class="yes">✓</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="section" id="deploy">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="label" data-en="Deployment" data-ar="التركيب">Deployment</span>
+        <h2 class="st" data-en="Host it on your own servers" data-ar="استضفها على خوادمكم">Host it on your own servers</h2>
+        <p style="margin-bottom:20px" data-en="The reason most Egyptian institutions cannot adopt offshore RegTech is data residency. ComplyNex runs entirely inside your perimeter." data-ar="السبب الرئيسي في عدم قدرة معظم المؤسسات المصرية على تبني تقنيات الامتثال الخارجية هو مكان حفظ البيانات. تعمل كومبلاي‑نكس بالكامل داخل نطاقكم.">The reason most Egyptian institutions cannot adopt offshore RegTech is data residency. ComplyNex runs entirely inside your perimeter.</p>
+        <ul class="ul">
+          <li data-en="Fully hostable on internal servers or private cloud — zero exposure to external SaaS vendors" data-ar="قابلة للاستضافة بالكامل على خوادم داخلية أو سحابة خاصة — بدون أي انكشاف لمزودين خارجيين">Fully hostable on internal servers or private cloud — zero exposure to external SaaS vendors</li>
+          <li data-en="Runs production workloads on 2 vCPUs and 8GB RAM" data-ar="تعمل بأحمال إنتاجية على معالجين افتراضيين و8 جيجابايت ذاكرة">Runs production workloads on 2 vCPUs and 8GB RAM</li>
+          <li data-en="Python (Gunicorn/Flask) workers with a PostgreSQL 16.14 database" data-ar="خوادم بايثون مع قاعدة بيانات PostgreSQL 16.14">Python (Gunicorn/Flask) workers with a PostgreSQL 16.14 database</li>
+          <li data-en="AES-256 encrypted automated backups and isolated environments" data-ar="نسخ احتياطي مشفر AES-256 وبيئات معزولة">AES-256 encrypted automated backups and isolated environments</li>
+          <li data-en="Every system action cryptographically logged — exam-ready for CBE inspectors" data-ar="كل إجراء مسجل تشفيرياً — جاهز لمفتشي البنك المركزي">Every system action cryptographically logged — exam-ready for CBE inspectors</li>
+        </ul>
+      </div>
+      <div><img src="shots/audit.jpg" class="shot" alt="Internal audit dashboard" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="cta">
+      <h2 data-en="See it running on your own data" data-ar="شاهدها تعمل على بياناتكم">See it running on your own data</h2>
+      <p data-en="A 45-minute walkthrough on a live environment — not slides. Tell us which modules matter most and we will focus the session there." data-ar="جولة مدتها 45 دقيقة على بيئة حية — وليست شرائح عرض. أخبرنا بالوحدات الأهم لديكم وسنركز الجلسة عليها.">A 45-minute walkthrough on a live environment — not slides. Tell us which modules matter most and we will focus the session there.</p>
+      <button class="btn btn-p" onclick="openDemo()" data-en="Request a Demo" data-ar="اطلب عرضاً توضيحياً">Request a Demo</button>
+      <div style="margin-top:22px;font-size:13.5px;color:#8FA8BE">info@integrysconsult.com &nbsp;·&nbsp; +20 10 9798 8812</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <h4>ComplyNex</h4>
+        <p style="font-size:13.5px;max-width:340px" data-en="The in-house compliance operating system from Integrys Consulting, built exclusively for the Egyptian market." data-ar="نظام تشغيل الامتثال الداخلي من إنتيجريس للاستشارات، مصمم خصيصاً للسوق المصري.">The in-house compliance operating system from Integrys Consulting, built exclusively for the Egyptian market.</p>
+      </div>
+      <div>
+        <h4 data-en="Platform" data-ar="المنصة">Platform</h4>
+        <a href="#pillars" data-en="Modules" data-ar="الوحدات">Modules</a>
+        <a href="#screens" data-en="Product screens" data-ar="شاشات المنتج">Product screens</a>
+        <a href="#deploy" data-en="Deployment" data-ar="التركيب">Deployment</a>
+      </div>
+      <div>
+        <h4 data-en="Integrys" data-ar="إنتيجريس">Integrys</h4>
+        <a href="index.html" data-en="Main site" data-ar="الموقع الرئيسي">Main site</a>
+        <a href="index.html#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+        <a href="privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>© <span id="yr"></span> Integrys Consulting. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></span>
+      <span>Cairo, Egypt</span>
+    </div>
+  </div>
+</footer>
+
+
+<div class="bk-overlay" id="bkOverlay" role="dialog" aria-modal="true">
+  <div class="bk-modal">
+    <button class="bk-close" id="bkClose" aria-label="Close">&times;</button>
+    <div class="bk-title" data-en="Request a ComplyNex demo" data-ar="اطلب عرضاً لكومبلاي‑نكس">Request a ComplyNex demo</div>
+    <div class="bk-sub" data-en="45 minutes on a live environment. We confirm within one business day." data-ar="45 دقيقة على بيئة حية. نؤكد الموعد خلال يوم عمل واحد.">45 minutes on a live environment. We confirm within one business day.</div>
+    <form id="demoForm" novalidate>
+      <div class="bk-row">
+        <div class="bk-group"><label class="bk-label" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label><input class="bk-input" type="text" name="name" required></div>
+        <div class="bk-group"><label class="bk-label" data-en="Work Email *" data-ar="البريد الإلكتروني *">Work Email *</label><input class="bk-input" type="email" name="email" required></div>
+      </div>
+      <div class="bk-row">
+        <div class="bk-group"><label class="bk-label" data-en="Company *" data-ar="الشركة *">Company *</label><input class="bk-input" type="text" name="company" required></div>
+        <div class="bk-group"><label class="bk-label" data-en="Phone / WhatsApp" data-ar="الهاتف / واتساب">Phone / WhatsApp</label><input class="bk-input" type="tel" name="phone" dir="ltr"></div>
+      </div>
+      <div class="bk-group"><label class="bk-label" data-en="Organisation type" data-ar="نوع المؤسسة">Organisation type</label>
+        <select class="bk-select" name="entity">
+          <option value="Bank" data-en="Bank" data-ar="بنك">Bank</option>
+          <option value="Payment Service Provider" data-en="Payment Service Provider" data-ar="مزود خدمات دفع">Payment Service Provider</option>
+          <option value="Non-bank financial institution" data-en="Non-bank financial institution" data-ar="مؤسسة مالية غير مصرفية">Non-bank financial institution</option>
+          <option value="Investment manager" data-en="Investment manager" data-ar="مدير استثمار">Investment manager</option>
+          <option value="Insurance" data-en="Insurance" data-ar="تأمين">Insurance</option>
+          <option value="Listed corporate" data-en="Listed corporate" data-ar="شركة مقيدة بالبورصة">Listed corporate</option>
+          <option value="Other" data-en="Other" data-ar="أخرى">Other</option>
+        </select>
+      </div>
+      <div class="bk-group"><label class="bk-label" data-en="Modules of interest" data-ar="الوحدات محل الاهتمام">Modules of interest</label>
+        <select class="bk-select" name="modules">
+          <option value="Whole platform" data-en="The whole platform" data-ar="المنصة بالكامل">The whole platform</option>
+          <option value="Financial Crime" data-en="Financial Crime (AML, screening, KYC)" data-ar="الجرائم المالية">Financial Crime (AML, screening, KYC)</option>
+          <option value="ESG &amp; Carbon" data-en="ESG &amp; Carbon" data-ar="الاستدامة والبصمة الكربونية">ESG &amp; Carbon</option>
+          <option value="Governance &amp; Risk" data-en="Governance &amp; Risk" data-ar="الحوكمة والمخاطر">Governance &amp; Risk</option>
+          <option value="Regulatory Reporting" data-en="Regulatory Reporting" data-ar="التقارير الرقابية">Regulatory Reporting</option>
+          <option value="Conduct &amp; Protection" data-en="Conduct &amp; Protection" data-ar="السلوك وحماية العملاء">Conduct &amp; Protection</option>
+        </select>
+      </div>
+      <div class="bk-group"><label class="bk-label" data-en="Anything specific you want to see?" data-ar="هل هناك ما تود رؤيته تحديداً؟">Anything specific you want to see?</label>
+        <textarea class="bk-textarea" name="message" data-en-ph="Current tooling, upcoming inspection, or a specific regulatory requirement..." data-ar-ph="الأدوات الحالية أو تفتيش قادم أو متطلب رقابي محدد..." placeholder="Current tooling, upcoming inspection, or a specific regulatory requirement..."></textarea></div>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0">
+      <button type="submit" class="bk-submit" data-en="Request My Demo" data-ar="اطلب العرض">Request My Demo</button>
+      <div class="bk-note" data-en="We reply within one business day. Your details are never shared." data-ar="نرد خلال يوم عمل واحد. لا تتم مشاركة بياناتك.">We reply within one business day. Your details are never shared.</div>
+      <div class="bk-status" id="bkStatus" role="status"></div>
+    </form>
+  </div>
+</div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+let currentLang = 'en';
+function applyLang(lang){
+  currentLang = lang;
+  const isAr = lang === 'ar';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+  document.getElementById('langLabel').textContent = isAr ? 'English' : 'العربية';
+  document.querySelectorAll('[data-en-ph]').forEach(el => {
+    const p = el.getAttribute(isAr ? 'data-ar-ph' : 'data-en-ph');
+    if (p) el.placeholder = p;
+  });
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const t = el.getAttribute('data-' + lang);
+    if (!t) return;
+    if (t.includes('<')) el.innerHTML = t; else el.textContent = t;
+  });
+  try { localStorage.setItem('cnxLang', lang); } catch(e){}
+}
+function toggleLang(){ applyLang(currentLang === 'en' ? 'ar' : 'en'); }
+try { const s = localStorage.getItem('cnxLang'); if (s === 'ar') applyLang('ar'); } catch(e){}
+(function(){
+  const ov=document.getElementById('bkOverlay'), form=document.getElementById('demoForm'),
+        st=document.getElementById('bkStatus'), cb=document.getElementById('bkClose');
+  const L=()=>currentLang==='ar'?1:0;
+  const T={sending:['Sending...','جاري الإرسال...'],
+           ok:['Thank you. Your demo request has been received and a confirmation email is on its way.','شكراً لك. تم استلام طلبك وسيصلك بريد تأكيد.'],
+           req:['Please fill in your name, work email and company.','يرجى إدخال الاسم والبريد الإلكتروني واسم الشركة.']};
+  window.openDemo=function(){
+    st.className='bk-status'; st.textContent='';
+    ov.classList.add('open'); requestAnimationFrame(()=>ov.classList.add('show'));
+    document.body.classList.add('bk-lock');
+    setTimeout(()=>{const f=form.querySelector('input'); if(f) f.focus();},260);
+  };
+  function close(){ ov.classList.remove('show'); document.body.classList.remove('bk-lock');
+    setTimeout(()=>ov.classList.remove('open'),250); }
+  cb.addEventListener('click',close);
+  ov.addEventListener('click',e=>{if(e.target===ov) close();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ov.classList.contains('open')) close();});
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const i=L(), btn=form.querySelector('.bk-submit'), fd=new FormData(form);
+    if(fd.get('_gotcha')) return;
+    if(!form.checkValidity()){ st.className='bk-status err'; st.textContent=T.req[i]; form.reportValidity(); return; }
+    const payload={formType:'demo', lang:i?'ar':'en'};
+    fd.forEach((v,k)=>{ if(v) payload[k]=v; });
+    const orig=btn.textContent; btn.disabled=true; btn.textContent=T.sending[i]; st.className='bk-status';
+    try{
+      const r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok) throw new Error(j.error||'failed');
+      st.className='bk-status ok'; st.textContent=T.ok[i]; form.reset(); setTimeout(close,3600);
+    }catch(err){
+      st.className='bk-status err';
+      st.textContent=(err.message&&err.message!=='failed')?err.message:(i?'تعذر الإرسال. راسلنا على ':'Could not send. Please email ')+'info@integrysconsult.com';
+    }finally{ btn.disabled=false; btn.textContent=orig; }
+  });
+})();
+</script>
+</body>
+</html>

@@ -53,6 +53,25 @@ const FORM_META = {
       'كل ما تشاركه معنا يُعامل بسرية تامة.'
     ]
   },
+  demo: {
+    subject: 'ComplyNex Demo Request',
+    ackSubjectEn: 'We received your ComplyNex demo request — Integrys Consulting',
+    ackSubjectAr: 'استلمنا طلب عرض كومبلاي‑نكس — إنتيجريس للاستشارات',
+    ackLineEn: 'Thank you for requesting a ComplyNex demonstration.',
+    ackLineAr: 'شكراً لطلبك عرضاً توضيحياً لمنصة كومبلاي‑نكس.',
+    nextEn: [
+      'We will contact you within one business day to agree a time.',
+      'The demo runs about 45 minutes on a live environment — not slides.',
+      'Tell us which modules matter most and we will focus the session there.',
+      'We can also walk through on-premise deployment and data residency if that is a requirement.'
+    ],
+    nextAr: [
+      'سنتواصل معك خلال يوم عمل واحد للاتفاق على موعد.',
+      'يستغرق العرض حوالي 45 دقيقة على بيئة حية — وليس شرائح عرض.',
+      'أخبرنا بالوحدات الأهم لديك وسنركز الجلسة عليها.',
+      'يمكننا أيضاً استعراض التركيب الداخلي على خوادمكم ومتطلبات سيادة البيانات.'
+    ]
+  },
   proposal: {
     subject: 'Proposal Request',
     ackSubjectEn: 'We received your proposal request — Integrys Consulting',
@@ -81,7 +100,7 @@ const LABELS = {
   name: 'Name', email: 'Email', company: 'Company', phone: 'Phone / WhatsApp',
   service: 'Service of interest', preferred_date: 'Preferred date',
   preferred_time: 'Preferred time (Cairo)', role: 'Role', urgency: 'Urgency',
-  budget: 'Indicative budget', timeline: 'Required timeline',
+  budget: 'Indicative budget', timeline: 'Required timeline', modules: 'Modules of interest', entity: 'Organisation type',
   regulator: 'Regulator / framework', message: 'Message'
 };
 
