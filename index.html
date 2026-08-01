@@ -1374,6 +1374,8 @@ footer::before {
 }
 .leader-photo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(0deg, rgba(0, 168, 150, 0.15), transparent); }
 .leader-initials { font-size: 60px; font-weight: 800; color: rgba(0, 168, 150, 0.4); letter-spacing: -2px; user-select: none; }
+.leader-photo { overflow: hidden; position: relative; }
+.leader-photo img.leader-img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; border-radius: 20px; }
 .leader-card-badge {
   background: var(--teal);
   color: #fff;
@@ -2652,7 +2654,7 @@ footer::before {
       <!-- Photo Wrapper -->
       <div class="leader-photo-wrap">
         <div class="leader-photo">
-          <div class="leader-initials">HG</div>
+          <img src="team/hussein.jpg" alt="Hussein El Gaafary, Founder &amp; Principal Consultant, Integrys Consulting" class="leader-img" loading="lazy" width="800" height="800">
           <div class="leader-card-badge" data-en="Founder &bull; Integrys" data-ar="المؤسس &bull; إنتيجريس">Founder &bull; Integrys</div>
         </div>
       </div>
@@ -2685,7 +2687,7 @@ footer::before {
     <div class="leader-grid reveal" style="margin-top:28px">
       <div class="leader-photo-wrap">
         <div class="leader-photo">
-          <div class="leader-initials">ME</div>
+          <img src="team/emam.jpg" alt="Mohamed Emam, Partner, Integrys Consulting and architect of ComplyNex" class="leader-img" loading="lazy" width="800" height="800">
           <div class="leader-card-badge" data-en="Partner &bull; Integrys" data-ar="شريك &bull; إنتيجريس">Partner &bull; Integrys</div>
         </div>
       </div>
