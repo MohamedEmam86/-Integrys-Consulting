@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.integrysconsult.com" }], "destination": "https://integrysconsult.com/:path*", "permanent": true }
+  ]
+}
