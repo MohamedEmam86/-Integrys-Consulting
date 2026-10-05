@@ -1468,6 +1468,35 @@ footer::before {
 [dir="rtl"] .service-card::before, [dir="rtl"] .why-card::before { left: auto; right: 0; }
 [dir="rtl"] .why-card::before { left: auto; right: 0; }
 
+
+/* ═══════════════════ INTEGRYS ACADEMY (free training) ═══════════════════ */
+.hero-academy-pill{display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:rgba(0,168,150,0.14);border:1px solid rgba(0,168,150,0.45);color:#fff;padding:7px 14px 7px 8px;border-radius:999px;font-size:13px;font-weight:500;margin-bottom:14px;transition:var(--transition)}
+.hero-academy-pill:hover{background:rgba(0,168,150,0.26);transform:translateY(-1px)}
+.hero-academy-pill .pill-new{background:#00A896;color:#fff;font-size:10px;font-weight:800;letter-spacing:1.5px;padding:3px 8px;border-radius:999px}
+.hero-academy-pill .pill-arrow{opacity:.8}
+[dir="rtl"] .hero-academy-pill{padding:7px 8px 7px 14px}
+[dir="rtl"] .hero-academy-pill .pill-arrow{transform:scaleX(-1)}
+.academy-section{padding:56px 0 8px}
+.academy-card{position:relative;overflow:hidden;display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:center;background:linear-gradient(135deg,#0D2B4E 0%,#0B3A57 55%,#006B75 100%);border-radius:18px;padding:44px 48px;box-shadow:var(--shadow-lg);color:#fff}
+.academy-card::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(0,168,150,0.35),transparent 65%);right:-120px;top:-160px;pointer-events:none}
+[dir="rtl"] .academy-card::after{right:auto;left:-120px}
+.academy-card .section-label{color:#5fe0cf}
+.academy-card h2{color:#fff;font-size:clamp(24px,3vw,34px);font-weight:800;margin:0 0 12px;line-height:1.25}
+.academy-card h2 span{color:#5fe0cf}
+.academy-lead{color:rgba(255,255,255,0.82);font-size:16px;line-height:1.8;margin:0 0 20px;max-width:620px}
+.academy-points{list-style:none;padding:0;margin:0 0 26px;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.academy-points li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.9)}
+.academy-points li::before{content:"✓";flex:none;width:20px;height:20px;border-radius:50%;background:rgba(0,168,150,0.25);color:#5fe0cf;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.academy-btns{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.academy-btns .btn-primary{background:#00A896;text-decoration:none;display:inline-flex;align-items:center}
+.academy-btns .btn-primary:hover{background:#00907f}
+.academy-side{position:relative;z-index:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:26px;text-align:center}
+.academy-side img{width:96px;height:96px;object-fit:contain;background:#fff;border-radius:16px;padding:8px;margin-bottom:14px}
+.academy-course-tag{display:inline-block;background:rgba(0,168,150,0.22);color:#5fe0cf;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.academy-course-title{font-size:17px;font-weight:700;color:#fff;margin-bottom:6px}
+.academy-course-meta{font-size:13px;color:rgba(255,255,255,0.7)}
+.academy-powered{margin-top:14px;font-size:12px;color:rgba(255,255,255,0.6)}
+@media(max-width:900px){.academy-card{grid-template-columns:1fr;padding:32px 24px}.academy-points{grid-template-columns:1fr}}
 </style>
 
 </head>
@@ -1543,6 +1572,11 @@ footer::before {
     <div class="hero-content">
       <!-- LEFT CONTENT -->
       <div class="hero-left reveal">
+        <a class="hero-academy-pill" href="https://academy.integrysconsult.com/academy/?utm_source=integrysconsult&amp;utm_medium=hero">
+          <span class="pill-new" data-en="NEW" data-ar="جديد">NEW</span>
+          <span data-en="Free compliance training with a verifiable certificate" data-ar="تدريب مجاني في الالتزام بشهادة قابلة للتحقق">Free compliance training with a verifiable certificate</span>
+          <span class="pill-arrow" aria-hidden="true">→</span>
+        </a>
         <div class="hero-badge">
           <span class="hero-badge-dot"></span>
           <span data-en="Integrated Advisory &mdash; Egypt, Saudi Arabia, UAE &amp; MENA" data-ar="استشارات متكاملة &mdash; مصر والسعودية والإمارات ومنطقة منا">Integrated Advisory &mdash; Egypt, Saudi Arabia, UAE &amp; MENA</span>
@@ -1678,6 +1712,36 @@ footer::before {
     </div>
   </div>
 </div>
+
+<!-- ═══════════════════ INTEGRYS ACADEMY ════════════════════════════════ -->
+<section class="academy-section" id="academy">
+  <div class="container">
+    <div class="academy-card reveal">
+      <div style="position:relative;z-index:1">
+        <span class="section-label" data-en="Integrys Academy · Free" data-ar="أكاديمية إنتيجريس · مجانًا">Integrys Academy · Free</span>
+        <h2 data-en="Practical compliance training, <span>grounded in Egyptian regulation</span>" data-ar="تدريب عملي في الالتزام، <span>مبني على التنظيم المصري</span>">Practical compliance training, <span>grounded in Egyptian regulation</span></h2>
+        <p class="academy-lead" data-en="Short courses written by the practitioners behind our AML, GRC and ESG engagements — for professionals at banks, fintechs, payment providers and regulated companies. Study at your own pace, pass the assessment, and receive a certificate anyone can verify." data-ar="دورات قصيرة كتبها الممارسون الذين يقودون مشروعاتنا في مكافحة غسل الأموال والحوكمة والاستدامة — للمهنيين في البنوك وشركات التكنولوجيا المالية ومقدمي خدمات الدفع والشركات الخاضعة للرقابة. تعلّم بالسرعة التي تناسبك، واجتز الاختبار، واحصل على شهادة يمكن لأي شخص التحقق منها.">Short courses written by the practitioners behind our AML, GRC and ESG engagements — for professionals at banks, fintechs, payment providers and regulated companies. Study at your own pace, pass the assessment, and receive a certificate anyone can verify.</p>
+        <ul class="academy-points">
+          <li data-en="Free with your work email" data-ar="مجانًا ببريد العمل">Free with your work email</li>
+          <li data-en="Arabic &amp; English" data-ar="بالعربية والإنجليزية">Arabic &amp; English</li>
+          <li data-en="Lessons, videos &amp; slides" data-ar="دروس وفيديوهات وعروض تقديمية">Lessons, videos &amp; slides</li>
+          <li data-en="Certificate with QR verification" data-ar="شهادة بتحقق عبر QR">Certificate with QR verification</li>
+        </ul>
+        <div class="academy-btns">
+          <a class="btn-primary" href="https://academy.integrysconsult.com/academy/?utm_source=integrysconsult&amp;utm_medium=home_section"><span data-en="Browse free courses" data-ar="تصفح الدورات المجانية">Browse free courses</span></a>
+          <a class="btn-outline" href="https://academy.integrysconsult.com/academy/verify"><span data-en="Verify a certificate" data-ar="تحقق من شهادة">Verify a certificate</span></a>
+        </div>
+      </div>
+      <div class="academy-side">
+        <img src="integrys-icon.png" alt="Integrys Academy" width="96" height="96" loading="lazy">
+        <div class="academy-course-tag" data-en="FIRST COURSE" data-ar="أول دورة">FIRST COURSE</div>
+        <div class="academy-course-title" data-en="AML/CFT Fundamentals for the Egyptian Market" data-ar="أساسيات مكافحة غسل الأموال وتمويل الإرهاب في السوق المصري">AML/CFT Fundamentals for the Egyptian Market</div>
+        <div class="academy-course-meta" data-en="6 lessons · ~50 minutes · assessment &amp; certificate" data-ar="6 دروس · حوالي 50 دقيقة · اختبار وشهادة">6 lessons · ~50 minutes · assessment &amp; certificate</div>
+        <div class="academy-powered" data-en="Training delivered on ComplyNex" data-ar="التدريب مقدّم على منصة ComplyNex">Training delivered on ComplyNex</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══════════════════ ABOUT ════════════════════════════════ -->
 <section class="section" id="about">
