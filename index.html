@@ -1469,6 +1469,23 @@ footer::before {
 [dir="rtl"] .why-card::before { left: auto; right: 0; }
 
 
+/* ═══════════════════ CONSULTANTS NETWORK (part-time) ═══════════════════ */
+.hero-join-pill{background:rgba(95,224,207,0.10);border-color:rgba(95,224,207,0.5)}
+.hero-join-pill .pill-new{background:#f4b942;color:#0D2B4E}
+.careers-section{padding:28px 0 8px}
+.careers-card{background:linear-gradient(135deg,#123457 0%,#0D2B4E 60%,#173d63 100%)}
+.careers-card .academy-side .careers-big{font-size:44px;font-weight:800;color:#5fe0cf;line-height:1}
+.careers-steps{list-style:none;padding:0;margin:0;text-align:start;counter-reset:cs}
+.careers-steps li{counter-increment:cs;display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.88);font-size:14px;margin-bottom:10px}
+.careers-steps li::before{content:counter(cs);flex:none;width:22px;height:22px;border-radius:50%;background:#00A896;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.careers-bar{position:fixed;left:0;right:0;bottom:0;z-index:998;background:#0D2B4E;border-top:2px solid #00A896;color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:10px 48px;font-size:14px;box-shadow:0 -6px 24px rgba(0,0,0,0.18)}
+.careers-bar[hidden]{display:none}
+.careers-bar b{color:#5fe0cf}
+.careers-bar a.careers-bar-btn{background:#00A896;color:#fff;font-weight:700;padding:6px 14px;border-radius:999px;text-decoration:none;white-space:nowrap}
+.careers-bar a.careers-bar-btn:hover{background:#00907f}
+.careers-bar-close{position:absolute;inset-inline-end:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,0.7);font-size:22px;cursor:pointer;line-height:1}
+@media(max-width:700px){.careers-bar{font-size:13px;padding:10px 40px 10px 14px}.hero-join-pill{margin-top:0}}
+
 /* ═══════════════════ INTEGRYS ACADEMY (free training) ═══════════════════ */
 .hero-academy-pill{display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:rgba(0,168,150,0.14);border:1px solid rgba(0,168,150,0.45);color:#fff;padding:7px 14px 7px 8px;border-radius:999px;font-size:13px;font-weight:500;margin-bottom:14px;transition:var(--transition)}
 .hero-academy-pill:hover{background:rgba(0,168,150,0.26);transform:translateY(-1px)}
@@ -1520,6 +1537,7 @@ footer::before {
         <a href="#regulatory" data-en="Regulatory" data-ar="الإطار التنظيمي">Regulatory</a>
         <a href="insights.html" data-en="Insights" data-ar="رؤى">Insights</a>
         <a href="https://academy.integrysconsult.com/academy/?utm_source=integrysconsult&amp;utm_medium=nav" data-en="Academy" data-ar="الأكاديمية">Academy</a>
+        <a href="https://academy.integrysconsult.com/careers/?src=integrys_nav" data-en="Join us" data-ar="انضم لنا" style="color:#5fe0cf;font-weight:700">Join us</a>
         <a href="complynex.html" data-en="ComplyNex" data-ar="كومبلاي‑نكس" style="color:#00A896;font-weight:700">ComplyNex</a>
         <a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a>
         <a href="#leadership" data-en="Leadership" data-ar="القيادة">Leadership</a>
@@ -1544,6 +1562,7 @@ footer::before {
     <a href="#methodology" data-en="Methodology" data-ar="المنهجية" onclick="toggleMenu()">Methodology</a>
     <a href="#regulatory" data-en="Regulatory" data-ar="الإطار التنظيمي" onclick="toggleMenu()">Regulatory</a>
     <a href="https://academy.integrysconsult.com/academy/?utm_source=integrysconsult&amp;utm_medium=mobile" data-en="Academy" data-ar="الأكاديمية" onclick="toggleMenu()">Academy</a>
+    <a href="https://academy.integrysconsult.com/careers/?src=integrys_mobile" data-en="Join us — part-time consulting" data-ar="انضم لنا — استشارات بدوام جزئي" onclick="toggleMenu()">Join us — part-time consulting</a>
     <a href="#pricing" data-en="Pricing" data-ar="الأسعار" onclick="toggleMenu()">Pricing</a>
     <a href="#leadership" data-en="Leadership" data-ar="القيادة" onclick="toggleMenu()">Leadership</a>
     <a href="#engagements" data-en="Engagements" data-ar="المشاركات" onclick="toggleMenu()">Engagements</a>
@@ -1575,6 +1594,11 @@ footer::before {
         <a class="hero-academy-pill" href="https://academy.integrysconsult.com/academy/?utm_source=integrysconsult&amp;utm_medium=hero">
           <span class="pill-new" data-en="NEW" data-ar="جديد">NEW</span>
           <span data-en="Free compliance training with a verifiable certificate" data-ar="تدريب مجاني في الالتزام بشهادة قابلة للتحقق">Free compliance training with a verifiable certificate</span>
+          <span class="pill-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="hero-academy-pill hero-join-pill" href="https://academy.integrysconsult.com/careers/?src=integrys_hero">
+          <span class="pill-new" data-en="JOIN US" data-ar="انضم لنا">JOIN US</span>
+          <span data-en="Part-time consulting opportunities — apply now" data-ar="فرص استشارات بدوام جزئي — قدّم الآن">Part-time consulting opportunities — apply now</span>
           <span class="pill-arrow" aria-hidden="true">→</span>
         </a>
         <div class="hero-badge">
@@ -1742,6 +1766,40 @@ footer::before {
     </div>
   </div>
 </section>
+
+<!-- ═══════════════════ CONSULTANTS NETWORK (part-time) ═══════════════════ -->
+<section class="academy-section careers-section" id="join-us">
+  <div class="container">
+    <div class="academy-card careers-card reveal">
+      <div style="position:relative;z-index:1">
+        <span class="section-label" data-en="Consultants network · Part-time" data-ar="شبكة الاستشاريين · دوام جزئي">Consultants network · Part-time</span>
+        <h2 data-en="Work with us on <span>governance, compliance and financial-crime projects</span>" data-ar="اعمل معنا في <span>مشروعات الحوكمة والالتزام ومكافحة الجرائم المالية</span>">Work with us on <span>governance, compliance and financial-crime projects</span></h2>
+        <p class="academy-lead" data-en="Integrys works in governance, compliance, AML/CFT, financial-crime advisory and training. If you have the expertise and some time alongside your current role, join our network of part-time consultants and trainers. We call you when a project matches your area and level; every engagement is under an NDA and a consulting contract based on your experience." data-ar="تتخصص إنتيجريس في الحوكمة والالتزام ومكافحة غسل الأموال وتمويل الإرهاب والاستشارات المتعلقة بمكافحة الجرائم المالية والتدريب. إذا كانت لديك الخبرة ووقت إضافي إلى جانب عملك الحالي، انضم إلى شبكة الاستشاريين والمدربين بدوام جزئي. سنتواصل معك عندما يتوفر مشروع يناسب مجالك ومستواك، ويتم أي تعاون بموجب اتفاقية سرية (NDA) وعقد استشارات وفقًا لخبرتك.">Integrys works in governance, compliance, AML/CFT, financial-crime advisory and training. If you have the expertise and some time alongside your current role, join our network of part-time consultants and trainers. We call you when a project matches your area and level; every engagement is under an NDA and a consulting contract based on your experience.</p>
+        <ul class="academy-points">
+          <li data-en="Part-time or per project" data-ar="دوام جزئي أو بالمشروع">Part-time or per project</li>
+          <li data-en="Remote or on-site" data-ar="عن بُعد أو في موقع العميل">Remote or on-site</li>
+          <li data-en="Personal e-mail is fine — confidential" data-ar="البريد الشخصي مقبول — بسرية تامة">Personal e-mail is fine — confidential</li>
+          <li data-en="NDA + consulting contract" data-ar="اتفاقية سرية + عقد استشارات">NDA + consulting contract</li>
+        </ul>
+        <div class="academy-btns">
+          <a class="btn-primary" href="https://academy.integrysconsult.com/careers/apply?src=integrys_home"><span data-en="Apply now" data-ar="قدّم الآن">Apply now</span></a>
+          <a class="btn-outline" href="https://academy.integrysconsult.com/careers/?src=integrys_home"><span data-en="How it works" data-ar="كيف نعمل">How it works</span></a>
+        </div>
+      </div>
+      <div class="academy-side">
+        <div class="academy-course-tag" data-en="HOW IT WORKS" data-ar="كيف نعمل">HOW IT WORKS</div>
+        <ol class="careers-steps">
+          <li data-en="Apply once — 5 minutes, CV optional" data-ar="قدّم مرة واحدة — 5 دقائق، والسيرة الذاتية اختيارية">Apply once — 5 minutes, CV optional</li>
+          <li data-en="We match you by expertise" data-ar="نختار حسب الخبرة">We match you by expertise</li>
+          <li data-en="Sign an NDA and a consulting contract" data-ar="توقيع NDA وعقد استشارات">Sign an NDA and a consulting contract</li>
+          <li data-en="Deliver with our team" data-ar="نفّذ مع فريقنا">Deliver with our team</li>
+        </ol>
+        <div class="academy-powered" data-en="Applications handled on ComplyNex" data-ar="تُدار الطلبات على منصة ComplyNex">Applications handled on ComplyNex</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ═══════════════════ ABOUT ════════════════════════════════ -->
 <section class="section" id="about">
@@ -3040,6 +3098,7 @@ footer::before {
           <li><a href="insights.html" data-en="Insights &amp; Infographics" data-ar="رؤى ورسوم معلوماتية">Insights &amp; Infographics</a></li>
           <li><a href="complynex.html" data-en="ComplyNex Platform" data-ar="منصة كومبلاي‑نكس">ComplyNex Platform</a></li>
           <li><a href="https://academy.integrysconsult.com/academy/?utm_source=integrysconsult&amp;utm_medium=footer" data-en="Integrys Academy — free training" data-ar="أكاديمية إنتيجريس — تدريب مجاني">Integrys Academy — free training</a></li>
+          <li><a href="https://academy.integrysconsult.com/careers/?src=integrys_footer" data-en="Join our consultants network" data-ar="انضم لشبكة الاستشاريين">Join our consultants network</a></li>
           <li><a href="#" onclick="openEnquiry('proposal');return false;" data-en="Request a Proposal" data-ar="اطلب عرضاً">Request a Proposal</a></li>
           <li><a href="#" onclick="openEnquiry('booking');return false;" data-en="Schedule a Call" data-ar="جدول مكالمة">Schedule a Call</a></li>
           <li><a href="#team" data-en="Our Team" data-ar="فريقنا">Our Team</a></li>
@@ -3729,6 +3788,24 @@ async function sendForm(formData) {
   }
 }
 
+</script>
+
+<!-- Announcement: consultants network -->
+<div class="careers-bar" id="careersBar" hidden>
+  <span><b data-en="We are growing:" data-ar="نتوسع:">We are growing:</b> <span data-en="part-time consulting &amp; training opportunities in compliance and AML." data-ar="فرص استشارات وتدريب بدوام جزئي في الالتزام ومكافحة غسل الأموال.">part-time consulting &amp; training opportunities in compliance and AML.</span></span>
+  <a class="careers-bar-btn" href="https://academy.integrysconsult.com/careers/?src=integrys_bar" data-en="Join our network →" data-ar="انضم لشبكتنا ←">Join our network →</a>
+  <button class="careers-bar-close" id="careersBarClose" aria-label="Close">×</button>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('careersBar'); if(!bar) return;
+  try{ if(sessionStorage.getItem('careersBarClosed')==='1') return; }catch(e){}
+  bar.hidden=false; document.body.style.paddingBottom=(bar.offsetHeight+4)+'px';
+  document.getElementById('careersBarClose').addEventListener('click',function(){
+    bar.hidden=true; document.body.style.paddingBottom='';
+    try{ sessionStorage.setItem('careersBarClosed','1'); }catch(e){}
+  });
+})();
 </script>
 </body>
 </html>
