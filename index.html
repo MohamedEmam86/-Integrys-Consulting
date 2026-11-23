@@ -920,6 +920,22 @@ footer{background:var(--nav);color:rgba(255,255,255,0.65);padding-top:60px}
 .bk-status.err{display:block;background:rgba(192,60,60,0.14);border:1px solid rgba(192,60,60,0.4);color:#ffb0b0}
 body.bk-lock{overflow:hidden}
 @media(max-width:600px){.bk-modal{padding:24px 20px}.bk-row{grid-template-columns:1fr;gap:0}.bk-title{font-size:21px}}
+
+/* grouped navigation (dropdowns) */
+.nav-links{gap:4px}
+.nav-links > a, .nav-dd-btn{font-size:13.5px;padding:8px 12px}
+.nav-dd{position:relative}
+.nav-dd-btn{background:none;border:none;cursor:pointer;font-family:inherit;font-weight:500;color:rgba(255,255,255,0.75);border-radius:6px;display:flex;align-items:center;gap:4px;transition:var(--transition);white-space:nowrap}
+.nav-dd-btn:hover,.nav-dd.open .nav-dd-btn{color:#fff;background:rgba(0,107,117,0.25)}
+.nav-caret{font-size:10px;opacity:.7}
+.nav-dd-menu{position:absolute;top:calc(100% + 6px);inset-inline-start:0;min-width:210px;background:var(--nav);border:1px solid rgba(0,168,150,0.3);border-radius:10px;padding:6px;box-shadow:0 14px 34px rgba(0,0,0,.35);display:none;flex-direction:column;z-index:1001}
+.nav-dd-menu::before{content:'';position:absolute;top:-8px;left:0;right:0;height:8px}
+.nav-dd:hover .nav-dd-menu,.nav-dd.open .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
+.nav-dd-menu a{display:block;padding:9px 12px;font-size:13.5px}
+.nav-dd-menu a::after{display:none}
+.nav-links a.nav-hl{color:#00A896;font-weight:700}
+.mobile-group{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#5fe0cf;padding:12px 12px 4px}
+.mobile-group--line{padding:0;margin:8px 0;border-top:1px solid rgba(255,255,255,0.1)}
 </style>
 
 <style id="new-premium-styles">
@@ -1531,17 +1547,27 @@ footer::before {
         </div>
       </a>
       <div class="nav-links" id="navLinks">
-        <a href="#about" data-en="About" data-ar="من نحن">About</a>
-        <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
-        <a href="#methodology" data-en="Methodology" data-ar="المنهجية">Methodology</a>
-        <a href="#regulatory" data-en="Regulatory" data-ar="الإطار التنظيمي">Regulatory</a>
+        <div class="nav-dd">
+          <button class="nav-dd-btn" type="button" aria-haspopup="true" aria-expanded="false"><span data-en="What we do" data-ar="ماذا نقدم">What we do</span> <span class="nav-caret">▾</span></button>
+          <div class="nav-dd-menu">
+            <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+            <a href="#methodology" data-en="Methodology" data-ar="المنهجية">Methodology</a>
+            <a href="#regulatory" data-en="Regulatory coverage" data-ar="الإطار التنظيمي">Regulatory coverage</a>
+            <a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a>
+          </div>
+        </div>
+        <div class="nav-dd">
+          <button class="nav-dd-btn" type="button" aria-haspopup="true" aria-expanded="false"><span data-en="About us" data-ar="من نحن">About us</span> <span class="nav-caret">▾</span></button>
+          <div class="nav-dd-menu">
+            <a href="#about" data-en="Who we are" data-ar="من نحن">Who we are</a>
+            <a href="#leadership" data-en="Leadership" data-ar="القيادة">Leadership</a>
+            <a href="#engagements" data-en="Engagements" data-ar="المشاركات">Engagements</a>
+            <a href="https://academy.integrysconsult.com/careers/?src=integrys_nav" data-en="Join us" data-ar="انضم لنا">Join us</a>
+          </div>
+        </div>
         <a href="insights.html" data-en="Insights" data-ar="رؤى">Insights</a>
         <a href="https://academy.integrysconsult.com/academy/?utm_source=integrysconsult&amp;utm_medium=nav" data-en="Academy" data-ar="الأكاديمية">Academy</a>
-        <a href="https://academy.integrysconsult.com/careers/?src=integrys_nav" data-en="Join us" data-ar="انضم لنا" style="color:#5fe0cf;font-weight:700">Join us</a>
-        <a href="complynex.html" data-en="ComplyNex" data-ar="كومبلاي‑نكس" style="color:#00A896;font-weight:700">ComplyNex</a>
-        <a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a>
-        <a href="#leadership" data-en="Leadership" data-ar="القيادة">Leadership</a>
-        <a href="#engagements" data-en="Engagements" data-ar="المشاركات">Engagements</a>
+        <a href="complynex.html" class="nav-hl" data-en="ComplyNex" data-ar="كومبلاي‑نكس">ComplyNex</a>
         <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
       </div>
       <div class="nav-actions">
@@ -1557,15 +1583,20 @@ footer::before {
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" data-en="About" data-ar="من نحن" onclick="toggleMenu()">About</a>
+    <div class="mobile-group" data-en="What we do" data-ar="ماذا نقدم">What we do</div>
     <a href="#services" data-en="Services" data-ar="خدماتنا" onclick="toggleMenu()">Services</a>
     <a href="#methodology" data-en="Methodology" data-ar="المنهجية" onclick="toggleMenu()">Methodology</a>
-    <a href="#regulatory" data-en="Regulatory" data-ar="الإطار التنظيمي" onclick="toggleMenu()">Regulatory</a>
-    <a href="https://academy.integrysconsult.com/academy/?utm_source=integrysconsult&amp;utm_medium=mobile" data-en="Academy" data-ar="الأكاديمية" onclick="toggleMenu()">Academy</a>
-    <a href="https://academy.integrysconsult.com/careers/?src=integrys_mobile" data-en="Join us — part-time consulting" data-ar="انضم لنا — استشارات بدوام جزئي" onclick="toggleMenu()">Join us — part-time consulting</a>
+    <a href="#regulatory" data-en="Regulatory coverage" data-ar="الإطار التنظيمي" onclick="toggleMenu()">Regulatory coverage</a>
     <a href="#pricing" data-en="Pricing" data-ar="الأسعار" onclick="toggleMenu()">Pricing</a>
+    <div class="mobile-group" data-en="About us" data-ar="من نحن">About us</div>
+    <a href="#about" data-en="Who we are" data-ar="من نحن" onclick="toggleMenu()">Who we are</a>
     <a href="#leadership" data-en="Leadership" data-ar="القيادة" onclick="toggleMenu()">Leadership</a>
     <a href="#engagements" data-en="Engagements" data-ar="المشاركات" onclick="toggleMenu()">Engagements</a>
+    <a href="https://academy.integrysconsult.com/careers/?src=integrys_mobile" data-en="Join us" data-ar="انضم لنا" onclick="toggleMenu()">Join us</a>
+    <div class="mobile-group mobile-group--line"></div>
+    <a href="insights.html" data-en="Insights" data-ar="رؤى" onclick="toggleMenu()">Insights</a>
+    <a href="https://academy.integrysconsult.com/academy/?utm_source=integrysconsult&amp;utm_medium=mobile" data-en="Academy" data-ar="الأكاديمية" onclick="toggleMenu()">Academy</a>
+    <a href="complynex.html" data-en="ComplyNex" data-ar="كومبلاي‑نكس" onclick="toggleMenu()" style="color:#00A896;font-weight:700">ComplyNex</a>
     <a href="#contact" data-en="Contact" data-ar="اتصل بنا" onclick="toggleMenu()">Contact</a>
     <div class="mobile-lang">
       <button class="lang-btn" onclick="toggleLang();toggleMenu()">
@@ -3230,6 +3261,20 @@ function toggleExpand(el) {
 // ══════════════════════════════════════════════════════════════
 //  MOBILE MENU
 // ══════════════════════════════════════════════════════════════
+
+// grouped navigation: click/tap opens a group, click elsewhere closes it
+document.querySelectorAll('.nav-dd-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const dd = btn.closest('.nav-dd');
+    const open = !dd.classList.contains('open');
+    document.querySelectorAll('.nav-dd.open').forEach(d => { d.classList.remove('open'); d.querySelector('.nav-dd-btn').setAttribute('aria-expanded','false'); });
+    if (open) { dd.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  });
+});
+document.addEventListener('click', () => document.querySelectorAll('.nav-dd.open').forEach(d => d.classList.remove('open')));
+document.querySelectorAll('.nav-dd-menu a').forEach(a => a.addEventListener('click', () => a.closest('.nav-dd').classList.remove('open')));
+
 function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
   menu.classList.toggle('open');
